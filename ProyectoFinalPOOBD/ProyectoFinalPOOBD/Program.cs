@@ -18,7 +18,7 @@ namespace ProyectoFinalPOOBD
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainForm());
+            Application.Run(new frmLogin());
         }
     }
 }
