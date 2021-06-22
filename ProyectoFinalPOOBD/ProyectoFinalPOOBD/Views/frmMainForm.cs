@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using ProyectoFinalPOOBD.Models;
 
 namespace ProyectoFinalPOOBD.Views
 {
@@ -7,6 +8,7 @@ namespace ProyectoFinalPOOBD.Views
         public frmMainForm()
         {
             InitializeComponent();
+            var em = new Employee();
         }
     }
 }
