@@ -16,5 +16,6 @@ namespace ProyectoFinalPOOBD.Views
         {
             InitializeComponent();
         }
+
     }
 }
