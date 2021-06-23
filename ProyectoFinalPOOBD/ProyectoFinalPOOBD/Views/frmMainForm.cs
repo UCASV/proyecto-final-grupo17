@@ -53,27 +53,35 @@ namespace ProyectoFinalPOOBD.Views
             }
         }
 
-        private void iconButton1_Click(object sender, System.EventArgs e)
-        {
-            ActivateButton(sender,Color.DarkGoldenrod);
-        }
-
         private void btnAppointmentTracking_Click(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.DarkGoldenrod);
+            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            tabProgram.SelectTab(2);
 
         }
 
         private void btnVaccinationProcess_Click(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.DarkGoldenrod);
+            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            tabProgram.SelectTab(3);
 
         }
 
         private void btnStats_Click(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.DarkGoldenrod);
+            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            tabProgram.SelectTab(4);
+        }
 
+        private void picHome_Click(object sender, System.EventArgs e)
+        {
+            tabProgram.SelectTab(0);
+        }
+
+        private void btnAppointmentProcess_Click_1(object sender, System.EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            tabProgram.SelectTab(1);
         }
     }
 }

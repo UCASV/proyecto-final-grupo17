@@ -35,11 +35,18 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAppointmentTracking = new FontAwesome.Sharp.IconButton();
             this.btnAppointmentProcess = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picHome = new System.Windows.Forms.PictureBox();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.tabProgram = new System.Windows.Forms.TabControl();
+            this.tabPageTracking = new System.Windows.Forms.TabPage();
+            this.tabPageVaccination = new System.Windows.Forms.TabPage();
+            this.tabPageStats = new System.Windows.Forms.TabPage();
+            this.tabPageAppointment = new System.Windows.Forms.TabPage();
+            this.tabPageMain = new System.Windows.Forms.TabPage();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
+            this.tabProgram.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -138,27 +145,28 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAppointmentProcess.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAppointmentProcess.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAppointmentProcess.UseVisualStyleBackColor = true;
-            this.btnAppointmentProcess.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnAppointmentProcess.Click += new System.EventHandler(this.btnAppointmentProcess_Click_1);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.picHome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 112);
             this.panel2.TabIndex = 0;
             // 
-            // pictureBox1
+            // picHome
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinalPOOBD.Properties.Resources.programmer_male_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picHome.Image = global::ProyectoFinalPOOBD.Properties.Resources.programmer_male_icon;
+            this.picHome.Location = new System.Drawing.Point(0, 0);
+            this.picHome.Name = "picHome";
+            this.picHome.Size = new System.Drawing.Size(212, 112);
+            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHome.TabIndex = 0;
+            this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // pnlTitleBar
             // 
@@ -169,11 +177,76 @@ namespace ProyectoFinalPOOBD.Views
             this.pnlTitleBar.Size = new System.Drawing.Size(740, 70);
             this.pnlTitleBar.TabIndex = 1;
             // 
+            // tabProgram
+            // 
+            this.tabProgram.Controls.Add(this.tabPageMain);
+            this.tabProgram.Controls.Add(this.tabPageAppointment);
+            this.tabProgram.Controls.Add(this.tabPageTracking);
+            this.tabProgram.Controls.Add(this.tabPageVaccination);
+            this.tabProgram.Controls.Add(this.tabPageStats);
+            this.tabProgram.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabProgram.Location = new System.Drawing.Point(212, 70);
+            this.tabProgram.Name = "tabProgram";
+            this.tabProgram.SelectedIndex = 0;
+            this.tabProgram.Size = new System.Drawing.Size(740, 577);
+            this.tabProgram.TabIndex = 2;
+            // 
+            // tabPageTracking
+            // 
+            this.tabPageTracking.Location = new System.Drawing.Point(4, 24);
+            this.tabPageTracking.Name = "tabPageTracking";
+            this.tabPageTracking.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTracking.Size = new System.Drawing.Size(732, 549);
+            this.tabPageTracking.TabIndex = 2;
+            this.tabPageTracking.Text = "tabPageTracking";
+            this.tabPageTracking.UseVisualStyleBackColor = true;
+            // 
+            // tabPageVaccination
+            // 
+            this.tabPageVaccination.Location = new System.Drawing.Point(4, 24);
+            this.tabPageVaccination.Name = "tabPageVaccination";
+            this.tabPageVaccination.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageVaccination.Size = new System.Drawing.Size(732, 549);
+            this.tabPageVaccination.TabIndex = 3;
+            this.tabPageVaccination.Text = "tabPageVaccination";
+            this.tabPageVaccination.UseVisualStyleBackColor = true;
+            // 
+            // tabPageStats
+            // 
+            this.tabPageStats.Location = new System.Drawing.Point(4, 24);
+            this.tabPageStats.Name = "tabPageStats";
+            this.tabPageStats.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageStats.Size = new System.Drawing.Size(732, 549);
+            this.tabPageStats.TabIndex = 4;
+            this.tabPageStats.Text = "tabPageStats";
+            this.tabPageStats.UseVisualStyleBackColor = true;
+            // 
+            // tabPageAppointment
+            // 
+            this.tabPageAppointment.Location = new System.Drawing.Point(4, 24);
+            this.tabPageAppointment.Name = "tabPageAppointment";
+            this.tabPageAppointment.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAppointment.Size = new System.Drawing.Size(732, 549);
+            this.tabPageAppointment.TabIndex = 1;
+            this.tabPageAppointment.Text = "tabPageAppointment";
+            this.tabPageAppointment.UseVisualStyleBackColor = true;
+            // 
+            // tabPageMain
+            // 
+            this.tabPageMain.Location = new System.Drawing.Point(4, 24);
+            this.tabPageMain.Name = "tabPageMain";
+            this.tabPageMain.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMain.Size = new System.Drawing.Size(732, 549);
+            this.tabPageMain.TabIndex = 0;
+            this.tabPageMain.Text = "tabPageMain";
+            this.tabPageMain.UseVisualStyleBackColor = true;
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 647);
+            this.Controls.Add(this.tabProgram);
             this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmMainForm";
@@ -181,7 +254,8 @@ namespace ProyectoFinalPOOBD.Views
             this.Text = "frmMainForm";
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
+            this.tabProgram.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -194,8 +268,14 @@ namespace ProyectoFinalPOOBD.Views
         private FontAwesome.Sharp.IconButton btnStats;
         private FontAwesome.Sharp.IconButton btnVaccinationProcess;
         private FontAwesome.Sharp.IconButton btnAppointmentTracking;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Panel pnlTitleBar;
+        private System.Windows.Forms.TabControl tabProgram;
+        private System.Windows.Forms.TabPage tabPageTracking;
+        private System.Windows.Forms.TabPage tabPageVaccination;
+        private System.Windows.Forms.TabPage tabPageStats;
+        private System.Windows.Forms.TabPage tabPageMain;
+        private System.Windows.Forms.TabPage tabPageAppointment;
     }
 }
 
