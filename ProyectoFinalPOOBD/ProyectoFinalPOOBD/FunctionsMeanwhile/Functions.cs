@@ -1,5 +1,6 @@
 ﻿#nullable enable
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,6 +66,54 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
                     ,"Usuario no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+            return false;
+        }
+
+        // Code for a new Citizen 
+        public static bool IfSuccessCitizen(Citizen person, List<Disease> diseases, Institution institution)
+        {
+            // Si el ciudadano es apto se ingresara el ciudadano y devolvera true
+            if (ConditionCitizen(person, diseases, institution))
+            {
+                person.IdInstitution = institution.Id;
+                CitizenServices citizenServices = new CitizenServices();
+                citizenServices.Create(person);
+                Citizen citizenCreated = citizenServices.GetLastCitizen();
+
+                if (diseases.Count > 0)
+                {
+                    DiseaseServices.InsertDiseases(diseases, citizenCreated.Id);
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool ConditionCitizen(Citizen person, List<Disease> diseases, Institution institution)
+        {
+            // Si la persona es mayor de 60 años
+            if (person.Age >= 60)
+            {
+                return true;
+            }
+
+            // Si es mayor de 18 años y tiene enfermedades
+            if (person.Age >= 18 && diseases.Count > 0)
+            {
+                return true;
+            }
+
+            // O si pertenece a un equipo del gobierno, salud, educacion o personal de seguridad
+            var context = new VaccinationContext();
+            var institutions = (new InstitutionServices()).GetInstitutions();
+            if (institutions.Exists(i=> i.InstitutionName == institution.InstitutionName))
+            {
+                return true;
+            }
+
+            // De lo contrario es falso
             return false;
         }
     }
