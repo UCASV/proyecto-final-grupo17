@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.VaccineContext;
 
-namespace ProyectoFinalPOOBD.Repositorio
+namespace ProyectoFinalPOOBD.Repository
 {
     class EmployeeServices : IRepository<Employee>
     {

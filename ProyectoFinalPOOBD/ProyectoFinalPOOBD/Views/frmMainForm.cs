@@ -1,8 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 using ProyectoFinalPOOBD.Models;
-using ProyectoFinalPOOBD.Repositorio;
 using ProyectoFinalPOOBD.VaccineContext;
+using ProyectoFinalPOOBD.FunctionsMeanwhile;
+using ProyectoFinalPOOBD.Repository;
 
 namespace ProyectoFinalPOOBD.Views
 {
@@ -11,7 +14,6 @@ namespace ProyectoFinalPOOBD.Views
         public frmMainForm()
         {
             InitializeComponent();
-            var em = new Employee();
         }
 
         private void button1_Click(object sender, System.EventArgs e)
