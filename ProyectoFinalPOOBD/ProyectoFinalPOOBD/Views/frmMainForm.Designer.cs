@@ -38,15 +38,32 @@ namespace ProyectoFinalPOOBD.Views
             this.picHome = new System.Windows.Forms.PictureBox();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.tabProgram = new System.Windows.Forms.TabControl();
+            this.tabPageMain = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPageAppointment = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDui = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.btnAddDisease = new System.Windows.Forms.Button();
+            this.cmbInstitucion = new System.Windows.Forms.ComboBox();
+            this.lblDui = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblInstitution = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabPageTracking = new System.Windows.Forms.TabPage();
             this.tabPageVaccination = new System.Windows.Forms.TabPage();
             this.tabPageStats = new System.Windows.Forms.TabPage();
-            this.tabPageAppointment = new System.Windows.Forms.TabPage();
-            this.tabPageMain = new System.Windows.Forms.TabPage();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.tabProgram.SuspendLayout();
+            this.tabPageMain.SuspendLayout();
+            this.tabPageAppointment.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -60,7 +77,7 @@ namespace ProyectoFinalPOOBD.Views
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(212, 647);
+            this.pnlMenu.Size = new System.Drawing.Size(212, 664);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnStats
@@ -174,7 +191,7 @@ namespace ProyectoFinalPOOBD.Views
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleBar.Location = new System.Drawing.Point(212, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(740, 70);
+            this.pnlTitleBar.Size = new System.Drawing.Size(782, 70);
             this.pnlTitleBar.TabIndex = 1;
             // 
             // tabProgram
@@ -188,15 +205,195 @@ namespace ProyectoFinalPOOBD.Views
             this.tabProgram.Location = new System.Drawing.Point(212, 70);
             this.tabProgram.Name = "tabProgram";
             this.tabProgram.SelectedIndex = 0;
-            this.tabProgram.Size = new System.Drawing.Size(740, 577);
+            this.tabProgram.Size = new System.Drawing.Size(782, 594);
+            this.tabProgram.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabProgram.TabIndex = 2;
+            // 
+            // tabPageMain
+            // 
+            this.tabPageMain.Controls.Add(this.label1);
+            this.tabPageMain.Location = new System.Drawing.Point(4, 24);
+            this.tabPageMain.Name = "tabPageMain";
+            this.tabPageMain.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMain.Size = new System.Drawing.Size(774, 566);
+            this.tabPageMain.TabIndex = 0;
+            this.tabPageMain.Text = "tabPageMain";
+            this.tabPageMain.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(768, 560);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bienvenido {usuario}\r\nTenga buen dia\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPageAppointment
+            // 
+            this.tabPageAppointment.Controls.Add(this.tableLayoutPanel1);
+            this.tabPageAppointment.Controls.Add(this.panel1);
+            this.tabPageAppointment.Location = new System.Drawing.Point(4, 24);
+            this.tabPageAppointment.Name = "tabPageAppointment";
+            this.tabPageAppointment.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAppointment.Size = new System.Drawing.Size(774, 566);
+            this.tabPageAppointment.TabIndex = 1;
+            this.tabPageAppointment.Text = "tabPageAppointment";
+            this.tabPageAppointment.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
+            this.tableLayoutPanel1.Controls.Add(this.txtDui, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtName, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtAddress, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtEmail, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddDisease, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.cmbInstitucion, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblDui, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblAddress, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblEmail, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblInstitution, 1, 5);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 56);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(768, 266);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // txtDui
+            // 
+            this.txtDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDui.Location = new System.Drawing.Point(281, 7);
+            this.txtDui.Name = "txtDui";
+            this.txtDui.Size = new System.Drawing.Size(273, 29);
+            this.txtDui.TabIndex = 0;
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.Location = new System.Drawing.Point(281, 51);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(273, 29);
+            this.txtName.TabIndex = 1;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAddress.Location = new System.Drawing.Point(281, 95);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(273, 29);
+            this.txtAddress.TabIndex = 2;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.Location = new System.Drawing.Point(281, 139);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(273, 29);
+            this.txtEmail.TabIndex = 3;
+            // 
+            // btnAddDisease
+            // 
+            this.btnAddDisease.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAddDisease.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddDisease.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddDisease.Location = new System.Drawing.Point(281, 179);
+            this.btnAddDisease.Name = "btnAddDisease";
+            this.btnAddDisease.Size = new System.Drawing.Size(221, 38);
+            this.btnAddDisease.TabIndex = 4;
+            this.btnAddDisease.Text = "Ver o añadir enfermedades";
+            this.btnAddDisease.UseVisualStyleBackColor = false;
+            // 
+            // cmbInstitucion
+            // 
+            this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbInstitucion.FormattingEnabled = true;
+            this.cmbInstitucion.Location = new System.Drawing.Point(281, 228);
+            this.cmbInstitucion.Name = "cmbInstitucion";
+            this.cmbInstitucion.Size = new System.Drawing.Size(273, 29);
+            this.cmbInstitucion.TabIndex = 5;
+            // 
+            // lblDui
+            // 
+            this.lblDui.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDui.AutoSize = true;
+            this.lblDui.Location = new System.Drawing.Point(234, 11);
+            this.lblDui.Name = "lblDui";
+            this.lblDui.Size = new System.Drawing.Size(41, 21);
+            this.lblDui.TabIndex = 6;
+            this.lblDui.Text = "DUI:";
+            // 
+            // lblName
+            // 
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(200, 55);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(75, 21);
+            this.lblName.TabIndex = 7;
+            this.lblName.Text = "Nombre:";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(192, 99);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(83, 21);
+            this.lblAddress.TabIndex = 8;
+            this.lblAddress.Text = "Domicilio:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(138, 143);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(137, 21);
+            this.lblEmail.TabIndex = 9;
+            this.lblEmail.Text = "E-mail (Opcional):";
+            // 
+            // lblInstitution
+            // 
+            this.lblInstitution.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblInstitution.AutoSize = true;
+            this.lblInstitution.Location = new System.Drawing.Point(184, 232);
+            this.lblInstitution.Name = "lblInstitution";
+            this.lblInstitution.Size = new System.Drawing.Size(91, 21);
+            this.lblInstitution.TabIndex = 10;
+            this.lblInstitution.Text = "Institucion:";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(768, 53);
+            this.panel1.TabIndex = 0;
             // 
             // tabPageTracking
             // 
             this.tabPageTracking.Location = new System.Drawing.Point(4, 24);
             this.tabPageTracking.Name = "tabPageTracking";
             this.tabPageTracking.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTracking.Size = new System.Drawing.Size(732, 549);
+            this.tabPageTracking.Size = new System.Drawing.Size(774, 566);
             this.tabPageTracking.TabIndex = 2;
             this.tabPageTracking.Text = "tabPageTracking";
             this.tabPageTracking.UseVisualStyleBackColor = true;
@@ -206,7 +403,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageVaccination.Location = new System.Drawing.Point(4, 24);
             this.tabPageVaccination.Name = "tabPageVaccination";
             this.tabPageVaccination.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageVaccination.Size = new System.Drawing.Size(732, 549);
+            this.tabPageVaccination.Size = new System.Drawing.Size(774, 566);
             this.tabPageVaccination.TabIndex = 3;
             this.tabPageVaccination.Text = "tabPageVaccination";
             this.tabPageVaccination.UseVisualStyleBackColor = true;
@@ -216,36 +413,16 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageStats.Location = new System.Drawing.Point(4, 24);
             this.tabPageStats.Name = "tabPageStats";
             this.tabPageStats.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStats.Size = new System.Drawing.Size(732, 549);
+            this.tabPageStats.Size = new System.Drawing.Size(774, 566);
             this.tabPageStats.TabIndex = 4;
             this.tabPageStats.Text = "tabPageStats";
             this.tabPageStats.UseVisualStyleBackColor = true;
-            // 
-            // tabPageAppointment
-            // 
-            this.tabPageAppointment.Location = new System.Drawing.Point(4, 24);
-            this.tabPageAppointment.Name = "tabPageAppointment";
-            this.tabPageAppointment.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAppointment.Size = new System.Drawing.Size(732, 549);
-            this.tabPageAppointment.TabIndex = 1;
-            this.tabPageAppointment.Text = "tabPageAppointment";
-            this.tabPageAppointment.UseVisualStyleBackColor = true;
-            // 
-            // tabPageMain
-            // 
-            this.tabPageMain.Location = new System.Drawing.Point(4, 24);
-            this.tabPageMain.Name = "tabPageMain";
-            this.tabPageMain.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMain.Size = new System.Drawing.Size(732, 549);
-            this.tabPageMain.TabIndex = 0;
-            this.tabPageMain.Text = "tabPageMain";
-            this.tabPageMain.UseVisualStyleBackColor = true;
             // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 647);
+            this.ClientSize = new System.Drawing.Size(994, 664);
             this.Controls.Add(this.tabProgram);
             this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.pnlMenu);
@@ -256,6 +433,10 @@ namespace ProyectoFinalPOOBD.Views
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.tabProgram.ResumeLayout(false);
+            this.tabPageMain.ResumeLayout(false);
+            this.tabPageAppointment.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -276,6 +457,20 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.TabPage tabPageStats;
         private System.Windows.Forms.TabPage tabPageMain;
         private System.Windows.Forms.TabPage tabPageAppointment;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox txtDui;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button btnAddDisease;
+        private System.Windows.Forms.ComboBox cmbInstitucion;
+        private System.Windows.Forms.Label lblDui;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblInstitution;
     }
 }
 

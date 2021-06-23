@@ -10,14 +10,8 @@
 
 namespace ProyectoFinalPOOBD.Properties {
     using System;
-<<<<<<< HEAD
     
     
-=======
-    using System.Drawing;
-
-
->>>>>>> 03cf415c957f21cf1f7a886907b133e5fda084a4
     /// <summary>
     ///   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
     /// </summary>
@@ -37,13 +31,7 @@ namespace ProyectoFinalPOOBD.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-<<<<<<< HEAD
         
-=======
-
-        public static Image User_blue_icon { get; internal set; }
-
->>>>>>> 03cf415c957f21cf1f7a886907b133e5fda084a4
         /// <summary>
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
@@ -75,8 +63,6 @@ namespace ProyectoFinalPOOBD.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
-=======
         internal static System.Drawing.Bitmap Apps_preferences_desktop_user_icon {
             get {
                 object obj = ResourceManager.GetObject("Apps-preferences-desktop-user-icon", resourceCulture);
@@ -97,7 +83,6 @@ namespace ProyectoFinalPOOBD.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 03cf415c957f21cf1f7a886907b133e5fda084a4
         internal static System.Drawing.Bitmap programmer_male_icon {
             get {
                 object obj = ResourceManager.GetObject("programmer-male-icon", resourceCulture);
