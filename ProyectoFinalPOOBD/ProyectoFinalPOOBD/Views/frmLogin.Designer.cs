@@ -54,7 +54,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(140, 215);
+            this.label1.Location = new System.Drawing.Point(133, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 42);
             this.label1.TabIndex = 0;
@@ -65,7 +65,7 @@ namespace ProyectoFinalPOOBD.Views
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoFinalPOOBD.Properties.Resources.programmer_male_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(121, 57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(154, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +75,7 @@ namespace ProyectoFinalPOOBD.Views
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.panel1.Location = new System.Drawing.Point(78, 333);
+            this.panel1.Location = new System.Drawing.Point(73, 336);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace ProyectoFinalPOOBD.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.panel2.Location = new System.Drawing.Point(81, 389);
+            this.panel2.Location = new System.Drawing.Point(76, 392);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 5;
@@ -95,7 +95,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnDataDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDataDelete.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDataDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDataDelete.Location = new System.Drawing.Point(220, 452);
+            this.btnDataDelete.Location = new System.Drawing.Point(215, 455);
             this.btnDataDelete.Name = "btnDataDelete";
             this.btnDataDelete.Size = new System.Drawing.Size(97, 23);
             this.btnDataDelete.TabIndex = 6;
@@ -110,7 +110,7 @@ namespace ProyectoFinalPOOBD.Views
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 41;
-            this.iconPictureBox1.Location = new System.Drawing.Point(78, 284);
+            this.iconPictureBox1.Location = new System.Drawing.Point(73, 287);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(41, 43);
             this.iconPictureBox1.TabIndex = 7;
@@ -125,7 +125,7 @@ namespace ProyectoFinalPOOBD.Views
             this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 41;
-            this.iconPictureBox3.Location = new System.Drawing.Point(81, 340);
+            this.iconPictureBox3.Location = new System.Drawing.Point(76, 343);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(41, 43);
             this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +137,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.txtUserName.Location = new System.Drawing.Point(128, 284);
+            this.txtUserName.Location = new System.Drawing.Point(123, 287);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(186, 43);
@@ -149,7 +149,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Bahnschrift SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.txtPassword.Location = new System.Drawing.Point(128, 340);
+            this.txtPassword.Location = new System.Drawing.Point(123, 343);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -162,7 +162,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtCabin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCabin.Font = new System.Drawing.Font("Bahnschrift SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCabin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.txtCabin.Location = new System.Drawing.Point(125, 396);
+            this.txtCabin.Location = new System.Drawing.Point(120, 399);
             this.txtCabin.Multiline = true;
             this.txtCabin.Name = "txtCabin";
             this.txtCabin.Size = new System.Drawing.Size(189, 43);
@@ -178,7 +178,7 @@ namespace ProyectoFinalPOOBD.Views
             this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 41;
-            this.iconPictureBox2.Location = new System.Drawing.Point(78, 396);
+            this.iconPictureBox2.Location = new System.Drawing.Point(73, 399);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(41, 43);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -188,7 +188,7 @@ namespace ProyectoFinalPOOBD.Views
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.panel3.Location = new System.Drawing.Point(78, 445);
+            this.panel3.Location = new System.Drawing.Point(73, 448);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 12;
@@ -200,7 +200,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(78, 481);
+            this.btnLogin.Location = new System.Drawing.Point(73, 484);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(236, 42);
             this.btnLogin.TabIndex = 15;
