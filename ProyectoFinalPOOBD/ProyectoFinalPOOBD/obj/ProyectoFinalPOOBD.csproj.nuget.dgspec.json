@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\PRO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {}
+    "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\PRO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {
+    "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\PRO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+        "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
         "projectName": "ProyectoFinalPOOBD",
-        "projectPath": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\PRO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+        "projectPath": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
         "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\PRO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+        "outputPath": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",

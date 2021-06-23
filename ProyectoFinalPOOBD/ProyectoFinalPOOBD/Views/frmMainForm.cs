@@ -83,6 +83,12 @@ namespace ProyectoFinalPOOBD.Views
             ActivateButton(sender, Color.FromArgb(42, 157, 143));
             tabProgram.SelectTab(1);
         }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            Form formulario = new frmDiseases();
+            formulario.Show();
+        }
     }
 }
  
