@@ -53,6 +53,9 @@ namespace ProyectoFinalPOOBD.Views
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblInstitution = new System.Windows.Forms.Label();
+            this.nudAge = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPageTracking = new System.Windows.Forms.TabPage();
             this.tabPageVaccination = new System.Windows.Forms.TabPage();
@@ -64,6 +67,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageMain.SuspendLayout();
             this.tabPageAppointment.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAge)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -263,24 +267,29 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1.Controls.Add(this.lblAddress, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblInstitution, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.nudAge, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 56);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(768, 266);
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(768, 300);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // txtDui
             // 
             this.txtDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDui.Location = new System.Drawing.Point(281, 7);
+            this.txtDui.Location = new System.Drawing.Point(281, 4);
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(273, 29);
             this.txtDui.TabIndex = 0;
@@ -288,7 +297,7 @@ namespace ProyectoFinalPOOBD.Views
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(281, 51);
+            this.txtName.Location = new System.Drawing.Point(281, 41);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(273, 29);
             this.txtName.TabIndex = 1;
@@ -296,7 +305,7 @@ namespace ProyectoFinalPOOBD.Views
             // txtAddress
             // 
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.Location = new System.Drawing.Point(281, 95);
+            this.txtAddress.Location = new System.Drawing.Point(281, 78);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(273, 29);
             this.txtAddress.TabIndex = 2;
@@ -304,7 +313,7 @@ namespace ProyectoFinalPOOBD.Views
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(281, 139);
+            this.txtEmail.Location = new System.Drawing.Point(281, 115);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(273, 29);
             this.txtEmail.TabIndex = 3;
@@ -312,11 +321,13 @@ namespace ProyectoFinalPOOBD.Views
             // btnAddDisease
             // 
             this.btnAddDisease.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAddDisease.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddDisease.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddDisease.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnAddDisease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDisease.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddDisease.Location = new System.Drawing.Point(281, 179);
+            this.btnAddDisease.Location = new System.Drawing.Point(281, 151);
             this.btnAddDisease.Name = "btnAddDisease";
-            this.btnAddDisease.Size = new System.Drawing.Size(221, 38);
+            this.btnAddDisease.Size = new System.Drawing.Size(221, 31);
             this.btnAddDisease.TabIndex = 4;
             this.btnAddDisease.Text = "Ver o añadir enfermedades";
             this.btnAddDisease.UseVisualStyleBackColor = false;
@@ -325,7 +336,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbInstitucion.FormattingEnabled = true;
-            this.cmbInstitucion.Location = new System.Drawing.Point(281, 228);
+            this.cmbInstitucion.Location = new System.Drawing.Point(281, 189);
             this.cmbInstitucion.Name = "cmbInstitucion";
             this.cmbInstitucion.Size = new System.Drawing.Size(273, 29);
             this.cmbInstitucion.TabIndex = 5;
@@ -334,7 +345,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblDui.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDui.AutoSize = true;
-            this.lblDui.Location = new System.Drawing.Point(234, 11);
+            this.lblDui.Location = new System.Drawing.Point(234, 8);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(41, 21);
             this.lblDui.TabIndex = 6;
@@ -344,7 +355,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(200, 55);
+            this.lblName.Location = new System.Drawing.Point(200, 45);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(75, 21);
             this.lblName.TabIndex = 7;
@@ -354,7 +365,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(192, 99);
+            this.lblAddress.Location = new System.Drawing.Point(192, 82);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(83, 21);
             this.lblAddress.TabIndex = 8;
@@ -364,7 +375,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(138, 143);
+            this.lblEmail.Location = new System.Drawing.Point(138, 119);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(137, 21);
             this.lblEmail.TabIndex = 9;
@@ -374,11 +385,43 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblInstitution.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblInstitution.AutoSize = true;
-            this.lblInstitution.Location = new System.Drawing.Point(184, 232);
+            this.lblInstitution.Location = new System.Drawing.Point(184, 193);
             this.lblInstitution.Name = "lblInstitution";
             this.lblInstitution.Size = new System.Drawing.Size(91, 21);
             this.lblInstitution.TabIndex = 10;
             this.lblInstitution.Text = "Institucion:";
+            // 
+            // nudAge
+            // 
+            this.nudAge.Location = new System.Drawing.Point(281, 225);
+            this.nudAge.Name = "nudAge";
+            this.nudAge.Size = new System.Drawing.Size(85, 29);
+            this.nudAge.TabIndex = 12;
+            this.nudAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(225, 230);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Edad:";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(281, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(221, 31);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "AÑADIR CITA";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -437,6 +480,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageAppointment.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAge)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -471,6 +515,9 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblInstitution;
+        private System.Windows.Forms.NumericUpDown nudAge;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
