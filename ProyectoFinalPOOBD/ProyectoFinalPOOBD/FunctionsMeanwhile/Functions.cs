@@ -1,7 +1,10 @@
 ﻿#nullable enable
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Transactions;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.Repository;
 using ProyectoFinalPOOBD.VaccineContext;
@@ -33,7 +36,7 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
                 if (CheckCabin(cabinNumber))
                 {
                     Employee employeeLogged = (new UserServices()
-                        .FindByUsernameAndPassword(username, password))
+                            .FindByUsernameAndPassword(username, password))
                         .Employee;
 
                     Cabin cabinInUse = new CabinServices().Find(cabinNumber);
@@ -44,7 +47,7 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
                         IdCabin = cabinInUse.Id,
                         IdEmployee = employeeLogged.Id
                     };
-                    
+
                     var context = new VaccinationContext();
                     context.Logins.Add(newLogin);
                     context.SaveChanges();
@@ -58,7 +61,7 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
             else
             {
                 MessageBox.Show("No se encontro al usuario, por favor revise el usuario y la contraseña"
-                    ,"Usuario no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    , "Usuario no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             return false;
@@ -103,7 +106,7 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
             // O si pertenece a un equipo del gobierno, salud, educacion o personal de seguridad
             var context = new VaccinationContext();
             var institutions = (new InstitutionServices()).GetInstitutions();
-            if (institutions.Exists(i=> i.InstitutionName == institution.InstitutionName))
+            if (institutions.Exists(i => i.InstitutionName == institution.InstitutionName))
             {
                 return true;
             }
@@ -145,6 +148,42 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
         {
             var people = new CitizenServices().GetCitizenByDui(person.Dui);
             return (people is not null);
+        }
+
+        public static bool CreateAppointment(Citizen person, DateTime? time)
+        {
+            if (CheckIfNotAppointment(person))
+            {
+
+                var vaccineAppointment = new AppointmentServices().FillAppointment(person);
+                new AppointmentServices().Create(vaccineAppointment);
+                return true;
+            }
+            else
+            {
+                var allApointments = new AppointmentServices().GetByCitizen(person.Id);
+                if (IfPendingVaccination(allApointments[0]).Equals(false))
+                {
+                    var vaccineAppointment = new AppointmentServices().FillAppointment(person);
+                    new AppointmentServices().Create(vaccineAppointment);
+                    return true;
+                }
+
+                return false;
+            }
+
+            return false;
+        }
+
+        public static bool CheckIfNotAppointment(Citizen person)
+        {
+            var listAppointments = new AppointmentServices().GetByCitizen(person.Id);
+            return listAppointments.Count == 0;
+        }
+
+        public static bool IfPendingVaccination(Appointment appointment)
+        {
+            return appointment.IdVaccination is null;
         }
     }
 }

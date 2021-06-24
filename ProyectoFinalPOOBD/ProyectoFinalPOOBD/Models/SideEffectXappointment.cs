@@ -4,7 +4,7 @@ namespace ProyectoFinalPOOBD.Models
 {
     public partial class SideEffectXappointment
     {
-        public int IdAppointment { get; set; }
+        public bool IdAppointment { get; set; }
         public int IdSideEffect { get; set; }
         public int? Lapse { get; set; }
 
