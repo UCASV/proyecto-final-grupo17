@@ -10,6 +10,9 @@
     <Compile Update="Views\frmMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\frmReservationAppointmentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">

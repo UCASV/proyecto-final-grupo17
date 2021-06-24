@@ -89,6 +89,12 @@ namespace ProyectoFinalPOOBD.Views
             Form formulario = new frmDiseases();
             formulario.Show();
         }
+
+        private void btnAddDisease_Click(object sender, System.EventArgs e)
+        {
+            Form formulario1 = new frmReservationAppointmentDetails();
+            formulario1.Show();
+        }
     }
 }
  
