@@ -45,30 +45,38 @@ namespace ProyectoFinalPOOBD.Views
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageAppointment = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddDisease = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.nudAge = new System.Windows.Forms.NumericUpDown();
+            this.cmbInstitucion = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.nudAge = new System.Windows.Forms.NumericUpDown();
+            this.lblInstitution = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDiesease = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtDui = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.cmbInstitucion = new System.Windows.Forms.ComboBox();
             this.lblDui = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblInstitution = new System.Windows.Forms.Label();
-            this.btnAddDisease = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPageTracking = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDuiSearch = new System.Windows.Forms.TextBox();
+            this.btnDuiSearch = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDuiSearch = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tabPageVaccination = new System.Windows.Forms.TabPage();
             this.tabPageStats = new System.Windows.Forms.TabPage();
-            this.lblDiesease = new System.Windows.Forms.Label();
-            this.rdoYes = new System.Windows.Forms.RadioButton();
-            this.rdoNo = new System.Windows.Forms.RadioButton();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -83,6 +91,11 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPageTracking.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -337,6 +350,21 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel5.Size = new System.Drawing.Size(707, 171);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
+            // btnAddDisease
+            // 
+            this.btnAddDisease.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAddDisease.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddDisease.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnAddDisease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDisease.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddDisease.Location = new System.Drawing.Point(237, 5);
+            this.btnAddDisease.Name = "btnAddDisease";
+            this.btnAddDisease.Size = new System.Drawing.Size(224, 31);
+            this.btnAddDisease.TabIndex = 4;
+            this.btnAddDisease.Text = "Ver o añadir enfermedades";
+            this.btnAddDisease.UseVisualStyleBackColor = false;
+            this.btnAddDisease.Click += new System.EventHandler(this.btnAddDisease_Click);
+            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -352,13 +380,14 @@ namespace ProyectoFinalPOOBD.Views
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // nudAge
+            // cmbInstitucion
             // 
-            this.nudAge.Location = new System.Drawing.Point(237, 45);
-            this.nudAge.Name = "nudAge";
-            this.nudAge.Size = new System.Drawing.Size(85, 29);
-            this.nudAge.TabIndex = 12;
-            this.nudAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbInstitucion.FormattingEnabled = true;
+            this.cmbInstitucion.Location = new System.Drawing.Point(237, 93);
+            this.cmbInstitucion.Name = "cmbInstitucion";
+            this.cmbInstitucion.Size = new System.Drawing.Size(265, 29);
+            this.cmbInstitucion.TabIndex = 5;
             // 
             // label2
             // 
@@ -369,6 +398,24 @@ namespace ProyectoFinalPOOBD.Views
             this.label2.Size = new System.Drawing.Size(50, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "Edad:";
+            // 
+            // nudAge
+            // 
+            this.nudAge.Location = new System.Drawing.Point(237, 45);
+            this.nudAge.Name = "nudAge";
+            this.nudAge.Size = new System.Drawing.Size(85, 29);
+            this.nudAge.TabIndex = 12;
+            this.nudAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblInstitution
+            // 
+            this.lblInstitution.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblInstitution.AutoSize = true;
+            this.lblInstitution.Location = new System.Drawing.Point(140, 94);
+            this.lblInstitution.Name = "lblInstitution";
+            this.lblInstitution.Size = new System.Drawing.Size(91, 21);
+            this.lblInstitution.TabIndex = 10;
+            this.lblInstitution.Text = "Institucion:";
             // 
             // tableLayoutPanel4
             // 
@@ -385,6 +432,30 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel4.Size = new System.Drawing.Size(707, 35);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
+            // rdoNo
+            // 
+            this.rdoNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Location = new System.Drawing.Point(356, 8);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(41, 19);
+            this.rdoNo.TabIndex = 1;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
+            // 
+            // rdoYes
+            // 
+            this.rdoYes.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.Location = new System.Drawing.Point(316, 8);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(34, 19);
+            this.rdoYes.TabIndex = 0;
+            this.rdoYes.TabStop = true;
+            this.rdoYes.Text = "Si";
+            this.rdoYes.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -397,6 +468,18 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(707, 38);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // lblDiesease
+            // 
+            this.lblDiesease.AutoSize = true;
+            this.lblDiesease.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDiesease.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDiesease.Location = new System.Drawing.Point(3, 0);
+            this.lblDiesease.Name = "lblDiesease";
+            this.lblDiesease.Size = new System.Drawing.Size(701, 38);
+            this.lblDiesease.TabIndex = 0;
+            this.lblDiesease.Text = "Tiene alguna enfermedad no transmisiva o alguna discapacidad";
+            this.lblDiesease.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -457,15 +540,6 @@ namespace ProyectoFinalPOOBD.Views
             this.txtEmail.Size = new System.Drawing.Size(263, 29);
             this.txtEmail.TabIndex = 3;
             // 
-            // cmbInstitucion
-            // 
-            this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbInstitucion.FormattingEnabled = true;
-            this.cmbInstitucion.Location = new System.Drawing.Point(237, 90);
-            this.cmbInstitucion.Name = "cmbInstitucion";
-            this.cmbInstitucion.Size = new System.Drawing.Size(265, 29);
-            this.cmbInstitucion.TabIndex = 5;
-            // 
             // lblDui
             // 
             this.lblDui.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -506,31 +580,6 @@ namespace ProyectoFinalPOOBD.Views
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "E-mail (Opcional):";
             // 
-            // lblInstitution
-            // 
-            this.lblInstitution.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblInstitution.AutoSize = true;
-            this.lblInstitution.Location = new System.Drawing.Point(140, 94);
-            this.lblInstitution.Name = "lblInstitution";
-            this.lblInstitution.Size = new System.Drawing.Size(91, 21);
-            this.lblInstitution.TabIndex = 10;
-            this.lblInstitution.Text = "Institucion:";
-            // 
-            // btnAddDisease
-            // 
-            this.btnAddDisease.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAddDisease.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddDisease.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.btnAddDisease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDisease.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddDisease.Location = new System.Drawing.Point(237, 5);
-            this.btnAddDisease.Name = "btnAddDisease";
-            this.btnAddDisease.Size = new System.Drawing.Size(224, 31);
-            this.btnAddDisease.TabIndex = 4;
-            this.btnAddDisease.Text = "Ver o añadir enfermedades";
-            this.btnAddDisease.UseVisualStyleBackColor = false;
-            this.btnAddDisease.Click += new System.EventHandler(this.btnAddDisease_Click);
-            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -541,6 +590,10 @@ namespace ProyectoFinalPOOBD.Views
             // 
             // tabPageTracking
             // 
+            this.tabPageTracking.Controls.Add(this.tableLayoutPanel8);
+            this.tabPageTracking.Controls.Add(this.tableLayoutPanel7);
+            this.tabPageTracking.Controls.Add(this.tableLayoutPanel6);
+            this.tabPageTracking.Controls.Add(this.panel3);
             this.tabPageTracking.Location = new System.Drawing.Point(4, 24);
             this.tabPageTracking.Name = "tabPageTracking";
             this.tabPageTracking.Padding = new System.Windows.Forms.Padding(3);
@@ -548,6 +601,102 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageTracking.TabIndex = 2;
             this.tabPageTracking.Text = "tabPageTracking";
             this.tabPageTracking.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 131);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(707, 414);
+            this.tableLayoutPanel8.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(701, 408);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.89474F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.10526F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327F));
+            this.tableLayoutPanel7.Controls.Add(this.txtDuiSearch, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btnDuiSearch, 2, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 94);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(707, 37);
+            this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // txtDuiSearch
+            // 
+            this.txtDuiSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDuiSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtDuiSearch.Location = new System.Drawing.Point(166, 3);
+            this.txtDuiSearch.Name = "txtDuiSearch";
+            this.txtDuiSearch.Size = new System.Drawing.Size(211, 29);
+            this.txtDuiSearch.TabIndex = 0;
+            // 
+            // btnDuiSearch
+            // 
+            this.btnDuiSearch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDuiSearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDuiSearch.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnDuiSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDuiSearch.Location = new System.Drawing.Point(383, 3);
+            this.btnDuiSearch.Name = "btnDuiSearch";
+            this.btnDuiSearch.Size = new System.Drawing.Size(75, 31);
+            this.btnDuiSearch.TabIndex = 1;
+            this.btnDuiSearch.Text = "Buscar";
+            this.btnDuiSearch.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.lblDuiSearch, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 57);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(707, 37);
+            this.tableLayoutPanel6.TabIndex = 1;
+            // 
+            // lblDuiSearch
+            // 
+            this.lblDuiSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDuiSearch.AutoSize = true;
+            this.lblDuiSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDuiSearch.Location = new System.Drawing.Point(3, 0);
+            this.lblDuiSearch.Name = "lblDuiSearch";
+            this.lblDuiSearch.Size = new System.Drawing.Size(701, 30);
+            this.lblDuiSearch.TabIndex = 3;
+            this.lblDuiSearch.Text = "Busqueda por DUI:";
+            this.lblDuiSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(707, 54);
+            this.panel3.TabIndex = 0;
             // 
             // tabPageVaccination
             // 
@@ -568,42 +717,6 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageStats.TabIndex = 4;
             this.tabPageStats.Text = "tabPageStats";
             this.tabPageStats.UseVisualStyleBackColor = true;
-            // 
-            // lblDiesease
-            // 
-            this.lblDiesease.AutoSize = true;
-            this.lblDiesease.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDiesease.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDiesease.Location = new System.Drawing.Point(3, 0);
-            this.lblDiesease.Name = "lblDiesease";
-            this.lblDiesease.Size = new System.Drawing.Size(701, 38);
-            this.lblDiesease.TabIndex = 0;
-            this.lblDiesease.Text = "Tiene alguna enfermedad no transmisiva o alguna discapacidad";
-            this.lblDiesease.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rdoYes
-            // 
-            this.rdoYes.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.rdoYes.AutoSize = true;
-            this.rdoYes.Location = new System.Drawing.Point(316, 8);
-            this.rdoYes.Name = "rdoYes";
-            this.rdoYes.Size = new System.Drawing.Size(34, 19);
-            this.rdoYes.TabIndex = 0;
-            this.rdoYes.TabStop = true;
-            this.rdoYes.Text = "Si";
-            this.rdoYes.UseVisualStyleBackColor = true;
-            // 
-            // rdoNo
-            // 
-            this.rdoNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rdoNo.AutoSize = true;
-            this.rdoNo.Location = new System.Drawing.Point(356, 8);
-            this.rdoNo.Name = "rdoNo";
-            this.rdoNo.Size = new System.Drawing.Size(41, 19);
-            this.rdoNo.TabIndex = 1;
-            this.rdoNo.TabStop = true;
-            this.rdoNo.Text = "No";
-            this.rdoNo.UseVisualStyleBackColor = true;
             // 
             // frmMainForm
             // 
@@ -635,6 +748,13 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tabPageTracking.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -681,6 +801,14 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label lblDiesease;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.TextBox txtDuiSearch;
+        private System.Windows.Forms.Button btnDuiSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label lblDuiSearch;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
