@@ -6960,19 +6960,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\keale\\.nuget\\packages\\": {}
+    "C:\\Users\\Fernando\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.9\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+      "projectUniqueName": "C:\\Users\\Fernando\\source\\repos\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
       "projectName": "ProyectoFinalPOOBD",
-      "projectPath": "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.9\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
-      "packagesPath": "C:\\Users\\keale\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.9\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+      "projectPath": "C:\\Users\\Fernando\\source\\repos\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+      "packagesPath": "C:\\Users\\Fernando\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Fernando\\source\\repos\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\keale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
