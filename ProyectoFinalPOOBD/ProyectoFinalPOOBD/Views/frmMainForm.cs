@@ -10,6 +10,13 @@ namespace ProyectoFinalPOOBD.Views
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private struct RGBColors
+        {
+            public static Color color1 = Color.FromArgb(42, 157, 143);
+            public static Color color2 = Color.FromArgb(233, 196, 106);
+            public static Color color3 = Color.FromArgb(244, 162, 97);
+            public static Color color4 = Color.FromArgb(231, 111, 81);
+        }
 
 
         public frmMainForm()
@@ -55,35 +62,49 @@ namespace ProyectoFinalPOOBD.Views
 
         private void btnAppointmentTracking_Click(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            ActivateButton(sender, RGBColors.color2);
             tabProgram.SelectTab(2);
-
+            icoTitle.IconChar = currentBtn.IconChar;
+            lblTitle.Text = "Seguimiento de cita";
         }
 
         private void btnVaccinationProcess_Click(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            ActivateButton(sender, RGBColors.color3);
             tabProgram.SelectTab(3);
-
+            icoTitle.IconChar = currentBtn.IconChar;
+            lblTitle.Text = "Proceso de vacunacion";
         }
 
         private void btnStats_Click(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            ActivateButton(sender, RGBColors.color4);
             tabProgram.SelectTab(4);
+            icoTitle.IconChar = currentBtn.IconChar;
+            lblTitle.Text = "Estadisticas";
         }
 
         private void picHome_Click(object sender, System.EventArgs e)
         {
             tabProgram.SelectTab(0);
+            Reset();
         }
 
         private void btnAppointmentProcess_Click_1(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(42, 157, 143));
+            ActivateButton(sender, RGBColors.color1);
             tabProgram.SelectTab(1);
+            icoTitle.IconChar = currentBtn.IconChar;
+            lblTitle.Text = "Proceso de citas";
         }
 
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            lblTitle.Text = "Home";
+            icoTitle.IconChar = IconChar.Home;
+        }
         private void button1_Click(object sender, System.EventArgs e)
         {
             Form formulario = new frmDiseases();
@@ -94,6 +115,11 @@ namespace ProyectoFinalPOOBD.Views
         {
             Form formulario1 = new frmReservationAppointmentDetails();
             formulario1.Show();
+        }
+
+        private void pnlTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
