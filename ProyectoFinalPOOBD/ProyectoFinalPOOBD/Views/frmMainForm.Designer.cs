@@ -400,7 +400,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbInstitucion.FormattingEnabled = true;
-            this.cmbInstitucion.Location = new System.Drawing.Point(272, 124);
+            this.cmbInstitucion.Location = new System.Drawing.Point(272, 128);
             this.cmbInstitucion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbInstitucion.Name = "cmbInstitucion";
             this.cmbInstitucion.Size = new System.Drawing.Size(304, 36);
@@ -662,7 +662,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.89474F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.10526F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 379F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 380F));
             this.tableLayoutPanel7.Controls.Add(this.txtDuiSearch, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.btnDuiSearch, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -681,7 +681,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtDuiSearch.Location = new System.Drawing.Point(187, 4);
             this.txtDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuiSearch.Name = "txtDuiSearch";
-            this.txtDuiSearch.Size = new System.Drawing.Size(240, 34);
+            this.txtDuiSearch.Size = new System.Drawing.Size(239, 34);
             this.txtDuiSearch.TabIndex = 0;
             // 
             // btnDuiSearch
@@ -691,7 +691,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnDuiSearch.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnDuiSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDuiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDuiSearch.Location = new System.Drawing.Point(433, 4);
+            this.btnDuiSearch.Location = new System.Drawing.Point(432, 4);
             this.btnDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDuiSearch.Name = "btnDuiSearch";
             this.btnDuiSearch.Size = new System.Drawing.Size(86, 41);
