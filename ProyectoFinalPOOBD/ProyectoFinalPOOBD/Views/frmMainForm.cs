@@ -128,6 +128,11 @@ namespace ProyectoFinalPOOBD.Views
             Form formulario2 = new frmWaitingLine();
             formulario2.Show();
         }
+
+        private void label3_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
  
