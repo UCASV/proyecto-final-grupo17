@@ -116,5 +116,34 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
             // De lo contrario es falso
             return false;
         }
+
+        // Codigo para generar el pdf en la pagina de detalles de cita reservada
+
+        /*
+        private void CreatePdf()
+        {
+            SaveFileDialog pathDialog = new SaveFileDialog();
+            pathDialog.Filter = "PDF document (*.pdf)|*.pdf";
+            DialogResult response = pathDialog.ShowDialog();
+
+            if (response == DialogResult.OK)
+            {
+                path = pathDialog.FileName;
+            }
+
+            PdfWriter pdfW = new PdfWriter(pathDialog.FileName);
+            PdfDocument pdf = new PdfDocument(pdfW);
+            Document document = new Document(pdf, PageSize.LETTER);
+
+            document.SetMargins(60, 20, 55, 20);
+            var prueba = new UserServices().Find(1);
+            string detalle = "User: " + prueba.Username + Environment.NewLine;
+            detalle += "Password: " + prueba.Password;
+            Paragraph text = new Paragraph(detalle);
+            
+            document.Add(text);
+            document.Close();
+        }
+         */
     }
 }
