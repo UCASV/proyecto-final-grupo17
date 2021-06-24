@@ -45,5 +45,10 @@ namespace ProyectoFinalPOOBD.Repository
         {
             return _context.Citizens.LastOrDefault();
         }
+
+        public Citizen GetCitizenByDui(string dui)
+        {
+            return _context.Citizens.FirstOrDefault(citizen => citizen.Dui == dui);
+        }
     }
 }

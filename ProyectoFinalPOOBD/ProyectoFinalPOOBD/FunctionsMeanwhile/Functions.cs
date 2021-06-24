@@ -1,16 +1,10 @@
 ﻿#nullable enable
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Org.BouncyCastle.Asn1.X509.SigI;
 using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.Repository;
 using ProyectoFinalPOOBD.VaccineContext;
-using ProyectoFinalPOOBD.Views;
 
 namespace ProyectoFinalPOOBD.FunctionsMeanwhile
 {
@@ -146,9 +140,10 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
             document.Close();
         }
          */
-        public static bool CheckIfExists(Citizen person)
+
+        public static bool CheckIfCitizenExists(Citizen person)
         {
-            var people = new CitizenServices().Find(person.Id);
+            var people = new CitizenServices().GetCitizenByDui(person.Dui);
             return (people is not null);
         }
     }
