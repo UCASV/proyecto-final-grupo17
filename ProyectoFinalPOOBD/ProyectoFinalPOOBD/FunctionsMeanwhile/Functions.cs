@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Asn1.X509.SigI;
 using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.Repository;
 using ProyectoFinalPOOBD.VaccineContext;
@@ -145,5 +146,10 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
             document.Close();
         }
          */
+        public static bool CheckIfExists(Citizen person)
+        {
+            var people = new CitizenServices().Find(person.Id);
+            return (people is not null);
+        }
     }
 }
