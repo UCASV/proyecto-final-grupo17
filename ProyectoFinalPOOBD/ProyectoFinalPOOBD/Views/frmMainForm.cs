@@ -39,6 +39,7 @@ namespace ProyectoFinalPOOBD.Views
 
             if (response == DialogResult.OK)
             {
+                
                 PdfWriter pdfW = new PdfWriter(pathDialog.FileName);
                 PdfDocument pdf = new PdfDocument(pdfW);
                 Document document = new Document(pdf, PageSize.LETTER);
@@ -50,6 +51,7 @@ namespace ProyectoFinalPOOBD.Views
                 Paragraph text = new Paragraph(detalle);
 
                 document.Add(text);
+                
                 document.Close();
             }
         }
