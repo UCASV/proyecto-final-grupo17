@@ -21,5 +21,22 @@ namespace ProyectoFinalPOOBD.Views
         {
 
         }
+
+        //TODO pendiente añadir nuevas enfermedades
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Form newDisiease = new frmAddNewDisease();
+            newDisiease.Show();
+        }
+
+        private void lblCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblDone_Click(object sender, EventArgs e)
+        {
+            //Code for add the diesease
+        }
     }
 }

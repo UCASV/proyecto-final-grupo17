@@ -42,7 +42,14 @@ namespace ProyectoFinalPOOBD.Views
             this.icoTitle = new FontAwesome.Sharp.IconPictureBox();
             this.tabProgram = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblWelcomeMessage = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconVirus = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tabPageAppointment = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddDisease = new System.Windows.Forms.Button();
@@ -81,11 +88,11 @@ namespace ProyectoFinalPOOBD.Views
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.btnVaccineStart = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblVaccine = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabPageStats = new System.Windows.Forms.TabPage();
-            this.btnVaccineStart = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -94,6 +101,11 @@ namespace ProyectoFinalPOOBD.Views
             ((System.ComponentModel.ISupportInitialize)(this.icoTitle)).BeginInit();
             this.tabProgram.SuspendLayout();
             this.tabPageMain.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconVirus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.tabPageAppointment.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAge)).BeginInit();
@@ -300,27 +312,129 @@ namespace ProyectoFinalPOOBD.Views
             // 
             // tabPageMain
             // 
-            this.tabPageMain.Controls.Add(this.label1);
+            this.tabPageMain.BackColor = System.Drawing.Color.LightSlateGray;
+            this.tabPageMain.Controls.Add(this.tableLayoutPanel11);
+            this.tabPageMain.Controls.Add(this.tableLayoutPanel10);
+            this.tabPageMain.Controls.Add(this.panel6);
+            this.tabPageMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabPageMain.ForeColor = System.Drawing.Color.White;
             this.tabPageMain.Location = new System.Drawing.Point(4, 24);
             this.tabPageMain.Name = "tabPageMain";
             this.tabPageMain.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageMain.Size = new System.Drawing.Size(713, 548);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "tabPageMain";
-            this.tabPageMain.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // tableLayoutPanel11
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.lblWelcomeMessage, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.lblMessage, 0, 1);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 204);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(707, 216);
+            this.tableLayoutPanel11.TabIndex = 3;
+            // 
+            // lblWelcomeMessage
+            // 
+            this.lblWelcomeMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWelcomeMessage.AutoSize = true;
+            this.lblWelcomeMessage.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcomeMessage.Location = new System.Drawing.Point(3, 14);
+            this.lblWelcomeMessage.Name = "lblWelcomeMessage";
+            this.lblWelcomeMessage.Size = new System.Drawing.Size(701, 80);
+            this.lblWelcomeMessage.TabIndex = 0;
+            this.lblWelcomeMessage.Text = "Bienvenido a nuestro sistema\r\nJuntos, derrotaremos el virus\r\n";
+            this.lblWelcomeMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(710, 542);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido {usuario}\r\nTenga buen dia\r\n";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMessage.Location = new System.Drawing.Point(3, 109);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(701, 107);
+            this.lblMessage.TabIndex = 1;
+            this.lblMessage.Text = "Hoy podrias salvar muchas vidas";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel10.Controls.Add(this.iconPictureBox2, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.iconVirus, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.iconPictureBox1, 2, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 103);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(707, 101);
+            this.tableLayoutPanel10.TabIndex = 2;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.VirusSlash;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 95;
+            this.iconPictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(229, 95);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBox2.TabIndex = 2;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconVirus
+            // 
+            this.iconVirus.BackColor = System.Drawing.Color.LightSlateGray;
+            this.iconVirus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconVirus.IconChar = FontAwesome.Sharp.IconChar.ShieldVirus;
+            this.iconVirus.IconColor = System.Drawing.Color.White;
+            this.iconVirus.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconVirus.IconSize = 95;
+            this.iconVirus.Location = new System.Drawing.Point(238, 3);
+            this.iconVirus.Name = "iconVirus";
+            this.iconVirus.Size = new System.Drawing.Size(229, 95);
+            this.iconVirus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconVirus.TabIndex = 0;
+            this.iconVirus.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.VirusSlash;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 95;
+            this.iconPictureBox1.Location = new System.Drawing.Point(473, 3);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(231, 95);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBox1.TabIndex = 1;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(707, 100);
+            this.panel6.TabIndex = 1;
             // 
             // tabPageAppointment
             // 
@@ -390,13 +504,13 @@ namespace ProyectoFinalPOOBD.Views
             this.button1.TabIndex = 13;
             this.button1.Text = "AÑADIR CITA";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // cmbInstitucion
             // 
             this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbInstitucion.FormattingEnabled = true;
-            this.cmbInstitucion.Location = new System.Drawing.Point(272, 128);
+            this.cmbInstitucion.Location = new System.Drawing.Point(237, 93);
             this.cmbInstitucion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbInstitucion.Name = "cmbInstitucion";
             this.cmbInstitucion.Size = new System.Drawing.Size(265, 29);
@@ -644,11 +758,8 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.89474F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.10526F));
-
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 379F));
-
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 388F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
-
             this.tableLayoutPanel7.Controls.Add(this.txtDuiSearch, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.btnDuiSearch, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -663,16 +774,10 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.txtDuiSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDuiSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-
-            this.txtDuiSearch.Location = new System.Drawing.Point(162, 3);
-            this.txtDuiSearch.Name = "txtDuiSearch";
-            this.txtDuiSearch.Size = new System.Drawing.Size(240, 34);
-
-            this.txtDuiSearch.Location = new System.Drawing.Point(186, 4);
+            this.txtDuiSearch.Location = new System.Drawing.Point(139, 4);
             this.txtDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuiSearch.Name = "txtDuiSearch";
-            this.txtDuiSearch.Size = new System.Drawing.Size(238, 34);
-
+            this.txtDuiSearch.Size = new System.Drawing.Size(176, 29);
             this.txtDuiSearch.TabIndex = 0;
             // 
             // btnDuiSearch
@@ -682,14 +787,10 @@ namespace ProyectoFinalPOOBD.Views
             this.btnDuiSearch.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnDuiSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDuiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-
-            this.btnDuiSearch.Location = new System.Drawing.Point(433, 4);
-
-            this.btnDuiSearch.Location = new System.Drawing.Point(430, 4);
-
+            this.btnDuiSearch.Location = new System.Drawing.Point(321, 4);
             this.btnDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDuiSearch.Name = "btnDuiSearch";
-            this.btnDuiSearch.Size = new System.Drawing.Size(75, 31);
+            this.btnDuiSearch.Size = new System.Drawing.Size(75, 29);
             this.btnDuiSearch.TabIndex = 1;
             this.btnDuiSearch.Text = "Buscar";
             this.btnDuiSearch.UseVisualStyleBackColor = false;
@@ -808,6 +909,21 @@ namespace ProyectoFinalPOOBD.Views
             this.dateTimePicker2.Size = new System.Drawing.Size(75, 23);
             this.dateTimePicker2.TabIndex = 3;
             // 
+            // btnVaccineStart
+            // 
+            this.btnVaccineStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVaccineStart.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVaccineStart.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnVaccineStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVaccineStart.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVaccineStart.Location = new System.Drawing.Point(258, 139);
+            this.btnVaccineStart.Name = "btnVaccineStart";
+            this.btnVaccineStart.Size = new System.Drawing.Size(189, 30);
+            this.btnVaccineStart.TabIndex = 4;
+            this.btnVaccineStart.Text = "Proceder a vacunacion";
+            this.btnVaccineStart.UseVisualStyleBackColor = false;
+            this.btnVaccineStart.Click += new System.EventHandler(this.btnVaccineStart_Click);
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.lblVaccine);
@@ -847,20 +963,6 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageStats.Text = "tabPageStats";
             this.tabPageStats.UseVisualStyleBackColor = true;
             // 
-            // btnVaccineStart
-            // 
-            this.btnVaccineStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVaccineStart.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnVaccineStart.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.btnVaccineStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVaccineStart.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnVaccineStart.Location = new System.Drawing.Point(258, 139);
-            this.btnVaccineStart.Name = "btnVaccineStart";
-            this.btnVaccineStart.Size = new System.Drawing.Size(189, 30);
-            this.btnVaccineStart.TabIndex = 4;
-            this.btnVaccineStart.Text = "Proceder a vacunacion";
-            this.btnVaccineStart.UseVisualStyleBackColor = false;
-            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -881,6 +983,12 @@ namespace ProyectoFinalPOOBD.Views
             ((System.ComponentModel.ISupportInitialize)(this.icoTitle)).EndInit();
             this.tabProgram.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconVirus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.tabPageAppointment.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
@@ -920,7 +1028,6 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.TabPage tabPageStats;
         private System.Windows.Forms.TabPage tabPageMain;
         private System.Windows.Forms.TabPage tabPageAppointment;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtDui;
         private System.Windows.Forms.TextBox txtName;
@@ -965,6 +1072,14 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnVaccineStart;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private FontAwesome.Sharp.IconPictureBox iconVirus;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Label lblWelcomeMessage;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label lblMessage;
     }
 }
 
