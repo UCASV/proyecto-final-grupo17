@@ -53,19 +53,37 @@ namespace ProyectoFinalPOOBD.Backend
                                     into X
                                     group X by new { X.Name }
                                     into G
+                                    where G.Select(X => X.IdCitizen).Count() == 1
+                                    select new
+                                    {
+                                        Name = G.Key.Name,
+                                        vaccinations = G.Select(X => X.IdCitizen).Count()
+                                    }).ToList().Count();
+                return vaccinations;
+
+            }          
+        }
+
+        public static int TwoVaccination()
+        {
+            var appointmentVM = new List<AppointmentVM>();
+            using (var context = new VaccinationContext())
+            {
+                var vaccinations = (from A in context.Appointments
+                                    join C in context.Citizens
+                                        on A.IdCitizen equals C.Id
+                                    select new { C.Name, A.IdCitizen }
+                                    into X
+                                    group X by new { X.Name }
+                                    into G
                                     where G.Select(X => X.IdCitizen).Count() == 2
                                     select new
                                     {
                                         Name = G.Key.Name,
                                         vaccinations = G.Select(X => X.IdCitizen).Count()
                                     }).ToList().Count();
-
-                
-
                 return vaccinations;
-
             }
-            
         }
 
         public static List<int> EfficiencyVaccination()
