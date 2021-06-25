@@ -147,26 +147,22 @@ namespace ProyectoFinalPOOBD.Backend
             return (people is not null);
         }
 
-        public static bool CreateAppointment(Citizen person, DateTime? time)
+        public static bool CreateAppointment(Citizen person, DateTime? time, Employee employeeLogged)
         {
             if (CheckIfNotAppointment(person))
             {
 
-                var vaccineAppointment = new AppointmentServices().FillAppointment(person);
+                var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged);
                 new AppointmentServices().Create(vaccineAppointment);
                 return true;
             }
-            else
-            {
-                var allApointments = new AppointmentServices().GetByCitizen(person.Id);
-                if (IfPendingVaccination(allApointments[0]).Equals(false))
-                {
-                    var vaccineAppointment = new AppointmentServices().FillAppointment(person);
-                    new AppointmentServices().Create(vaccineAppointment);
-                    return true;
-                }
 
-                return false;
+            var allApointments = new AppointmentServices().GetByCitizen(person.Id);
+            if (IfPendingVaccination(allApointments[0]).Equals(false))
+            {
+                var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged);
+                new AppointmentServices().Create(vaccineAppointment);
+                return true;
             }
 
             return false;

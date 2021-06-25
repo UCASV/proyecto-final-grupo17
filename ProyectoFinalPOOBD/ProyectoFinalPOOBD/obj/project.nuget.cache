@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V23wIcyQmZC9V5TdcqfS22F+sCwlTEartoQfQLwguZ37/xjXYd2Hopda67r7EJE55MOTGpYLvtfgFaFI8b8sxQ==",
+  "dgSpecHash": "p6WmoGaL+92bxYYGnb1guUNk/hlY7yvs1okk0Z6hRgPRiaYXF3P4fDpahl9IYZPCEV6p/Zs+govK4dQWE4eztg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+  "projectFilePath": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fernando\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\common.logging\\3.4.1\\common.logging.3.4.1.nupkg.sha512",

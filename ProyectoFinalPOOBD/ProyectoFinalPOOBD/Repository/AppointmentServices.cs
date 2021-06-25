@@ -40,7 +40,7 @@ namespace ProyectoFinalPOOBD.Repository
 
         public int GetLastIdVaccination() => _context.Appointments.Max(a => a.IdVaccination) ?? 0;
 
-        public Appointment FillAppointment(Citizen person)
+        public Appointment FillAppointment(Citizen person, Employee employee)
         {
             Random placeNumber = new();
             var placesAmount = new PlaceServices().Amount;
@@ -52,7 +52,9 @@ namespace ProyectoFinalPOOBD.Repository
                 IdPlace = vaccinationPlace.Id,
                 IdPlaceNavigation = vaccinationPlace,
                 IdCitizen = person.Id,
-                IdCitizenNavigation = person
+                IdCitizenNavigation = person,
+                IdEmployee = employee.Id,
+                IdEmployeeNavigation = employee
             };
             return vaccineAppointment;
         }
