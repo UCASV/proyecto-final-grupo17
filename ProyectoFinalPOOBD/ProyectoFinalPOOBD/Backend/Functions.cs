@@ -1,15 +1,12 @@
 ﻿#nullable enable
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Transactions;
 using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore;
 using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.Repository;
 using ProyectoFinalPOOBD.VaccineContext;
 
-namespace ProyectoFinalPOOBD.FunctionsMeanwhile
+namespace ProyectoFinalPOOBD.Backend
 {
     public static class Functions
     {

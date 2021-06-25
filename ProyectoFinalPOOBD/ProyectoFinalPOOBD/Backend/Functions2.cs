@@ -1,14 +1,9 @@
-﻿using ProyectoFinalPOOBD.VaccineContext;
-using ProyectoFinalPOOBD.ViewModel;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using ProyectoFinalPOOBD.Models;
+using ProyectoFinalPOOBD.VaccineContext;
+using ProyectoFinalPOOBD.ViewModel;
 
-namespace ProyectoFinalPOOBD.FunctionsMeanwhile
+namespace ProyectoFinalPOOBD.Backend
 {
     public static class Functions2
     {
