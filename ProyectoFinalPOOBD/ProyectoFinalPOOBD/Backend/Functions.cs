@@ -157,8 +157,8 @@ namespace ProyectoFinalPOOBD.Backend
                 return true;
             }
 
-            var allApointments = new AppointmentServices().GetByCitizen(person.Id);
-            if (IfPendingVaccination(allApointments[0]).Equals(false))
+            var allAppointments = new AppointmentServices().GetByCitizen(person.Id);
+            if (IfPendingVaccination(allAppointments[0]).Equals(false))
             {
                 var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged);
                 new AppointmentServices().Create(vaccineAppointment);

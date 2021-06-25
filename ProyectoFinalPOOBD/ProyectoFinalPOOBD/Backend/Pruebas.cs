@@ -21,7 +21,7 @@ namespace ProyectoFinalPOOBD.Backend
 
         private void Pruebas_Load(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = Backend.Functions2.OneVaccination();
+            label1.Text = Backend.Functions2.OneVaccination().ToString();
         }
     }
 }
