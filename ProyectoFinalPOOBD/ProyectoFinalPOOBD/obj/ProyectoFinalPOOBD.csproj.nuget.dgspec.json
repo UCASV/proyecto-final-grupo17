@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.3\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {}
+    "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.3\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {
+    "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.3\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+        "projectUniqueName": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
         "projectName": "ProyectoFinalPOOBD",
-        "projectPath": "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.3\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
-        "packagesPath": "C:\\Users\\keale\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\keale\\OneDrive\\Documentos\\UCA\\ProyectoFinal\\ProyectoFinal1.3\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+        "projectPath": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+        "packagesPath": "C:\\Users\\Fernando\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\keale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "CircularProgressBar": {
+              "target": "Package",
+              "version": "[2.8.0.16, )"
+            },
+            "FontAwesome.Sharp": {
+              "target": "Package",
+              "version": "[5.15.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.7, )"
@@ -53,6 +61,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "WinFormAnimation": {
+              "target": "Package",
+              "version": "[1.6.0.4, )"
             },
             "itext7": {
               "target": "Package",

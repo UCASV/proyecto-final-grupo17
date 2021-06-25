@@ -644,11 +644,11 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.89474F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.10526F));
-<<<<<<< HEAD
+
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 379F));
-=======
+
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
->>>>>>> Supporting
+
             this.tableLayoutPanel7.Controls.Add(this.txtDuiSearch, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.btnDuiSearch, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -663,16 +663,16 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.txtDuiSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDuiSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
+
             this.txtDuiSearch.Location = new System.Drawing.Point(162, 3);
             this.txtDuiSearch.Name = "txtDuiSearch";
             this.txtDuiSearch.Size = new System.Drawing.Size(240, 34);
-=======
+
             this.txtDuiSearch.Location = new System.Drawing.Point(186, 4);
             this.txtDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuiSearch.Name = "txtDuiSearch";
             this.txtDuiSearch.Size = new System.Drawing.Size(238, 34);
->>>>>>> Supporting
+
             this.txtDuiSearch.TabIndex = 0;
             // 
             // btnDuiSearch
@@ -682,11 +682,11 @@ namespace ProyectoFinalPOOBD.Views
             this.btnDuiSearch.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnDuiSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDuiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
+
             this.btnDuiSearch.Location = new System.Drawing.Point(433, 4);
-=======
+
             this.btnDuiSearch.Location = new System.Drawing.Point(430, 4);
->>>>>>> Supporting
+
             this.btnDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDuiSearch.Name = "btnDuiSearch";
             this.btnDuiSearch.Size = new System.Drawing.Size(75, 31);
