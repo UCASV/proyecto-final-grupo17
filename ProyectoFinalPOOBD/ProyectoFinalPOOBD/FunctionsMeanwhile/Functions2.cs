@@ -43,24 +43,6 @@ namespace ProyectoFinalPOOBD.FunctionsMeanwhile
             }
             return sideEffectsVm;
         }
-
-        public static List<SideEffectVM> Funcion1V2()
-        {
-            var sideEffectsVm = new List<SideEffectVM>();
-            var context = new VaccinationContext();
-            var list = (context.SideEffects.Include(e => e.SideEffectXappointments)
-                .GroupBy(s => new {s.Effect})).ToList();
-
-            SideEffectVM helper = new SideEffectVM();
-            list.ForEach(s =>
-            {
-                helper.Effect = s.Key.Effect;
-                helper.Amount = s.Select(s => s.SideEffectXappointments).Count();
-                sideEffectsVm.Add(helper);
-            });
-            return sideEffectsVm;
-        }
-        
     }
         
 }
