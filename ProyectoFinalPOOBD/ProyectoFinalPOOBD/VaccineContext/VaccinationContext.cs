@@ -47,7 +47,7 @@ namespace ProyectoFinalPOOBD.VaccineContext
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.HasKey(e => e.IdAppointment)
-                    .HasName("PK__Appointm__6ECCF90241BBC7EA");
+                    .HasName("PK__Appointm__6ECCF902492A3877");
 
                 entity.ToTable("Appointment");
 
@@ -69,18 +69,18 @@ namespace ProyectoFinalPOOBD.VaccineContext
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.IdCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Appointme__Id_Ci__3E52440B");
+                    .HasConstraintName("FK__Appointme__Id_Ci__3C69FB99");
 
                 entity.HasOne(d => d.IdEmployeeNavigation)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.IdEmployee)
-                    .HasConstraintName("FK__Appointme__Id_Em__3F466844");
+                    .HasConstraintName("FK__Appointme__Id_Em__3D5E1FD2");
 
                 entity.HasOne(d => d.IdPlaceNavigation)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.IdPlace)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Appointme__Id_Pl__403A8C7D");
+                    .HasConstraintName("FK__Appointme__Id_Pl__3E52440B");
             });
 
             modelBuilder.Entity<Cabin>(entity =>
@@ -120,6 +120,11 @@ namespace ProyectoFinalPOOBD.VaccineContext
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.PhoneNumber)
                     .IsRequired()
                     .HasMaxLength(9)
@@ -128,7 +133,7 @@ namespace ProyectoFinalPOOBD.VaccineContext
                 entity.HasOne(d => d.IdInstitutionNavigation)
                     .WithMany(p => p.Citizens)
                     .HasForeignKey(d => d.IdInstitution)
-                    .HasConstraintName("FK__Citizen__Id_Inst__36B12243");
+                    .HasConstraintName("FK__Citizen__Id_Inst__34C8D9D1");
             });
 
             modelBuilder.Entity<Disease>(entity =>
@@ -145,18 +150,20 @@ namespace ProyectoFinalPOOBD.VaccineContext
                 entity.HasOne(d => d.IdCitizenNavigation)
                     .WithMany(p => p.Diseases)
                     .HasForeignKey(d => d.IdCitizen)
-                    .HasConstraintName("FK__Disease__Id_Citi__398D8EEE");
+                    .HasConstraintName("FK__Disease__Id_Citi__37A5467C");
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.ToTable("Employee");
 
-                entity.HasIndex(e => e.IdCabin, "UQ__Employee__5C171949FFFAE471")
-                    .IsUnique();
+                entity.HasIndex(e => e.IdCabin, "idx_Id_Cabin_notnull")
+                    .IsUnique()
+                    .HasFilter("([Id_Cabin] IS NOT NULL)");
 
-                entity.HasIndex(e => e.IdUser, "UQ__Employee__D03DEDCAFBE15F62")
-                    .IsUnique();
+                entity.HasIndex(e => e.IdUser, "idx_Id_User_notnull")
+                    .IsUnique()
+                    .HasFilter("([Id_User] IS NOT NULL)");
 
                 entity.Property(e => e.Address)
                     .IsRequired()
@@ -182,17 +189,17 @@ namespace ProyectoFinalPOOBD.VaccineContext
                 entity.HasOne(d => d.IdCabinNavigation)
                     .WithOne(p => p.Employee)
                     .HasForeignKey<Employee>(d => d.IdCabin)
-                    .HasConstraintName("FK__Employee__Id_Cab__2D27B809");
+                    .HasConstraintName("FK__Employee__Id_Cab__2B3F6F97");
 
                 entity.HasOne(d => d.IdEmployeeTypeNavigation)
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.IdEmployeeType)
-                    .HasConstraintName("FK__Employee__Id_Emp__2E1BDC42");
+                    .HasConstraintName("FK__Employee__Id_Emp__2C3393D0");
 
                 entity.HasOne(d => d.IdUserNavigation)
                     .WithOne(p => p.Employee)
                     .HasForeignKey<Employee>(d => d.IdUser)
-                    .HasConstraintName("FK__Employee__Id_Use__2C3393D0");
+                    .HasConstraintName("FK__Employee__Id_Use__2A4B4B5E");
             });
 
             modelBuilder.Entity<EmployeeType>(entity =>
@@ -227,12 +234,12 @@ namespace ProyectoFinalPOOBD.VaccineContext
                 entity.HasOne(d => d.IdCabinNavigation)
                     .WithMany(p => p.Logins)
                     .HasForeignKey(d => d.IdCabin)
-                    .HasConstraintName("FK__Login__Id_Cabin__31EC6D26");
+                    .HasConstraintName("FK__Login__Id_Cabin__300424B4");
 
                 entity.HasOne(d => d.IdEmployeeNavigation)
                     .WithMany(p => p.Logins)
                     .HasForeignKey(d => d.IdEmployee)
-                    .HasConstraintName("FK__Login__Id_Employ__30F848ED");
+                    .HasConstraintName("FK__Login__Id_Employ__2F10007B");
             });
 
             modelBuilder.Entity<Place>(entity =>
@@ -268,13 +275,13 @@ namespace ProyectoFinalPOOBD.VaccineContext
                     .WithMany(p => p.SideEffectXappointments)
                     .HasForeignKey(d => d.IdAppointment)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__SideEffec__Id_Ap__44FF419A");
+                    .HasConstraintName("FK__SideEffec__Id_Ap__4316F928");
 
                 entity.HasOne(d => d.IdSideEffectNavigation)
                     .WithMany(p => p.SideEffectXappointments)
                     .HasForeignKey(d => d.IdSideEffect)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__SideEffec__Id_Si__45F365D3");
+                    .HasConstraintName("FK__SideEffec__Id_Si__440B1D61");
             });
 
             modelBuilder.Entity<User>(entity =>
