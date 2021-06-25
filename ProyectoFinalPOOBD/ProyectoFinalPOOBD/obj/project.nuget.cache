@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Mq6MAdm4hYNPKWZHlsNNz0W2sKVC8VU8XD2s93B1jCghYWeMw/BpiS1ajauwumfm0pDz3dVr5CmLbKft5evL8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Samuel\\Downloads\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+=======
+  "dgSpecHash": "PseIZhYmXTlSrKf992ZRDfYbEa6ZO12nKzy6K5LBaD2eFanp2KfQ8zQiDCBI1W5HBYCQM8778OlFqZNz/bdimg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+>>>>>>> Supporting
   "expectedPackageFiles": [
     "C:\\Users\\Samuel\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512",
     "C:\\Users\\Samuel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

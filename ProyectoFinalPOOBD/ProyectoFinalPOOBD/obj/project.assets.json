@@ -5795,11 +5795,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Samuel\\Downloads\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
       "projectName": "ProyectoFinalPOOBD",
       "projectPath": "C:\\Users\\Samuel\\Downloads\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
       "packagesPath": "C:\\Users\\Samuel\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Samuel\\Downloads\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+      "projectName": "ProyectoFinalPOOBD",
+      "projectPath": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+      "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\erick\\OneDrive\\Escritorio\\UCA\\Ciclo 04\\PROYECTO POO\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+>>>>>>> Supporting
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Samuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
