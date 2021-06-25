@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoFinalPOOBD.FunctionsMeanwhile;
 using ProyectoFinalPOOBD.Views;
+using ProyectoFinalPOOBD.Backend;
 
 namespace ProyectoFinalPOOBD
 {
@@ -19,7 +20,7 @@ namespace ProyectoFinalPOOBD
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainForm());
+            Application.Run(new Pruebas());
         }
     }
 }

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+
     "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {}
   },
   "projects": {
@@ -12,9 +13,10 @@
         "projectPath": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
         "packagesPath": "C:\\Users\\Fernando\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\keale\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
