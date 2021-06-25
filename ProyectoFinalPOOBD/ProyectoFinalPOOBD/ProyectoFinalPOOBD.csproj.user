@@ -1,8 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Views\frmDiseases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\frmMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\frmNewSideEffect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\frmReservationAppointmentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\frmSideEffects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\frmWaitingLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

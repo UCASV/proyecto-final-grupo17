@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oSY4YWboMgL/l7BPix7RDm/5fm/owyNfJHypgQ/exBeQLq6JVouWI8CbRFs22xnZsAnkQgmFju9HfuDydJM7pw==",
+  "dgSpecHash": "V23wIcyQmZC9V5TdcqfS22F+sCwlTEartoQfQLwguZ37/xjXYd2Hopda67r7EJE55MOTGpYLvtfgFaFI8b8sxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fernando\\source\\repos\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+  "projectFilePath": "C:\\Users\\Fernando\\Desktop\\FinalPOOBD\\FinalPOO-BD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Fernando\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\common.logging\\3.4.1\\common.logging.3.4.1.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\common.logging.core\\3.4.1\\common.logging.core.3.4.1.nupkg.sha512",
+    "C:\\Users\\Fernando\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\itext7\\7.1.15\\itext7.7.1.15.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -128,7 +130,29 @@
     "C:\\Users\\Fernando\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Fernando\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Fernando\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Fernando\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"CircularProgressBar 2.8.0.16\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "CircularProgressBar",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"WinFormAnimation 1.6.0.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "WinFormAnimation",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }
