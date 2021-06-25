@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using ProyectoFinalPOOBD.VaccineContext;
 using ProyectoFinalPOOBD.ViewModel;
 
@@ -64,6 +66,49 @@ namespace ProyectoFinalPOOBD.Backend
 
             }
             
+        }
+
+        public static List<int> EfficiencyVaccination()
+        {
+            var context = new VaccinationContext();
+
+            var firstParameter = new SqlParameter()
+            {
+                ParameterName = "FirstRange",
+                SqlDbType = System.Data.SqlDbType.Int,
+                Direction = System.Data.ParameterDirection.Output
+            };
+            var secondParameter = new SqlParameter()
+            {
+                ParameterName = "SecondRange",
+                SqlDbType = System.Data.SqlDbType.Int,
+                Direction = System.Data.ParameterDirection.Output
+            };
+            var thirdParameter = new SqlParameter()
+            {
+                ParameterName = "ThirdRange",
+                SqlDbType = System.Data.SqlDbType.Int,
+                Direction = System.Data.ParameterDirection.Output
+            };
+            var lastParameter = new SqlParameter()
+            {
+                ParameterName = "LastRange",
+                SqlDbType = System.Data.SqlDbType.Int,
+                Direction = System.Data.ParameterDirection.Output
+            };
+            string query =
+                "EXEC [dbo].[GetVaccineStatistics] @FirstRange OUTPUT, @SecondRange OUTPUT, @ThirdRange OUTPUT, @LastRange OUTPUT";
+            var queyrySqlRaw = context.Database.ExecuteSqlRaw(query, firstParameter, secondParameter, thirdParameter, lastParameter);
+
+            var efficiencyVaccination = new List<int>()
+            {
+                ((int) firstParameter.Value),
+                ((int) secondParameter.Value),
+                ((int) thirdParameter.Value),
+                ((int) lastParameter.Value)
+            };
+
+            return efficiencyVaccination;
         }
     }
         

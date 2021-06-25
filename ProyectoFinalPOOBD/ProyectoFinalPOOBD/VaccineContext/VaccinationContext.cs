@@ -47,7 +47,7 @@ namespace ProyectoFinalPOOBD.VaccineContext
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.HasKey(e => e.IdAppointment)
-                    .HasName("PK__Appointm__6ECCF902492A3877");
+                    .HasName("PK__Appointm__6ECCF902B31642C1");
 
                 entity.ToTable("Appointment");
 
@@ -101,8 +101,6 @@ namespace ProyectoFinalPOOBD.VaccineContext
             modelBuilder.Entity<Citizen>(entity =>
             {
                 entity.ToTable("Citizen");
-
-                entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.Address)
                     .IsRequired()

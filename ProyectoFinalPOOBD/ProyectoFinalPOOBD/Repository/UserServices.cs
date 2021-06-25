@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.VaccineContext;
-using User = ProyectoFinalPOOBD.Models.User;
+
 
 namespace ProyectoFinalPOOBD.Repository
 {
