@@ -36,7 +36,7 @@ namespace ProyectoFinalPOOBD.VaccineContext
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-TOKQM51\\SQLEXPRESS; Database = Vaccination; Trusted_Connection = True;");
+                optionsBuilder.UseSqlServer("Server=localhost; Database = Vaccination; Trusted_Connection = True;");
             }
         }
 
@@ -47,7 +47,7 @@ namespace ProyectoFinalPOOBD.VaccineContext
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.HasKey(e => e.IdAppointment)
-                    .HasName("PK__Appointm__6ECCF9027E36A138");
+                    .HasName("PK__Appointm__6ECCF902492A3877");
 
                 entity.ToTable("Appointment");
 
@@ -118,6 +118,11 @@ namespace ProyectoFinalPOOBD.VaccineContext
 
                 entity.Property(e => e.Mail)
                     .HasMaxLength(30)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.PhoneNumber)
