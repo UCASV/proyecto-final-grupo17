@@ -125,7 +125,7 @@ namespace ProyectoFinalPOOBD.Views
         private void btnDuiSearch_Click(object sender, System.EventArgs e)
         {
             // Prueba para abrir formulario de espera de cita
-            Form formulario2 = new frmSideEffects();
+            Form formulario2 = new frmNewSideEffect();
             formulario2.Show();
         }
     }
