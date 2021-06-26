@@ -14,13 +14,19 @@ namespace ProyectoFinalPOOBD.Views
 {
     public partial class frmDiseases : Form
     {
-        public List<Disease> Diseases { get; set; }
+        public List<Disease>? Diseases { get; set; }
        
         public frmDiseases()
         {
             InitializeComponent();
             Diseases = new List<Disease>();
-            
+        }
+
+        public frmDiseases(List<Disease>? diseases)
+        {
+            InitializeComponent();
+            Diseases = diseases;
+            FillDgv();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -46,8 +52,7 @@ namespace ProyectoFinalPOOBD.Views
 
         private void FillDgv()
         {
-            dgvDiseases.DataSource = null;
-            dgvDiseases.DataSource = Diseases.Select(s=> new {Enfermedad = s.Illness}).ToList();
+            dgvDiseases.DataSource = Diseases.Select(s=> new {s.Illness}).ToList();
         }
 
         public List<Disease>? ReturnList => Diseases;
@@ -59,7 +64,20 @@ namespace ProyectoFinalPOOBD.Views
 
         private void lblDone_Click(object sender, EventArgs e)
         {
-            //Code for add the diesease
+            MessageBox.Show("Las enfermedades han sido añadidas al formulario.");
+            this.Close();
+        }
+
+        // Al dar click al boton eliminar removera la enfermedad de la lista y el datagridview
+        private void dgvDiseases_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Si la celda pertenece a la columna con el nombre Eliminar, removera la enfermedad pasando el index en el que esta en el dgv al coincidir en la lista
+            if (dgvDiseases.Columns[e.ColumnIndex].HeaderText == "Eliminar")
+            {
+                // Eliminamos y repoblamos el datagridview
+                Diseases.RemoveAt(e.RowIndex);
+                FillDgv();
+            }
         }
     }
 }

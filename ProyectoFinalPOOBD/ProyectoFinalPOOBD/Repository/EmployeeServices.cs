@@ -47,5 +47,13 @@ namespace ProyectoFinalPOOBD.Repository
 
             return employee;
         }
+
+        public Employee FindGestor(string username, string password)
+        {
+            var employee = _context.Employees.Include(e => e.IdUserNavigation).SingleOrDefault(e =>
+                e.IdUserNavigation.Username == username && e.IdUserNavigation.Password == password);
+
+            return employee;
+        }
     }
 }

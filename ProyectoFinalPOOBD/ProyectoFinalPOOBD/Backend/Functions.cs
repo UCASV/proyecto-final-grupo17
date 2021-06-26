@@ -13,8 +13,9 @@ namespace ProyectoFinalPOOBD.Backend
         // Para el login: Sirve para revisar si el usuario existe en la base de datos, si es asi lo registra, de lo contrario no
         public static bool CheckUser(string username, string password)
         {
-            User? ifUser = new UserServices().FindByUsernameAndPassword(username, password);
-            return (ifUser is not null);
+            User? ifUser = new User();
+            ifUser = new UserServices().FindByUsernameAndPassword(username, password);
+            return ifUser is not null;
         }
 
         // This code is for login
@@ -65,7 +66,7 @@ namespace ProyectoFinalPOOBD.Backend
         }
 
         // Code for a new Citizen 
-        public static bool IfSuccessCitizen(Citizen person, List<Disease> diseases, Institution institution)
+        public static bool IfSuccessCitizen(Citizen person, List<Disease>? diseases, Institution institution)
         {
             // Si el ciudadano es apto se ingresara el ciudadano y devolvera true
             if (ConditionCitizen(person, diseases, institution))
@@ -141,9 +142,9 @@ namespace ProyectoFinalPOOBD.Backend
         }
          */
 
-        public static bool CheckIfCitizenExists(Citizen person)
+        public static bool CheckIfCitizenExists(string dui)
         {
-            var people = new CitizenServices().GetCitizenByDui(person.Dui);
+            var people = new CitizenServices().GetCitizenByDui(dui);
             return (people is not null);
         }
 

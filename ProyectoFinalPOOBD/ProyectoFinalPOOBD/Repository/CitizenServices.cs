@@ -43,7 +43,7 @@ namespace ProyectoFinalPOOBD.Repository
 
         public Citizen GetLastCitizen()
         {
-            return _context.Citizens.LastOrDefault();
+            return _context.Citizens.OrderBy(c => c.Id).LastOrDefault();
         }
 
         public Citizen GetCitizenByDui(string dui)

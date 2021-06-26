@@ -21,5 +21,10 @@ namespace ProyectoFinalPOOBD.Repository
         {
             return _context.Institutions.Where(institution => institution.InstitutionName != "Ninguna").ToList();
         }
+
+        public Institution Find(int pk)
+        {
+            return _context.Institutions.Find(pk);
+        }
     }
 }

@@ -53,7 +53,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageAppointment = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddDisease = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddCitizen = new System.Windows.Forms.Button();
             this.cmbInstitucion = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nudAge = new System.Windows.Forms.NumericUpDown();
@@ -72,6 +72,8 @@ namespace ProyectoFinalPOOBD.Views
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPageTracking = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -83,17 +85,17 @@ namespace ProyectoFinalPOOBD.Views
             this.lblDuiSearch = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabPageVaccination = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.btnVaccineStart = new System.Windows.Forms.Button();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblVaccineDate = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblVaccine = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabPageStats = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblVaccineDate = new System.Windows.Forms.Label();
-            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -119,9 +121,9 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tabPageVaccination.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -461,14 +463,14 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.38059F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.28449F));
             this.tableLayoutPanel5.Controls.Add(this.btnAddDisease, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button1, 2, 3);
+            this.tableLayoutPanel5.Controls.Add(this.btnAddCitizen, 2, 3);
             this.tableLayoutPanel5.Controls.Add(this.cmbInstitucion, 2, 2);
             this.tableLayoutPanel5.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.nudAge, 2, 1);
             this.tableLayoutPanel5.Controls.Add(this.lblInstitution, 1, 2);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 290);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 310);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -494,26 +496,27 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAddDisease.UseVisualStyleBackColor = false;
             this.btnAddDisease.Click += new System.EventHandler(this.btnAddDisease_Click);
             // 
-            // button1
+            // btnAddCitizen
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(237, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 31);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "AÑADIR CITA";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnAddCitizen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAddCitizen.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddCitizen.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnAddCitizen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCitizen.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddCitizen.Location = new System.Drawing.Point(237, 133);
+            this.btnAddCitizen.Name = "btnAddCitizen";
+            this.btnAddCitizen.Size = new System.Drawing.Size(176, 31);
+            this.btnAddCitizen.TabIndex = 13;
+            this.btnAddCitizen.Text = "AÑADIR CITA";
+            this.btnAddCitizen.UseVisualStyleBackColor = false;
+            this.btnAddCitizen.Click += new System.EventHandler(this.AddApointment_Click);
             // 
             // cmbInstitucion
             // 
             this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbInstitucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInstitucion.FormattingEnabled = true;
-            this.cmbInstitucion.Location = new System.Drawing.Point(237, 90);
+            this.cmbInstitucion.Location = new System.Drawing.Point(237, 93);
             this.cmbInstitucion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbInstitucion.Name = "cmbInstitucion";
             this.cmbInstitucion.Size = new System.Drawing.Size(265, 29);
@@ -555,7 +558,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel4.Controls.Add(this.rdoNo, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.rdoYes, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 255);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 275);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -593,7 +596,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.lblDiesease, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 217);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 237);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -627,22 +630,25 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1.Controls.Add(this.lblName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAddress, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblPhoneNumber, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtPhoneNumber, 2, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 56);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(707, 161);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(707, 181);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // txtDui
             // 
             this.txtDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDui.Location = new System.Drawing.Point(238, 5);
+            this.txtDui.Location = new System.Drawing.Point(238, 4);
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(263, 29);
             this.txtDui.TabIndex = 0;
@@ -650,7 +656,7 @@ namespace ProyectoFinalPOOBD.Views
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(238, 45);
+            this.txtName.Location = new System.Drawing.Point(238, 41);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(263, 29);
             this.txtName.TabIndex = 1;
@@ -658,7 +664,7 @@ namespace ProyectoFinalPOOBD.Views
             // txtAddress
             // 
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.Location = new System.Drawing.Point(238, 85);
+            this.txtAddress.Location = new System.Drawing.Point(238, 78);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(263, 29);
             this.txtAddress.TabIndex = 2;
@@ -666,7 +672,7 @@ namespace ProyectoFinalPOOBD.Views
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(238, 126);
+            this.txtEmail.Location = new System.Drawing.Point(238, 115);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(263, 29);
             this.txtEmail.TabIndex = 3;
@@ -675,7 +681,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblDui.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDui.AutoSize = true;
-            this.lblDui.Location = new System.Drawing.Point(191, 9);
+            this.lblDui.Location = new System.Drawing.Point(191, 8);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(41, 21);
             this.lblDui.TabIndex = 6;
@@ -685,7 +691,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(157, 49);
+            this.lblName.Location = new System.Drawing.Point(157, 45);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(75, 21);
             this.lblName.TabIndex = 7;
@@ -695,7 +701,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(149, 89);
+            this.lblAddress.Location = new System.Drawing.Point(149, 82);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(83, 21);
             this.lblAddress.TabIndex = 8;
@@ -705,11 +711,29 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(95, 130);
+            this.lblEmail.Location = new System.Drawing.Point(95, 119);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(137, 21);
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "E-mail (Opcional):";
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(68, 154);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(164, 21);
+            this.lblPhoneNumber.TabIndex = 10;
+            this.lblPhoneNumber.Text = "Numero de telefono:";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(238, 151);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(263, 29);
+            this.txtPhoneNumber.TabIndex = 11;
             // 
             // panel1
             // 
@@ -762,7 +786,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.89474F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.10526F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 391F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 398F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
             this.tableLayoutPanel7.Controls.Add(this.txtDuiSearch, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.btnDuiSearch, 2, 0);
@@ -778,10 +802,10 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.txtDuiSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDuiSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtDuiSearch.Location = new System.Drawing.Point(138, 4);
+            this.txtDuiSearch.Location = new System.Drawing.Point(135, 4);
             this.txtDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuiSearch.Name = "txtDuiSearch";
-            this.txtDuiSearch.Size = new System.Drawing.Size(174, 29);
+            this.txtDuiSearch.Size = new System.Drawing.Size(170, 29);
             this.txtDuiSearch.TabIndex = 0;
             // 
             // btnDuiSearch
@@ -791,7 +815,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnDuiSearch.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnDuiSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDuiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDuiSearch.Location = new System.Drawing.Point(318, 4);
+            this.btnDuiSearch.Location = new System.Drawing.Point(311, 4);
             this.btnDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDuiSearch.Name = "btnDuiSearch";
             this.btnDuiSearch.Size = new System.Drawing.Size(75, 29);
@@ -848,37 +872,20 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageVaccination.Text = "tabPageVaccination";
             this.tabPageVaccination.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // tableLayoutPanel13
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(402, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 23);
-            this.dateTimePicker1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(201, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 57);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Hora de vacunacion:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(421, 74);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(60, 23);
-            this.dateTimePicker2.TabIndex = 3;
+            this.tableLayoutPanel13.ColumnCount = 3;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 313F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
+            this.tableLayoutPanel13.Controls.Add(this.btnVaccineStart, 1, 0);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 285);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(707, 57);
+            this.tableLayoutPanel13.TabIndex = 4;
             // 
             // btnVaccineStart
             // 
@@ -894,6 +901,70 @@ namespace ProyectoFinalPOOBD.Views
             this.btnVaccineStart.Text = "Proceder a vacunacion";
             this.btnVaccineStart.UseVisualStyleBackColor = false;
             this.btnVaccineStart.Click += new System.EventHandler(this.btnVaccineStart_Click);
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 4;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5102F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.4898F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
+            this.tableLayoutPanel12.Controls.Add(this.dateTimePicker2, 2, 1);
+            this.tableLayoutPanel12.Controls.Add(this.label3, 1, 1);
+            this.tableLayoutPanel12.Controls.Add(this.dateTimePicker1, 2, 0);
+            this.tableLayoutPanel12.Controls.Add(this.lblVaccineDate, 1, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 171);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(707, 114);
+            this.tableLayoutPanel12.TabIndex = 3;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(414, 74);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(60, 23);
+            this.dateTimePicker2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(197, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(185, 57);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Hora de vacunacion:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(395, 17);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(98, 23);
+            this.dateTimePicker1.TabIndex = 1;
+            // 
+            // lblVaccineDate
+            // 
+            this.lblVaccineDate.AutoSize = true;
+            this.lblVaccineDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblVaccineDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVaccineDate.Location = new System.Drawing.Point(197, 0);
+            this.lblVaccineDate.Name = "lblVaccineDate";
+            this.lblVaccineDate.Size = new System.Drawing.Size(185, 57);
+            this.lblVaccineDate.TabIndex = 2;
+            this.lblVaccineDate.Text = "Fecha de vacunacion:";
+            this.lblVaccineDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -933,53 +1004,6 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageStats.TabIndex = 4;
             this.tabPageStats.Text = "tabPageStats";
             this.tabPageStats.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 4;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5102F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.4898F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.tableLayoutPanel12.Controls.Add(this.dateTimePicker2, 2, 1);
-            this.tableLayoutPanel12.Controls.Add(this.label3, 1, 1);
-            this.tableLayoutPanel12.Controls.Add(this.dateTimePicker1, 2, 0);
-            this.tableLayoutPanel12.Controls.Add(this.lblVaccineDate, 1, 0);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 171);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(707, 114);
-            this.tableLayoutPanel12.TabIndex = 3;
-            // 
-            // lblVaccineDate
-            // 
-            this.lblVaccineDate.AutoSize = true;
-            this.lblVaccineDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVaccineDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVaccineDate.Location = new System.Drawing.Point(201, 0);
-            this.lblVaccineDate.Name = "lblVaccineDate";
-            this.lblVaccineDate.Size = new System.Drawing.Size(188, 57);
-            this.lblVaccineDate.TabIndex = 2;
-            this.lblVaccineDate.Text = "Fecha de vacunacion:";
-            this.lblVaccineDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel13
-            // 
-            this.tableLayoutPanel13.ColumnCount = 3;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 313F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
-            this.tableLayoutPanel13.Controls.Add(this.btnVaccineStart, 1, 0);
-            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 285);
-            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
-            this.tableLayoutPanel13.RowCount = 1;
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(707, 57);
-            this.tableLayoutPanel13.TabIndex = 4;
             // 
             // frmMainForm
             // 
@@ -1026,10 +1050,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tabPageVaccination.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
-            this.tableLayoutPanel13.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1063,7 +1087,7 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Label lblInstitution;
         private System.Windows.Forms.NumericUpDown nudAge;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddCitizen;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -1101,6 +1125,8 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.Label lblVaccineDate;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
     }
 }
 

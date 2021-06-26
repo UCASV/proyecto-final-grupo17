@@ -35,6 +35,8 @@ namespace ProyectoFinalPOOBD.Views
             this.txtDisease = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvDiseases = new System.Windows.Forms.DataGridView();
+            this.Enfermedades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -132,11 +134,12 @@ namespace ProyectoFinalPOOBD.Views
             // 
             // dgvDiseases
             // 
-            this.dgvDiseases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDiseases.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDiseases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiseases.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Enfermedades,
+            this.Eliminar});
+            this.dgvDiseases.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDiseases.Location = new System.Drawing.Point(43, 116);
             this.dgvDiseases.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDiseases.Name = "dgvDiseases";
@@ -144,6 +147,21 @@ namespace ProyectoFinalPOOBD.Views
             this.dgvDiseases.RowTemplate.Height = 29;
             this.dgvDiseases.Size = new System.Drawing.Size(498, 307);
             this.dgvDiseases.TabIndex = 11;
+            this.dgvDiseases.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiseases_CellClick);
+            // 
+            // Enfermedades
+            // 
+            this.Enfermedades.DataPropertyName = "Illness";
+            this.Enfermedades.HeaderText = "Enfermedades";
+            this.Enfermedades.Name = "Enfermedades";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForButtonValue = true;
             // 
             // panel1
             // 
@@ -254,5 +272,7 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button lblCancel;
         private System.Windows.Forms.Button lblDone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Enfermedades;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }

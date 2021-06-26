@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoFinalPOOBD.Backend;
+using ProyectoFinalPOOBD.Repository;
 
 namespace ProyectoFinalPOOBD.Views
 {
@@ -35,7 +36,8 @@ namespace ProyectoFinalPOOBD.Views
                     if (Functions.LoginSuccess(value, txtUserName.Text, txtPassword.Text))
                     {
                         this.Hide();
-                        var main = new frmMainForm().ShowDialog();
+                        var employeeLogged = new EmployeeServices().FindGestor(txtUserName.Text, txtPassword.Text);
+                        var main = new frmMainForm(employeeLogged).ShowDialog();
                     }
                 }
                 else
