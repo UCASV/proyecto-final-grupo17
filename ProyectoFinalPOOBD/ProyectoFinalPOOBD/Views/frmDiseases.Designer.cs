@@ -32,16 +32,16 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDui = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtdeseases = new System.Windows.Forms.TextBox();
+            this.txtDisease = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDiseases = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblCancel = new System.Windows.Forms.Button();
             this.lblDone = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiseases)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,9 +54,9 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel1.Controls.Add(this.lblDui, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtdeseases, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtDisease, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.dgvDiseases, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(72, 67);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -95,21 +95,22 @@ namespace ProyectoFinalPOOBD.Views
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(498, 27);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Añade una enfermedad al ciudadano:";
+            this.label1.Text = "Añade una enfermedad/discapacidad al ciudadano:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtdeseases
+            // txtDisease
             // 
-            this.txtdeseases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtDisease.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtdeseases.Location = new System.Drawing.Point(43, 84);
-            this.txtdeseases.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtdeseases.Multiline = true;
-            this.txtdeseases.Name = "txtdeseases";
-            this.txtdeseases.Size = new System.Drawing.Size(498, 28);
-            this.txtdeseases.TabIndex = 9;
-            this.txtdeseases.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDisease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDisease.Location = new System.Drawing.Point(43, 84);
+            this.txtDisease.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDisease.Multiline = true;
+            this.txtDisease.Name = "txtDisease";
+            this.txtDisease.Size = new System.Drawing.Size(498, 28);
+            this.txtDisease.TabIndex = 9;
+            this.txtDisease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAdd
             // 
@@ -129,19 +130,20 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dataGridView1
+            // dgvDiseases
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvDiseases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 116);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 307);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvDiseases.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDiseases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiseases.Location = new System.Drawing.Point(43, 116);
+            this.dgvDiseases.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDiseases.Name = "dgvDiseases";
+            this.dgvDiseases.RowHeadersWidth = 51;
+            this.dgvDiseases.RowTemplate.Height = 29;
+            this.dgvDiseases.Size = new System.Drawing.Size(498, 307);
+            this.dgvDiseases.TabIndex = 11;
             // 
             // panel1
             // 
@@ -233,7 +235,7 @@ namespace ProyectoFinalPOOBD.Views
             this.Text = "frmDiseases";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiseases)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -244,9 +246,9 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblDui;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtdeseases;
+        private System.Windows.Forms.TextBox txtDisease;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDiseases;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

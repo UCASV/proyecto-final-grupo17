@@ -480,6 +480,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.btnAddDisease.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnAddDisease.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddDisease.Enabled = false;
             this.btnAddDisease.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnAddDisease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDisease.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -582,6 +583,7 @@ namespace ProyectoFinalPOOBD.Views
             this.rdoYes.TabStop = true;
             this.rdoYes.Text = "Si";
             this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -758,7 +760,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.89474F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.10526F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 388F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 390F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
             this.tableLayoutPanel7.Controls.Add(this.txtDuiSearch, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.btnDuiSearch, 2, 0);
@@ -774,10 +776,10 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.txtDuiSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDuiSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtDuiSearch.Location = new System.Drawing.Point(139, 4);
+            this.txtDuiSearch.Location = new System.Drawing.Point(138, 4);
             this.txtDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuiSearch.Name = "txtDuiSearch";
-            this.txtDuiSearch.Size = new System.Drawing.Size(176, 29);
+            this.txtDuiSearch.Size = new System.Drawing.Size(175, 29);
             this.txtDuiSearch.TabIndex = 0;
             // 
             // btnDuiSearch
@@ -787,7 +789,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnDuiSearch.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnDuiSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDuiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDuiSearch.Location = new System.Drawing.Point(321, 4);
+            this.btnDuiSearch.Location = new System.Drawing.Point(319, 4);
             this.btnDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDuiSearch.Name = "btnDuiSearch";
             this.btnDuiSearch.Size = new System.Drawing.Size(75, 29);
@@ -974,6 +976,7 @@ namespace ProyectoFinalPOOBD.Views
             this.Name = "frmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainForm_FormClosing);
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();

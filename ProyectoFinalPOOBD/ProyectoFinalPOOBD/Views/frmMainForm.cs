@@ -1,7 +1,10 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using ProyectoFinalPOOBD.Models;
 
 
 namespace ProyectoFinalPOOBD.Views
@@ -10,6 +13,9 @@ namespace ProyectoFinalPOOBD.Views
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+
+        private List<Disease>? _diseases;
+
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(42, 157, 143);
@@ -25,6 +31,7 @@ namespace ProyectoFinalPOOBD.Views
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 64);
             pnlMenu.Controls.Add(leftBorderBtn);
+            _diseases = new List<Disease>();
         }
 
         private void ActivateButton(object senderBtn, Color color)
@@ -113,8 +120,11 @@ namespace ProyectoFinalPOOBD.Views
 
         private void btnAddDisease_Click(object sender, System.EventArgs e)
         {
-            Form formulario = new frmDiseases();
-            formulario.Show();
+            using (var diseasesForm = new frmDiseases())
+            {
+                diseasesForm.ShowDialog();
+                _diseases = diseasesForm.ReturnList;
+            }
         }
 
         private void pnlTitleBar_Paint(object sender, PaintEventArgs e)
@@ -136,9 +146,30 @@ namespace ProyectoFinalPOOBD.Views
 
         private void btnVaccineStart_Click(object sender, System.EventArgs e)
         {
-            Form secondaryEffects = new frmSideEffects();
+            var secondaryEffects = new frmSideEffects();
             secondaryEffects.Show();
         }
+
+        private void frmMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void rdoYes_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (rdoNo.Checked)
+            {
+                btnAddDisease.Enabled = false;
+            }
+
+            if (rdoYes.Checked)
+            {
+                btnAddDisease.Enabled = true;
+            }
+        }
+
+        private bool FilledForm() => txtDui.Text != String.Empty || txtName.Text != String.Empty || txtAddress.Text != String.Empty || nudAge.Text != String.Empty;
+        
     }
 }
  
