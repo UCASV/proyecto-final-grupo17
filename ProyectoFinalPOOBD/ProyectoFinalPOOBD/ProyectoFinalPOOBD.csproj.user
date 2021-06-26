@@ -4,6 +4,9 @@
     <Compile Update="Backend\Pruebas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\frmAddNewDisease.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\frmDiseases.cs">
       <SubType>Form</SubType>
     </Compile>
