@@ -105,16 +105,16 @@ namespace ProyectoFinalPOOBD.Views
             lblTitle.Text = "Home";
             icoTitle.IconChar = IconChar.Home;
         }
-        private void button1_Click(object sender, System.EventArgs e)
+        private void Button1_Click(object sender, System.EventArgs e)
         {
-            Form formulario = new frmDiseases();
-            formulario.Show();
+            Form addAppointmentDetails = new frmReservationAppointmentDetails();
+            addAppointmentDetails.Show();
         }
 
         private void btnAddDisease_Click(object sender, System.EventArgs e)
         {
-            Form formulario1 = new frmReservationAppointmentDetails();
-            formulario1.Show();
+            Form formulario = new frmDiseases();
+            formulario.Show();
         }
 
         private void pnlTitleBar_Paint(object sender, PaintEventArgs e)
@@ -132,6 +132,12 @@ namespace ProyectoFinalPOOBD.Views
         private void label3_Click(object sender, System.EventArgs e)
         {
 
+        }
+
+        private void btnVaccineStart_Click(object sender, System.EventArgs e)
+        {
+            Form secondaryEffects = new frmSideEffects();
+            secondaryEffects.Show();
         }
     }
 }

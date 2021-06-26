@@ -71,7 +71,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.84615F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 426F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDui, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 2, 11);
@@ -122,7 +122,7 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDui.AutoSize = true;
             this.lblDui.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDui.Location = new System.Drawing.Point(85, 62);
+            this.lblDui.Location = new System.Drawing.Point(77, 62);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(420, 37);
             this.lblDui.TabIndex = 8;
@@ -131,7 +131,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(85, 300);
+            this.dateTimePicker2.Location = new System.Drawing.Point(77, 300);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(242, 23);
@@ -142,7 +142,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(85, 276);
+            this.label6.Location = new System.Drawing.Point(77, 276);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 21);
             this.label6.TabIndex = 14;
@@ -150,7 +150,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(85, 234);
+            this.dateTimePicker1.Location = new System.Drawing.Point(77, 234);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.MaxDate = new System.DateTime(2110, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -162,7 +162,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(85, 209);
+            this.label4.Location = new System.Drawing.Point(77, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 21);
             this.label4.TabIndex = 12;
@@ -173,7 +173,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(85, 181);
+            this.label5.Location = new System.Drawing.Point(77, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(334, 21);
             this.label5.TabIndex = 21;
@@ -184,7 +184,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(85, 144);
+            this.label3.Location = new System.Drawing.Point(77, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 19);
             this.label3.TabIndex = 11;
@@ -195,7 +195,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(85, 121);
+            this.label1.Location = new System.Drawing.Point(77, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 21);
             this.label1.TabIndex = 9;
@@ -206,7 +206,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(85, 99);
+            this.label7.Location = new System.Drawing.Point(77, 99);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 21);
             this.label7.TabIndex = 22;
@@ -218,7 +218,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnGereratePdf.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnGereratePdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGereratePdf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGereratePdf.Location = new System.Drawing.Point(178, 368);
+            this.btnGereratePdf.Location = new System.Drawing.Point(170, 368);
             this.btnGereratePdf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGereratePdf.Name = "btnGereratePdf";
             this.btnGereratePdf.Size = new System.Drawing.Size(234, 28);
@@ -234,8 +234,10 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmWaitingLine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmWaitingLine";
