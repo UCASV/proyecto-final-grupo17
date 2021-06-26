@@ -31,14 +31,13 @@ namespace ProyectoFinalPOOBD.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.txtCabin = new System.Windows.Forms.TextBox();
@@ -46,7 +45,7 @@ namespace ProyectoFinalPOOBD.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -55,17 +54,17 @@ namespace ProyectoFinalPOOBD.Views
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(125, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LOG IN";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Bauhaus 93", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLogin.Location = new System.Drawing.Point(125, 158);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(105, 33);
+            this.lblLogin.TabIndex = 0;
+            this.lblLogin.Text = "LOG IN";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogin.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -141,19 +140,6 @@ namespace ProyectoFinalPOOBD.Views
             this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox3.TabIndex = 8;
             this.iconPictureBox3.TabStop = false;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.txtUserName.Location = new System.Drawing.Point(112, 212);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUserName.Multiline = true;
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(163, 32);
-            this.txtUserName.TabIndex = 9;
-            this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPassword
             // 
@@ -247,18 +233,18 @@ namespace ProyectoFinalPOOBD.Views
             this.iconPictureBox4.TabIndex = 7;
             this.iconPictureBox4.TabStop = false;
             // 
-            // textBox2
+            // txtUserName
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.textBox2.Location = new System.Drawing.Point(112, 212);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 32);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserName.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
+            this.txtUserName.Location = new System.Drawing.Point(112, 212);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUserName.Multiline = true;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(163, 32);
+            this.txtUserName.TabIndex = 9;
+            this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel5
             // 
@@ -280,9 +266,8 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.iconPictureBox4);
             this.Controls.Add(this.iconPictureBox3);
             this.Controls.Add(this.iconPictureBox1);
@@ -291,11 +276,12 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -320,14 +306,13 @@ namespace ProyectoFinalPOOBD.Views
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLogin;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.TextBox txtCabin;
@@ -335,7 +320,7 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Panel panel5;
     }
 }

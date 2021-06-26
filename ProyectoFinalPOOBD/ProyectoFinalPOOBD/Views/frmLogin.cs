@@ -26,24 +26,47 @@ namespace ProyectoFinalPOOBD.Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!CheckIfEmpty(txtUserName, txtPassword))
+            try
             {
-                if (Functions.LoginSuccess(1, txtUserName.Text, txtPassword.Text))
+                var value = GetNumber(txtCabin);
+
+                if (!CheckIfEmpty(txtUserName, txtPassword, txtCabin))
                 {
-                    this.Hide();
-                    var main = new frmMainForm().ShowDialog();
+                    if (Functions.LoginSuccess(value, txtUserName.Text, txtPassword.Text))
+                    {
+                        this.Hide();
+                        var main = new frmMainForm().ShowDialog();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Campos incompletos, por favor llene los datos solicitados para iniciar sesion",
+                        "Inicio de sesion: Campos en blanco", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Campos incompletos, por favor llene los datos solicitados para iniciar sesion",
-                    "Inicio de sesion: Campos en blanco", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor ingrese un numero de cabina y no un caracter.",
+                    "Inicio de sesion: datos erroneos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private bool CheckIfEmpty(TextBox txt1, TextBox txt2)
+        private bool CheckIfEmpty(TextBox txt1, TextBox txt2, TextBox txt3)
         {
-            return txt1.Text == string.Empty || txt2.Text == string.Empty;
+            return txt1.Text == string.Empty || txt2.Text == string.Empty || txt3.Text == string.Empty;
+        }
+
+        private int GetNumber(TextBox txt)
+        {
+            int value;
+            value = Int32.Parse(txt.Text);
+            return value;
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
