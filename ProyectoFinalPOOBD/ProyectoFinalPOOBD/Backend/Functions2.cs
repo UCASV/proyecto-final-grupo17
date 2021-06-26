@@ -4,6 +4,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using ProyectoFinalPOOBD.VaccineContext;
 using ProyectoFinalPOOBD.ViewModel;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProyectoFinalPOOBD.Backend
 {
@@ -89,7 +90,6 @@ namespace ProyectoFinalPOOBD.Backend
         public static List<int> EfficiencyVaccination()
         {
             var context = new VaccinationContext();
-
             var firstParameter = new SqlParameter()
             {
                 ParameterName = "FirstRange",
