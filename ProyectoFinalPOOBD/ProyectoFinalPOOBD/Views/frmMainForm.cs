@@ -5,9 +5,12 @@ using System.Drawing.Text;
 using System.Linq;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using Microsoft.EntityFrameworkCore;
 using ProyectoFinalPOOBD.Backend;
 using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.Repository;
+using ProyectoFinalPOOBD.VaccineContext;
+using ProyectoFinalPOOBD.ViewModel;
 
 
 namespace ProyectoFinalPOOBD.Views
@@ -19,8 +22,11 @@ namespace ProyectoFinalPOOBD.Views
 
         // Lista de enfermedades del ciudadano
         private List<Disease>? _diseases;
-        private Employee employeeLogged;
+        private Employee _employeeLogged;
         private List<Institution> _institutions;
+        private Appointment _currentVaccination;
+        private Citizen _currenCitizen;
+        
 
         // Estructura que contiene los colores principales de los botones de seleccion en el formulario principal
         private struct RGBColors
@@ -39,8 +45,10 @@ namespace ProyectoFinalPOOBD.Views
             leftBorderBtn.Size = new Size(7, 64);
             pnlMenu.Controls.Add(leftBorderBtn);
             _diseases = new List<Disease>();
-            this.employeeLogged = employeeLogged;
+            this._employeeLogged = employeeLogged;
             _institutions = new List<Institution>();
+            _currentVaccination = new Appointment();
+            _currenCitizen = new Citizen();
         }
 
         private void ActivateButton(object senderBtn, Color color)
@@ -87,9 +95,8 @@ namespace ProyectoFinalPOOBD.Views
         private void btnVaccinationProcess_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            tabProgram.SelectTab(3);
             icoTitle.IconChar = currentBtn.IconChar;
-            lblTitle.Text = "Proceso de vacunacion";
+            MessageBox.Show("Primero debe ingresar el DUI del usuario en el apartado seguimiento de cita");
         }
 
         private void btnStats_Click(object sender, EventArgs e)
@@ -118,24 +125,7 @@ namespace ProyectoFinalPOOBD.Views
         }
 
         // Se encarga de limpiar todos los controles de la pestaña de agregar un nuevo ciudadano
-        private void ClearControlsAddCitizen()
-        {
-            // Obtiene todas las instituciones, y las pasa como DataSource al datagridview
-            _institutions = new InstitutionServices().GetAllInstitutions();
-            cmbInstitucion.DataSource = _institutions.Select(i => i.InstitutionName).ToList();
-            cmbInstitucion.SelectedIndex = cmbInstitucion.Items.IndexOf("Ninguna");
-
-            // Deja los textbox, numeric up down y las enfermedades limpias sin ningun dati
-            txtDui.Text = string.Empty;
-            txtAddress.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtName.Text = string.Empty;
-            txtPhoneNumber.Text = string.Empty;
-            nudAge.Value = 0;
-            _diseases = null;
-            _diseases = new List<Disease>();
-
-        }
+        
 
         private void Reset()
         {
@@ -145,16 +135,7 @@ namespace ProyectoFinalPOOBD.Views
             icoTitle.IconChar = IconChar.Home;
         }
 
-        // Abre el formulario de añadir enfermedad al darle click
-        private void btnAddDisease_Click(object sender, EventArgs e)
-        {
-            using (var diseasesForm = new frmDiseases(_diseases))
-            {
-                diseasesForm.ShowDialog();
-                // Obtenemos las enfermedades retornadas por dicho formulario
-                _diseases = diseasesForm.ReturnList;
-            }
-        }
+        
 
         private void pnlTitleBar_Paint(object sender, PaintEventArgs e)
         {
@@ -173,15 +154,42 @@ namespace ProyectoFinalPOOBD.Views
 
         }
 
-        private void btnVaccineStart_Click(object sender, EventArgs e)
-        {
-            var secondaryEffects = new frmSideEffects();
-            secondaryEffects.Show();
-        }
+        
 
         private void frmMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        // Abre el formulario de añadir enfermedad al darle click
+        private void btnAddDisease_Click(object sender, EventArgs e)
+        {
+            using (var diseasesForm = new frmDiseases(_diseases))
+            {
+                diseasesForm.ShowDialog();
+                // Obtenemos las enfermedades retornadas por dicho formulario
+                _diseases = diseasesForm.ReturnList;
+            }
+        }
+
+        // Funciones para añadir un ciudadano
+        private void ClearControlsAddCitizen()
+        {
+            // Obtiene todas las instituciones, y las pasa como DataSource al datagridview
+            _institutions = new InstitutionServices().GetAllInstitutions();
+            cmbInstitucion.DataSource = _institutions.Select(i => i.InstitutionName).ToList();
+            cmbInstitucion.SelectedIndex = cmbInstitucion.Items.IndexOf("Ninguna");
+
+            // Deja los textbox, numeric up down y las enfermedades limpias sin ningun dati
+            txtDui.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtPhoneNumber.Text = string.Empty;
+            nudAge.Value = 0;
+            _diseases = null;
+            _diseases = new List<Disease>();
+
         }
 
         // Este evento sucede cuando el gestor selecciona uno de los radiobutton
@@ -229,7 +237,17 @@ namespace ProyectoFinalPOOBD.Views
                     {
                         MessageBox.Show("El ciudadano pertenece al grupo de atencion, ha sido registrado exitosamente",
                             "Ciudadano registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            
+
+                        var context = new VaccinationContext();
+                        var citizenCreated = new CitizenServices().GetCitizenByDui(newCitizen.Dui);
+                        
+
+                        if (Functions.CreateAppointment(citizenCreated, _employeeLogged))
+                        {
+                            var lastAppointment = new AppointmentServices().GetLastByCitizen(citizenCreated.Id);
+                            var details = new frmReservationAppointmentDetails(lastAppointment, citizenCreated);
+                            details.ShowDialog();
+                        }
                     }
                     else
                     {
@@ -238,8 +256,12 @@ namespace ProyectoFinalPOOBD.Views
                             "Ciudadano no registrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         
                     }
+
+                    tabProgram.SelectedIndex = 2;
+                    ActivateButton(btnAppointmentTracking, RGBColors.color2);
+                    icoTitle.IconChar = currentBtn.IconChar;
+                    lblTitle.Text = "Proceso de citas";
                     ClearControlsAddCitizen();
-                    tabProgram.SelectedIndex = 3;
                 }
                 else
                 {
@@ -254,6 +276,156 @@ namespace ProyectoFinalPOOBD.Views
                 MessageBox.Show("Datos incompletos, por favor llene todos los datos del ciudadano",
                     "Añadir ciudadano: Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+
+        // Funciones de seguimiento de citas
+
+
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtDuiData.Text != String.Empty)
+            {
+                var context = new VaccinationContext();
+                var ifCitizen = new CitizenServices().GetCitizenByDui(txtDuiData.Text);
+                if (ifCitizen is not null)
+                {
+                    var citizen = context.Citizens.Include(c => c.Appointments)
+                        .FirstOrDefault(c => c.Dui == txtDuiData.Text &&
+                                             ((c.Appointments.Count == 1 && c.Appointments.First().IdVaccination == null) || 
+                                              (c.Appointments.Count == 2 && c.Appointments.OrderBy(a => a.IdAppointment).Last().IdVaccination == null)));
+                    if (citizen is not null)
+                    {
+                        var appointment = context.Appointments.Include(a => a.IdCitizenNavigation)
+                            .Include(a => a.IdPlaceNavigation)
+                            .FirstOrDefault(a => a.IdCitizenNavigation.Dui == txtDuiData.Text && a.IdVaccination == null);
+
+                        _currentVaccination = appointment;
+                        _currenCitizen = ifCitizen;
+                        FillList(_currentVaccination, _currenCitizen);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El ciudadano ingresado no posee citas pendientes.");
+                        listBox1.Items.Clear();
+                        listBox1.Items.Add("Sin resultados de citas del ciudadano");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "El DUI ingresado no esta asignado a ningun ciudadano, puede ingresarlo desde proceso de cita");
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add("Sin resultados");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El campo de DUI esta vacio, por favor ingrese uno para comenzar la busqueda");
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtDuiData.Text = String.Empty;
+            txtDuiData.PlaceholderText = "Ingrese el numero de DUI de un ciudadano";
+        }
+
+        private void FillList(Appointment appointment, Citizen citizen)
+        {
+            listBox1.Items.Clear();
+            string texto = String.Empty;
+            texto += "Numero de cita: " + appointment.IdAppointment.ToString() + Environment.NewLine;
+            listBox1.Items.Add(texto);
+            texto = "Nombre del ciudadano: " + citizen.Name + Environment.NewLine;
+            listBox1.Items.Add(texto);
+            texto = "DUI del ciudadano: " + citizen.Dui + Environment.NewLine;
+            listBox1.Items.Add(texto);
+            texto = "Edad del ciudadano: " + citizen.Age + Environment.NewLine;
+            listBox1.Items.Add(texto);
+            texto = "Fecha de cita: " + appointment.AppointmentDate.ToString("dddd dd MMMM yyyy") + Environment.NewLine;
+            listBox1.Items.Add(texto);
+            texto = "Hora de la cita: " + appointment.AppointmentDate.ToString("hh:mm tt") + Environment.NewLine;
+            listBox1.Items.Add(texto);
+            texto = "Lugar de vacunacion: " + appointment.IdPlaceNavigation.PlaceName + Environment.NewLine;
+            listBox1.Items.Add(texto);
+
+        }
+
+        private void btnWaiting_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("El ciudadano actual posee cita para realizar la vacunacion, desea proseguir: ",
+                "Seguimiento de citas: Vacunacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                txtDuiData.Text = String.Empty;
+                using (var waitingForm = new frmWaitingLine(_currentVaccination, _currenCitizen))
+                {
+                    waitingForm.ShowDialog();
+                    _currentVaccination = waitingForm.Appointment;
+                    ActivateButton(btnVaccinationProcess, RGBColors.color3);
+                    icoTitle.IconChar = currentBtn.IconChar;
+                    lblTitle.Text = "Proceso de vacunacion";
+                    tabProgram.SelectedIndex = 3;
+                }
+
+                dtpVaccinationDate.MinDate = _currentVaccination.AppointmentDate;
+            }
+        }
+
+        // Vaccination process
+        private void btnVaccineStart_Click(object sender, EventArgs e)
+        {
+            var appointmentContext = new AppointmentServices();
+            _currentVaccination.IdVaccination = appointmentContext.GetLastIdVaccination() + 1;
+            _currentVaccination.VaccineDateTime = dtpVaccinationDate.Value.Date + dtpHours.Value.TimeOfDay;
+            appointmentContext.Update(_currentVaccination);
+            var effectsId = new List<ViewModel.SideEffectXAppointmentVm>();
+            
+            using (var secondaryEffects = new frmSideEffects())
+            {
+                secondaryEffects.ShowDialog();
+                effectsId = secondaryEffects.SideEffects;
+            }
+
+            if (effectsId.Count > 0)
+            {
+                var effectsServices= new AppointmentXSideEffectsServices();
+                SideEffectXappointment effectXappointment = new SideEffectXappointment();
+                effectsId.ForEach(e =>
+                {
+                    effectXappointment.IdAppointment = _currentVaccination.IdAppointment;
+                    effectXappointment.IdSideEffect = e.SideEffectId;
+                    effectXappointment.Lapse = e.Lapse;
+                    effectsServices.Create(effectXappointment);
+                });
+                MessageBox.Show("Los efectos secundarios han sido añadidos a la revision de la vacunacion");
+            }
+
+            if (Functions.CreateAppointment(_currenCitizen, _employeeLogged))
+            {
+                MessageBox.Show("Se le ha asignado una nueva cita para la segunda dosis de vacunacion",
+                    "Asignacion de segunda dosis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                var lastApointment = new AppointmentServices().GetLastByCitizen(_currenCitizen.Id);
+                var frmDetails = new frmReservationAppointmentDetails(lastApointment, _currenCitizen);
+                frmDetails.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Se le han brindado ambas dosis de la vacuna al ciudadano",
+                    "Finalizacion de vacunaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            tabProgram.SelectedIndex = 2;
         }
     }
 }

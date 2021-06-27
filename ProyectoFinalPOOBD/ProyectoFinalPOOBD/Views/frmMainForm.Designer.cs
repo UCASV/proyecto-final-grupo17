@@ -77,10 +77,14 @@ namespace ProyectoFinalPOOBD.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPageTracking = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnWaiting = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtDuiSearch = new System.Windows.Forms.TextBox();
-            this.btnDuiSearch = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDuiData = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDuiSearch = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -88,9 +92,9 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.btnVaccineStart = new System.Windows.Forms.Button();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpHours = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpVaccinationDate = new System.Windows.Forms.DateTimePicker();
             this.lblVaccineDate = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblVaccine = new System.Windows.Forms.Label();
@@ -117,7 +121,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPageTracking.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tabPageVaccination.SuspendLayout();
@@ -516,7 +520,7 @@ namespace ProyectoFinalPOOBD.Views
             this.cmbInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbInstitucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInstitucion.FormattingEnabled = true;
-            this.cmbInstitucion.Location = new System.Drawing.Point(237, 93);
+            this.cmbInstitucion.Location = new System.Drawing.Point(237, 90);
             this.cmbInstitucion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbInstitucion.Name = "cmbInstitucion";
             this.cmbInstitucion.Size = new System.Drawing.Size(265, 29);
@@ -650,6 +654,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDui.Location = new System.Drawing.Point(238, 4);
             this.txtDui.Name = "txtDui";
+            this.txtDui.PlaceholderText = "Numero de DUI";
             this.txtDui.Size = new System.Drawing.Size(263, 29);
             this.txtDui.TabIndex = 0;
             // 
@@ -658,6 +663,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Location = new System.Drawing.Point(238, 41);
             this.txtName.Name = "txtName";
+            this.txtName.PlaceholderText = "Nombre del ciudadano";
             this.txtName.Size = new System.Drawing.Size(263, 29);
             this.txtName.TabIndex = 1;
             // 
@@ -666,6 +672,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddress.Location = new System.Drawing.Point(238, 78);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PlaceholderText = "Direccion del ciudadano";
             this.txtAddress.Size = new System.Drawing.Size(263, 29);
             this.txtAddress.TabIndex = 2;
             // 
@@ -674,6 +681,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(238, 115);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "Correo electronico";
             this.txtEmail.Size = new System.Drawing.Size(263, 29);
             this.txtEmail.TabIndex = 3;
             // 
@@ -732,6 +740,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(238, 151);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PlaceholderText = "Numero de telefono (8 digitos)";
             this.txtPhoneNumber.Size = new System.Drawing.Size(263, 29);
             this.txtPhoneNumber.TabIndex = 11;
             // 
@@ -761,68 +770,130 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.listBox1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 131);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 173);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(707, 414);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(707, 372);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
-            // dataGridView1
+            // listBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(701, 408);
-            this.dataGridView1.TabIndex = 0;
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(3, 3);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(701, 319);
+            this.listBox1.TabIndex = 0;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 3;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.60204F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.39796F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
+            this.tableLayoutPanel9.Controls.Add(this.btnWaiting, 1, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 334);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(701, 35);
+            this.tableLayoutPanel9.TabIndex = 1;
+            // 
+            // btnWaiting
+            // 
+            this.btnWaiting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWaiting.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnWaiting.Location = new System.Drawing.Point(275, 3);
+            this.btnWaiting.Name = "btnWaiting";
+            this.btnWaiting.Size = new System.Drawing.Size(124, 29);
+            this.btnWaiting.TabIndex = 0;
+            this.btnWaiting.Text = "Proceder a espera";
+            this.btnWaiting.UseVisualStyleBackColor = false;
+            this.btnWaiting.Click += new System.EventHandler(this.btnWaiting_Click);
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 3;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.89474F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.10526F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 398F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
-            this.tableLayoutPanel7.Controls.Add(this.txtDuiSearch, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.btnDuiSearch, 2, 0);
+            this.tableLayoutPanel7.ColumnCount = 5;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.94681F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.05319F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tableLayoutPanel7.Controls.Add(this.btnSearch, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.btnClear, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.txtDuiData, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 94);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 109);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(707, 37);
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.31507F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.68493F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(707, 64);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
-            // txtDuiSearch
+            // btnSearch
             // 
-            this.txtDuiSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDuiSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtDuiSearch.Location = new System.Drawing.Point(135, 4);
-            this.txtDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDuiSearch.Name = "txtDuiSearch";
-            this.txtDuiSearch.Size = new System.Drawing.Size(170, 29);
-            this.txtDuiSearch.TabIndex = 0;
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSearch.Location = new System.Drawing.Point(394, 34);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 27);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Buscar";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnDuiSearch
+            // btnClear
             // 
-            this.btnDuiSearch.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDuiSearch.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDuiSearch.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.btnDuiSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDuiSearch.Location = new System.Drawing.Point(311, 4);
-            this.btnDuiSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDuiSearch.Name = "btnDuiSearch";
-            this.btnDuiSearch.Size = new System.Drawing.Size(75, 29);
-            this.btnDuiSearch.TabIndex = 1;
-            this.btnDuiSearch.Text = "Buscar";
-            this.btnDuiSearch.UseVisualStyleBackColor = false;
-            this.btnDuiSearch.Click += new System.EventHandler(this.btnDuiSearch_Click);
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClear.Location = new System.Drawing.Point(475, 34);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(76, 27);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "Limpiar";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(81, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(307, 31);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "DUI:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txtDuiData
+            // 
+            this.txtDuiData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDuiData.Location = new System.Drawing.Point(81, 34);
+            this.txtDuiData.Name = "txtDuiData";
+            this.txtDuiData.PlaceholderText = "Ingrese el numero de DUI de un ciudadano";
+            this.txtDuiData.Size = new System.Drawing.Size(307, 23);
+            this.txtDuiData.TabIndex = 3;
             // 
             // tableLayoutPanel6
             // 
@@ -830,11 +901,11 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.lblDuiSearch, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 57);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 29);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(707, 37);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(707, 80);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // lblDuiSearch
@@ -855,8 +926,9 @@ namespace ProyectoFinalPOOBD.Views
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(707, 54);
+            this.panel3.Size = new System.Drawing.Size(707, 26);
             this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // tabPageVaccination
             // 
@@ -908,10 +980,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5102F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.4898F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
-            this.tableLayoutPanel12.Controls.Add(this.dateTimePicker2, 2, 1);
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216F));
+            this.tableLayoutPanel12.Controls.Add(this.dtpHours, 2, 1);
             this.tableLayoutPanel12.Controls.Add(this.label3, 1, 1);
-            this.tableLayoutPanel12.Controls.Add(this.dateTimePicker1, 2, 0);
+            this.tableLayoutPanel12.Controls.Add(this.dtpVaccinationDate, 2, 0);
             this.tableLayoutPanel12.Controls.Add(this.lblVaccineDate, 1, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 171);
@@ -922,46 +994,47 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel12.Size = new System.Drawing.Size(707, 114);
             this.tableLayoutPanel12.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // dtpHours
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(414, 74);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(60, 23);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtpHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpHours.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpHours.CustomFormat = "hh:mm tt";
+            this.dtpHours.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHours.Location = new System.Drawing.Point(391, 74);
+            this.dtpHours.Name = "dtpHours";
+            this.dtpHours.Size = new System.Drawing.Size(79, 23);
+            this.dtpHours.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(197, 57);
+            this.label3.Location = new System.Drawing.Point(191, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 57);
+            this.label3.Size = new System.Drawing.Size(178, 57);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hora de vacunacion:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dateTimePicker1
+            // dtpVaccinationDate
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(395, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 23);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpVaccinationDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpVaccinationDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpVaccinationDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVaccinationDate.Location = new System.Drawing.Point(382, 17);
+            this.dtpVaccinationDate.Name = "dtpVaccinationDate";
+            this.dtpVaccinationDate.Size = new System.Drawing.Size(98, 23);
+            this.dtpVaccinationDate.TabIndex = 1;
             // 
             // lblVaccineDate
             // 
             this.lblVaccineDate.AutoSize = true;
             this.lblVaccineDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVaccineDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVaccineDate.Location = new System.Drawing.Point(197, 0);
+            this.lblVaccineDate.Location = new System.Drawing.Point(191, 0);
             this.lblVaccineDate.Name = "lblVaccineDate";
-            this.lblVaccineDate.Size = new System.Drawing.Size(185, 57);
+            this.lblVaccineDate.Size = new System.Drawing.Size(178, 57);
             this.lblVaccineDate.TabIndex = 2;
             this.lblVaccineDate.Text = "Fecha de vacunacion:";
             this.lblVaccineDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1013,6 +1086,7 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.tabProgram);
             this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.pnlMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainForm";
@@ -1044,7 +1118,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1.PerformLayout();
             this.tabPageTracking.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -1100,19 +1174,16 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label lblDiesease;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox txtDuiSearch;
-        private System.Windows.Forms.Button btnDuiSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label lblDuiSearch;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblVaccine;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpVaccinationDate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpHours;
         private System.Windows.Forms.Button btnVaccineStart;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private FontAwesome.Sharp.IconPictureBox iconVirus;
@@ -1127,6 +1198,13 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Label lblVaccineDate;
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDuiData;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Button btnWaiting;
     }
 }
 

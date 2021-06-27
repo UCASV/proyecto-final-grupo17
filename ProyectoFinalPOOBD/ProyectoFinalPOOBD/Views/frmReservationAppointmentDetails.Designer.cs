@@ -36,12 +36,12 @@ namespace ProyectoFinalPOOBD.Views
             this.label2 = new System.Windows.Forms.Label();
             this.lblDui = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblDuiData = new System.Windows.Forms.Label();
+            this.lblHourData = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblDateData = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPlaceData = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGereratePdf = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
@@ -74,7 +74,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.58904F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 58);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -94,16 +94,16 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.84615F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 426F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDui, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.label1, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 2, 12);
+            this.tableLayoutPanel2.Controls.Add(this.lblDuiData, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblHourData, 2, 12);
             this.tableLayoutPanel2.Controls.Add(this.label8, 2, 11);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 2, 9);
+            this.tableLayoutPanel2.Controls.Add(this.lblDateData, 2, 9);
             this.tableLayoutPanel2.Controls.Add(this.label6, 2, 8);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.lblPlaceData, 2, 6);
             this.tableLayoutPanel2.Controls.Add(this.label4, 2, 5);
             this.tableLayoutPanel2.Controls.Add(this.btnGereratePdf, 2, 14);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(91, 58);
@@ -145,7 +145,7 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDui.AutoSize = true;
             this.lblDui.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDui.Location = new System.Drawing.Point(100, 59);
+            this.lblDui.Location = new System.Drawing.Point(98, 59);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(420, 35);
             this.lblDui.TabIndex = 8;
@@ -157,84 +157,84 @@ namespace ProyectoFinalPOOBD.Views
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(100, 94);
+            this.label1.Location = new System.Drawing.Point(98, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 21);
             this.label1.TabIndex = 9;
             this.label1.Text = "DUI:";
             // 
-            // label3
+            // lblDuiData
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(100, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 21);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "datos";
+            this.lblDuiData.AutoSize = true;
+            this.lblDuiData.BackColor = System.Drawing.Color.Transparent;
+            this.lblDuiData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDuiData.Location = new System.Drawing.Point(98, 116);
+            this.lblDuiData.Name = "lblDuiData";
+            this.lblDuiData.Size = new System.Drawing.Size(48, 21);
+            this.lblDuiData.TabIndex = 11;
+            this.lblDuiData.Text = "datos";
             // 
-            // label9
+            // lblHourData
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(100, 315);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 21);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "datos";
+            this.lblHourData.AutoSize = true;
+            this.lblHourData.BackColor = System.Drawing.Color.Transparent;
+            this.lblHourData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHourData.Location = new System.Drawing.Point(98, 315);
+            this.lblHourData.Name = "lblHourData";
+            this.lblHourData.Size = new System.Drawing.Size(48, 21);
+            this.lblHourData.TabIndex = 17;
+            this.lblHourData.Text = "datos";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(100, 293);
+            this.label8.Location = new System.Drawing.Point(98, 293);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(151, 21);
             this.label8.TabIndex = 16;
             this.label8.Text = "Hora de Vacunación:";
             // 
-            // label7
+            // lblDateData
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(100, 249);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 21);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "datos";
+            this.lblDateData.AutoSize = true;
+            this.lblDateData.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDateData.Location = new System.Drawing.Point(98, 249);
+            this.lblDateData.Name = "lblDateData";
+            this.lblDateData.Size = new System.Drawing.Size(48, 21);
+            this.lblDateData.TabIndex = 15;
+            this.lblDateData.Text = "datos";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(100, 227);
+            this.label6.Location = new System.Drawing.Point(98, 227);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(157, 21);
             this.label6.TabIndex = 14;
             this.label6.Text = "Fecha de Vacunación:";
             // 
-            // label5
+            // lblPlaceData
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(100, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "datos";
+            this.lblPlaceData.AutoSize = true;
+            this.lblPlaceData.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlaceData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPlaceData.Location = new System.Drawing.Point(98, 184);
+            this.lblPlaceData.Name = "lblPlaceData";
+            this.lblPlaceData.Size = new System.Drawing.Size(48, 20);
+            this.lblPlaceData.TabIndex = 13;
+            this.lblPlaceData.Text = "datos";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(100, 158);
+            this.label4.Location = new System.Drawing.Point(98, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 21);
             this.label4.TabIndex = 12;
@@ -245,13 +245,14 @@ namespace ProyectoFinalPOOBD.Views
             this.btnGereratePdf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGereratePdf.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnGereratePdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGereratePdf.Location = new System.Drawing.Point(193, 366);
+            this.btnGereratePdf.Location = new System.Drawing.Point(191, 366);
             this.btnGereratePdf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGereratePdf.Name = "btnGereratePdf";
             this.btnGereratePdf.Size = new System.Drawing.Size(234, 28);
             this.btnGereratePdf.TabIndex = 18;
             this.btnGereratePdf.Text = "Generar PDF";
             this.btnGereratePdf.UseVisualStyleBackColor = true;
+            this.btnGereratePdf.Click += new System.EventHandler(this.btnGereratePdf_Click);
             // 
             // frmReservationAppointmentDetails
             // 
@@ -285,13 +286,13 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDui;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDuiData;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPlaceData;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblDateData;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblHourData;
         private System.Windows.Forms.Button btnGereratePdf;
     }
 }

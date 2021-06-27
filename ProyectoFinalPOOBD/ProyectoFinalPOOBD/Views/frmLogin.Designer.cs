@@ -151,6 +151,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "Contraseña";
             this.txtPassword.Size = new System.Drawing.Size(165, 32);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -180,7 +181,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtCabin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCabin.Multiline = true;
             this.txtCabin.Name = "txtCabin";
-            this.txtCabin.PasswordChar = '*';
+            this.txtCabin.PlaceholderText = "N° cabina";
             this.txtCabin.Size = new System.Drawing.Size(165, 32);
             this.txtCabin.TabIndex = 14;
             this.txtCabin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -242,6 +243,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PlaceholderText = "Usuario";
             this.txtUserName.Size = new System.Drawing.Size(163, 32);
             this.txtUserName.TabIndex = 9;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

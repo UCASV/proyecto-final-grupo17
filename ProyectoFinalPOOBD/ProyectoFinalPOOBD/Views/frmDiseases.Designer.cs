@@ -110,6 +110,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtDisease.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDisease.Multiline = true;
             this.txtDisease.Name = "txtDisease";
+            this.txtDisease.PlaceholderText = "Nombre de la enfermedad o discapacidad";
             this.txtDisease.Size = new System.Drawing.Size(498, 28);
             this.txtDisease.TabIndex = 9;
             this.txtDisease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

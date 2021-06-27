@@ -1,10 +1,22 @@
 ﻿#nullable enable
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using iText.IO.Font;
+using iText.Kernel.Font;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using iText.StyledXmlParser.Jsoup.Nodes;
 using ProyectoFinalPOOBD.Models;
 using ProyectoFinalPOOBD.Repository;
 using ProyectoFinalPOOBD.VaccineContext;
+using Document = iText.Layout.Document;
+using FontFamily = System.Windows.Media.FontFamily;
+using HorizontalAlignment = iText.Layout.Properties.HorizontalAlignment;
 
 namespace ProyectoFinalPOOBD.Backend
 {
@@ -114,33 +126,43 @@ namespace ProyectoFinalPOOBD.Backend
         }
 
         // Codigo para generar el pdf en la pagina de detalles de cita reservada
-
-        /*
-        private void CreatePdf()
+        public static void CreatePdf(string place, Citizen person, Appointment appointment)
         {
             SaveFileDialog pathDialog = new SaveFileDialog();
             pathDialog.Filter = "PDF document (*.pdf)|*.pdf";
             DialogResult response = pathDialog.ShowDialog();
 
+            string path = string.Empty;
+
             if (response == DialogResult.OK)
             {
                 path = pathDialog.FileName;
+                PdfWriter pdfW = new PdfWriter(pathDialog.FileName);
+                PdfDocument pdf = new PdfDocument(pdfW);
+                Document document = new Document(pdf, PageSize.LETTER);
+                document.SetMargins(60, 50, 55, 50);
+                Text header = new Text("------------- VACUNACION COVID 19 -------------").SetTextAlignment(TextAlignment.CENTER);
+                header.SetFontSize(20);
+                Paragraph pdfText = new Paragraph(header).SetTextAlignment(TextAlignment.CENTER);
+                string detalle = "\nCita #" + appointment.IdAppointment + Environment.NewLine;
+                detalle += "Nombre del ciudadano: " + person.Name + Environment.NewLine;
+                detalle += "DUI del ciudadano: " + person.Dui + Environment.NewLine;
+                detalle += "Numero telefonico: " + person.PhoneNumber + Environment.NewLine;
+                detalle += "Lugar de vacunacion asignado: " + place + Environment.NewLine;
+                detalle += "Fecha de vacunacion: " + appointment.AppointmentDate.Date.ToString("dddd dd MMMM yyyy") + Environment.NewLine;
+                detalle += "Hora de vacunacion: " + appointment.AppointmentDate.ToString("hh:mm tt") + Environment.NewLine;
+                Text body = new Text(detalle).SetTextAlignment(TextAlignment.JUSTIFIED);
+                body.SetFontSize(14);
+                pdfText.Add(body);
+                pdfText.SetHorizontalAlignment(HorizontalAlignment.CENTER);
+                document.Add(pdfText);
+                document.Close();
             }
-
-            PdfWriter pdfW = new PdfWriter(pathDialog.FileName);
-            PdfDocument pdf = new PdfDocument(pdfW);
-            Document document = new Document(pdf, PageSize.LETTER);
-
-            document.SetMargins(60, 20, 55, 20);
-            var prueba = new UserServices().Find(1);
-            string detalle = "User: " + prueba.Username + Environment.NewLine;
-            detalle += "Password: " + prueba.Password;
-            Paragraph text = new Paragraph(detalle);
-            
-            document.Add(text);
-            document.Close();
+            else
+            {
+                MessageBox.Show("Por favor seleccione una direccion para guardar el PDF de la cita");
+            }
         }
-         */
 
         public static bool CheckIfCitizenExists(string dui)
         {
@@ -148,20 +170,19 @@ namespace ProyectoFinalPOOBD.Backend
             return (people is not null);
         }
 
-        public static bool CreateAppointment(Citizen person, DateTime? time, Employee employeeLogged)
+        public static bool CreateAppointment(Citizen person, Employee employeeLogged)
         {
             if (CheckIfNotAppointment(person))
             {
-
-                var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged);
+                var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged, true);
                 new AppointmentServices().Create(vaccineAppointment);
                 return true;
             }
 
             var allAppointments = new AppointmentServices().GetByCitizen(person.Id);
-            if (IfPendingVaccination(allAppointments[0]).Equals(false))
+            if (IfPendingVaccination(allAppointments).Equals(true))
             {
-                var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged);
+                var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged, false);
                 new AppointmentServices().Create(vaccineAppointment);
                 return true;
             }
@@ -175,9 +196,9 @@ namespace ProyectoFinalPOOBD.Backend
             return listAppointments.Count == 0;
         }
 
-        public static bool IfPendingVaccination(Appointment appointment)
+        public static bool IfPendingVaccination(List<Appointment> appointment)
         {
-            return appointment.IdVaccination is null;
+            return appointment.First().IdVaccination is not null && appointment.Count == 1;
         }
     }
 }
