@@ -8,6 +8,7 @@ using ProyectoFinalPOOBD.VaccineContext;
 
 namespace ProyectoFinalPOOBD.Repository
 {
+    // CRUD de clase Cabin
     class CabinServices : IRepository<Cabin>
     {
         private VaccinationContext _context = new VaccinationContext();

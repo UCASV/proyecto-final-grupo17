@@ -10,6 +10,7 @@ namespace ProyectoFinalPOOBD.Repository
 {
     public static class DiseaseServices
     {
+        // No hace uso de IRepository ya que solo se utiliza para insertar enfermedades
         public static void InsertDiseases(List<Disease> diseases, int idCitizen)
         {
             diseases.ForEach(disease => disease.IdCitizen = idCitizen);

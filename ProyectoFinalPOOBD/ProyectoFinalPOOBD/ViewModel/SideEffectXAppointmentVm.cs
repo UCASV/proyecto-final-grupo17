@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalPOOBD.ViewModel
 {
+    // Clase utilizada para recoger el lapso de tiempo y el id del efecto secundario
     public class SideEffectXAppointmentVm
     {
         public int Lapse { get; set; }

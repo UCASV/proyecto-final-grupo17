@@ -19,18 +19,22 @@ namespace ProyectoFinalPOOBD.Views
             InitializeComponent();
         }
 
+        // Esta funcion añade el nuevo efecto a la base de datos
         private void btnSend_Click(object sender, EventArgs e)
         {
+            // Se ejecuta si el efecto no es texto vacio
             if (txtSideEffect.Text != string.Empty)
             {
                 var newSideEffec = new SideEffect();
                 newSideEffec.Effect = txtSideEffect.Text;
                 var context = new SideEffectServices();
+                // Añadimos a la bd y cerramos
                 context.Create(newSideEffec);
                 this.Close();
             }
             else
             {
+                // Sino se muestra la alerta
                 MessageBox.Show("Por favor llene el campo del efecto secundario");
             }
         }

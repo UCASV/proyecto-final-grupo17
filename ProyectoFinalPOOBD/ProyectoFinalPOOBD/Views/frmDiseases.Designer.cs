@@ -29,6 +29,7 @@ namespace ProyectoFinalPOOBD.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiseases));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDui = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +71,6 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 310F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(654, 425);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // lblDui
             // 
@@ -246,12 +246,13 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDiseases";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDiseases";
+            this.Text = "Vacunacion COVID-19: Lista de enfermedades del ciudadano";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiseases)).EndInit();

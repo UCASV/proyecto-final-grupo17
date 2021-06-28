@@ -8,6 +8,7 @@ using ProyectoFinalPOOBD.VaccineContext;
 
 namespace ProyectoFinalPOOBD.Repository
 {
+    // Algunas consultas de instituciones pero no implementa IRepository debido a que no se usan muchas de las opciones
     class InstitutionServices
     {
         private VaccinationContext _context = new VaccinationContext();
@@ -17,6 +18,7 @@ namespace ProyectoFinalPOOBD.Repository
             return _context.Institutions.ToList();
         }
 
+        // Se obtienen todas las instituciones menos la opcion de ninguna
         public List<Institution> GetInstitutions()
         {
             return _context.Institutions.Where(institution => institution.InstitutionName != "Ninguna").ToList();

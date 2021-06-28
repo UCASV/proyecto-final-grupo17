@@ -82,7 +82,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.84615F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 426F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDui, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.label7, 2, 2);
@@ -113,7 +113,6 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(561, 434);
             this.tableLayoutPanel2.TabIndex = 4;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // label2
             // 
@@ -131,7 +130,7 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDui.AutoSize = true;
             this.lblDui.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDui.Location = new System.Drawing.Point(82, 19);
+            this.lblDui.Location = new System.Drawing.Point(81, 19);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(420, 28);
             this.lblDui.TabIndex = 8;
@@ -143,7 +142,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(82, 47);
+            this.label7.Location = new System.Drawing.Point(81, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(361, 19);
             this.label7.TabIndex = 22;
@@ -153,7 +152,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.panel3.Controls.Add(this.rdoNo);
             this.panel3.Controls.Add(this.rdoYes);
-            this.panel3.Location = new System.Drawing.Point(82, 73);
+            this.panel3.Location = new System.Drawing.Point(81, 73);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 25);
@@ -193,7 +192,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(82, 116);
+            this.panel4.Location = new System.Drawing.Point(81, 116);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(420, 23);
@@ -225,7 +224,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.panel5.Controls.Add(this.txtMins);
             this.panel5.Controls.Add(this.cmbEffects);
-            this.panel5.Location = new System.Drawing.Point(82, 145);
+            this.panel5.Location = new System.Drawing.Point(81, 145);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(420, 28);
@@ -242,7 +241,6 @@ namespace ProyectoFinalPOOBD.Views
             this.txtMins.PlaceholderText = "Minuto del efecto";
             this.txtMins.Size = new System.Drawing.Size(122, 25);
             this.txtMins.TabIndex = 1;
-            this.txtMins.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // cmbEffects
             // 
@@ -261,12 +259,12 @@ namespace ProyectoFinalPOOBD.Views
             this.lblLink.Enabled = false;
             this.lblLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLink.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLink.Location = new System.Drawing.Point(82, 188);
+            this.lblLink.Location = new System.Drawing.Point(81, 188);
             this.lblLink.Name = "lblLink";
             this.lblLink.Size = new System.Drawing.Size(384, 20);
             this.lblLink.TabIndex = 21;
             this.lblLink.Text = "Si el efecto no se encuentra ingreselo dando click aqui\r\n";
-            this.lblLink.Click += new System.EventHandler(this.label5_Click);
+            this.lblLink.Click += new System.EventHandler(this.AddNewSideEffect_Click);
             // 
             // btnAddEffect
             // 
@@ -276,7 +274,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAddEffect.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnAddEffect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEffect.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddEffect.Location = new System.Drawing.Point(226, 222);
+            this.btnAddEffect.Location = new System.Drawing.Point(225, 222);
             this.btnAddEffect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddEffect.Name = "btnAddEffect";
             this.btnAddEffect.Size = new System.Drawing.Size(131, 31);
@@ -291,7 +289,7 @@ namespace ProyectoFinalPOOBD.Views
             this.dgvEffects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEffects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Effect});
-            this.dgvEffects.Location = new System.Drawing.Point(82, 258);
+            this.dgvEffects.Location = new System.Drawing.Point(81, 258);
             this.dgvEffects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEffects.Name = "dgvEffects";
             this.dgvEffects.RowHeadersWidth = 51;
@@ -313,14 +311,14 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAceppt.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnAceppt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceppt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAceppt.Location = new System.Drawing.Point(226, 387);
+            this.btnAceppt.Location = new System.Drawing.Point(225, 387);
             this.btnAceppt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceppt.Name = "btnAceppt";
             this.btnAceppt.Size = new System.Drawing.Size(131, 31);
             this.btnAceppt.TabIndex = 30;
             this.btnAceppt.Text = "Aceptar";
             this.btnAceppt.UseVisualStyleBackColor = false;
-            this.btnAceppt.Click += new System.EventHandler(this.button2_Click);
+            this.btnAceppt.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmSideEffects
             // 
@@ -330,7 +328,7 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

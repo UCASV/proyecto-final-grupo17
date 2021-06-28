@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalPOOBD.ViewModel
 {
+    // Se utiliza para recoger las apariciones de un efecto secundario, effect es el nombre y amount es cantidad
     public class SideEffectVM
     {
         public string Effect { get; set; }
@@ -21,6 +22,5 @@ namespace ProyectoFinalPOOBD.ViewModel
             this.Effect = Effect;
             this.Amount = Amount;
         }
-        
     }
 }

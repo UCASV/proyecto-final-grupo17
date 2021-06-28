@@ -14,6 +14,7 @@ namespace ProyectoFinalPOOBD.Views
 {
     public partial class frmDiseases : Form
     {
+        // Lista de enfermedades del ciudadano
         public List<Disease>? Diseases { get; set; }
        
         public frmDiseases()
@@ -22,6 +23,7 @@ namespace ProyectoFinalPOOBD.Views
             Diseases = new List<Disease>();
         }
 
+        // Si el ciudadano ya habia registrado enfermedades las volvera a cargar y se llena el datagridview
         public frmDiseases(List<Disease>? diseases)
         {
             InitializeComponent();
@@ -29,12 +31,7 @@ namespace ProyectoFinalPOOBD.Views
             FillDgv();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        //TODO pendiente añadir nuevas enfermedades
+        //Añadimos una nueva enfermedad a la lista y lo pasamos al dgv
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (txtDisease.Text != String.Empty)
@@ -50,18 +47,22 @@ namespace ProyectoFinalPOOBD.Views
             }
         }
 
+        // Esta funcion llena el dgv con las enfermedades
         private void FillDgv()
         {
             dgvDiseases.DataSource = Diseases.Select(s=> new {s.Illness}).ToList();
         }
 
+        // Funcion que retorna las enfermedades
         public List<Disease>? ReturnList => Diseases;
 
+        // Se cierra el form
         private void lblCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Mostramos un mensaje de confirmacion y cerramos
         private void lblDone_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Las enfermedades han sido añadidas al formulario.");

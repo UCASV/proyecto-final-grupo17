@@ -20,7 +20,7 @@ using HorizontalAlignment = iText.Layout.Properties.HorizontalAlignment;
 
 namespace ProyectoFinalPOOBD.Backend
 {
-    public static class Functions
+    public static class Utilities
     {
         // Para el login: Sirve para revisar si el usuario existe en la base de datos, si es asi lo registra, de lo contrario no
         public static bool CheckUser(string username, string password)
@@ -30,27 +30,31 @@ namespace ProyectoFinalPOOBD.Backend
             return ifUser is not null;
         }
 
-        // This code is for login
+        // Este codigo sirve para ver si existe la cabina segun id ingresado
         public static bool CheckCabin(int id)
         {
             Cabin? ifCabin = new CabinServices().Find(id);
             return (ifCabin is not null);
         }
 
-        // This code goes for all the login:
+        // Este codigo es utilizado para validar si se puede iniciar sesion, de ser asi inicia sesion, de lo contrario retorna falso
 
         public static bool LoginSuccess(int cabinNumber, string username, string password)
         {
+            // Revisamos que exista el usuario
             if (CheckUser(username, password))
             {
+                // Revisamos si existe la cabina
                 if (CheckCabin(cabinNumber))
                 {
+                    // Obtenemos el empleado
                     Employee employeeLogged = (new UserServices()
                             .FindByUsernameAndPassword(username, password))
                         .Employee;
-
+                    // Obtenemos la cabina
                     Cabin cabinInUse = new CabinServices().Find(cabinNumber);
 
+                    // Creamos el inicio de sesion
                     Login newLogin = new()
                     {
                         LoginDate = DateTime.Now,
@@ -58,6 +62,7 @@ namespace ProyectoFinalPOOBD.Backend
                         IdEmployee = employeeLogged.Id
                     };
 
+                    // Y lo añadimos
                     var context = new VaccinationContext();
                     context.Logins.Add(newLogin);
                     context.SaveChanges();
@@ -77,7 +82,7 @@ namespace ProyectoFinalPOOBD.Backend
             return false;
         }
 
-        // Code for a new Citizen 
+        // Funcion que retorna verdadero si el ciudadano pudo ser registrado exitosamente
         public static bool IfSuccessCitizen(Citizen person, List<Disease>? diseases, Institution institution)
         {
             // Si el ciudadano es apto se ingresara el ciudadano y devolvera true
@@ -85,20 +90,25 @@ namespace ProyectoFinalPOOBD.Backend
             {
                 person.IdInstitution = institution.Id;
                 CitizenServices citizenServices = new CitizenServices();
+
+                // Crea al ciudadano
                 citizenServices.Create(person);
                 Citizen citizenCreated = citizenServices.GetLastCitizen();
 
+                // Si hay enfermedades las agrega a la BD
                 if (diseases.Count > 0)
                 {
                     DiseaseServices.InsertDiseases(diseases, citizenCreated.Id);
                 }
 
+                // Si se completo exitosamente retorna true, sino false
                 return true;
             }
 
             return false;
         }
 
+        // Funcion que verifica que el ciudadano este en una de las condiciones para ser apto
         public static bool ConditionCitizen(Citizen person, List<Disease> diseases, Institution institution)
         {
             // Si la persona es mayor de 60 años
@@ -128,19 +138,28 @@ namespace ProyectoFinalPOOBD.Backend
         // Codigo para generar el pdf en la pagina de detalles de cita reservada
         public static void CreatePdf(string place, Citizen person, Appointment appointment)
         {
+            // Cremos un SaveDialogFile para obtener la direccion y nombre del archivo a guardar
             SaveFileDialog pathDialog = new SaveFileDialog();
             pathDialog.Filter = "PDF document (*.pdf)|*.pdf";
             DialogResult response = pathDialog.ShowDialog();
 
             string path = string.Empty;
 
+            // Si se guardo la direccion creamos el pdf con los siguientes datos
             if (response == DialogResult.OK)
             {
+                // direccion y nombre del archivo
                 path = pathDialog.FileName;
+
+                // Seteamos donde estara y que nombre tiene
                 PdfWriter pdfW = new PdfWriter(pathDialog.FileName);
                 PdfDocument pdf = new PdfDocument(pdfW);
+
+                // Creamos el documento y le ponemos tamaño carta
                 Document document = new Document(pdf, PageSize.LETTER);
                 document.SetMargins(60, 50, 55, 50);
+
+                // Añadimos los datos y seteamos su alineacion
                 Text header = new Text("------------- VACUNACION COVID 19 -------------").SetTextAlignment(TextAlignment.CENTER);
                 header.SetFontSize(20);
                 Paragraph pdfText = new Paragraph(header).SetTextAlignment(TextAlignment.CENTER);
@@ -155,30 +174,38 @@ namespace ProyectoFinalPOOBD.Backend
                 body.SetFontSize(14);
                 pdfText.Add(body);
                 pdfText.SetHorizontalAlignment(HorizontalAlignment.CENTER);
+
+                // Añadimos todo al documento y lo guardara donde decidimos guardarlo
                 document.Add(pdfText);
                 document.Close();
             }
             else
             {
+                // Sino le dio a aceptar mostrara el siguiente texto
                 MessageBox.Show("Por favor seleccione una direccion para guardar el PDF de la cita");
             }
         }
 
+        // Funcion que verifica si el ciudadano existe segun el dui
         public static bool CheckIfCitizenExists(string dui)
         {
             var people = new CitizenServices().GetCitizenByDui(dui);
             return (people is not null);
         }
 
+        // Funcion utilizada para crear citas
         public static bool CreateAppointment(Citizen person, Employee employeeLogged)
         {
+            // Valida si el ciudadano no tiene citas
             if (CheckIfNotAppointment(person))
             {
+                // llama a appointment services y llena la cita y por ultimo crea, retorna true si se logro exitosamente
                 var vaccineAppointment = new AppointmentServices().FillAppointment(person, employeeLogged, true);
                 new AppointmentServices().Create(vaccineAppointment);
                 return true;
             }
 
+            // Repite lo mismo anterior solo que este proceso es para segundas citas
             var allAppointments = new AppointmentServices().GetByCitizen(person.Id);
             if (IfPendingVaccination(allAppointments).Equals(true))
             {
@@ -190,12 +217,14 @@ namespace ProyectoFinalPOOBD.Backend
             return false;
         }
 
+        // Revisa si el ciudadano no tiene citas
         public static bool CheckIfNotAppointment(Citizen person)
         {
             var listAppointments = new AppointmentServices().GetByCitizen(person.Id);
             return listAppointments.Count == 0;
         }
 
+        // Revisa si el ciudadano no posee vacunaciones pendientes
         public static bool IfPendingVaccination(List<Appointment> appointment)
         {
             return appointment.First().IdVaccination is not null && appointment.Count == 1;

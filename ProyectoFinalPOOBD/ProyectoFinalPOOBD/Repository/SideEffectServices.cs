@@ -8,6 +8,7 @@ using ProyectoFinalPOOBD.VaccineContext;
 
 namespace ProyectoFinalPOOBD.Repository
 {
+    // CRUD de efectos secundarios
     class SideEffectServices : IRepository<SideEffect>
     {
         private VaccinationContext _context = new VaccinationContext();

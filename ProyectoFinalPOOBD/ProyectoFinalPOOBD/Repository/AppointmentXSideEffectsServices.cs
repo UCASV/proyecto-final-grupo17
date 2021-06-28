@@ -10,6 +10,7 @@ namespace ProyectoFinalPOOBD.Repository
 {
     class AppointmentXSideEffectsServices : IRepository<SideEffectXappointment>
     {
+        // CRUD de SideEffectXappointment
         private VaccinationContext _context = new VaccinationContext();
         public List<SideEffectXappointment> GetAll()
         {

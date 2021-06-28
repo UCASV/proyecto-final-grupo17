@@ -22,6 +22,7 @@ namespace ProyectoFinalPOOBD.Views
         private Appointment _appointmentDetails;
         private Citizen _citizen;
 
+        // Inicializamos el formulario
         public frmReservationAppointmentDetails(Appointment appointment, Citizen citizen)
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace ProyectoFinalPOOBD.Views
             _citizen = citizen;
         }
 
+        // Esta funcion carga los datos que se mostraran en el form que muestra los detalles:
         private void frmReservationAppointmentDetails_Load(object sender, EventArgs e)
         {
             lblDuiData.Text = _citizen.Dui;
@@ -38,14 +40,10 @@ namespace ProyectoFinalPOOBD.Views
 
         }
 
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        // Añ darñe click a generar, si se genero el pdf se mostrara el siguiente mensaje y se cierra el form
         private void btnGereratePdf_Click(object sender, EventArgs e)
         {
-            Functions.CreatePdf(lblPlaceData.Text, _citizen, _appointmentDetails);
+            Utilities.CreatePdf(lblPlaceData.Text, _citizen, _appointmentDetails);
             MessageBox.Show("El pdf con los datos de vacunacion ha sido generado exitosamente",
                 "Asignacion de vacunacion: Reporte PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();

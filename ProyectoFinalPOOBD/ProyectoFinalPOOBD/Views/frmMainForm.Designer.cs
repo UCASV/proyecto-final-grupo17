@@ -29,6 +29,7 @@ namespace ProyectoFinalPOOBD.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainForm));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnStats = new FontAwesome.Sharp.IconButton();
             this.btnVaccinationProcess = new FontAwesome.Sharp.IconButton();
@@ -77,9 +78,9 @@ namespace ProyectoFinalPOOBD.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPageTracking = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.btnWaiting = new System.Windows.Forms.Button();
+            this.lstMain = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -100,26 +101,26 @@ namespace ProyectoFinalPOOBD.Views
             this.lblVaccine = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabPageStats = new System.Windows.Forms.TabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblDose1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblDose2 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lbl15Min = new System.Windows.Forms.Label();
-            this.lbl30Min = new System.Windows.Forms.Label();
-            this.lbl1Hour = new System.Windows.Forms.Label();
             this.lbl1HourPlus = new System.Windows.Forms.Label();
+            this.lbl1Hour = new System.Windows.Forms.Label();
+            this.lbl30Min = new System.Windows.Forms.Label();
+            this.lbl1h = new System.Windows.Forms.Label();
+            this.lbl30_1h = new System.Windows.Forms.Label();
+            this.lbl15_30m = new System.Windows.Forms.Label();
+            this.lbl15mins = new System.Windows.Forms.Label();
+            this.lbl15Min = new System.Windows.Forms.Label();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblEficiency = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDose2 = new System.Windows.Forms.Label();
+            this.lblSecondVaccine = new System.Windows.Forms.Label();
+            this.lblDose1 = new System.Windows.Forms.Label();
+            this.lblFirstVaccine = new System.Windows.Forms.Label();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCitizensVaccines = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
@@ -149,10 +150,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel12.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabPageStats.SuspendLayout();
-            this.tableLayoutPanel14.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -283,7 +284,6 @@ namespace ProyectoFinalPOOBD.Views
             this.pnlTitleBar.Name = "pnlTitleBar";
             this.pnlTitleBar.Size = new System.Drawing.Size(721, 85);
             this.pnlTitleBar.TabIndex = 1;
-            this.pnlTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitleBar_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -330,18 +330,21 @@ namespace ProyectoFinalPOOBD.Views
             // 
             // tabProgram
             // 
+            this.tabProgram.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabProgram.Controls.Add(this.tabPageMain);
             this.tabProgram.Controls.Add(this.tabPageAppointment);
             this.tabProgram.Controls.Add(this.tabPageTracking);
             this.tabProgram.Controls.Add(this.tabPageVaccination);
             this.tabProgram.Controls.Add(this.tabPageStats);
             this.tabProgram.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabProgram.ItemSize = new System.Drawing.Size(0, 1);
             this.tabProgram.Location = new System.Drawing.Point(204, 85);
             this.tabProgram.Name = "tabProgram";
             this.tabProgram.SelectedIndex = 0;
             this.tabProgram.Size = new System.Drawing.Size(721, 576);
             this.tabProgram.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabProgram.TabIndex = 2;
+            this.tabProgram.TabStop = false;
             // 
             // tabPageMain
             // 
@@ -351,10 +354,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageMain.Controls.Add(this.panel6);
             this.tabPageMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPageMain.ForeColor = System.Drawing.Color.White;
-            this.tabPageMain.Location = new System.Drawing.Point(4, 24);
+            this.tabPageMain.Location = new System.Drawing.Point(4, 5);
             this.tabPageMain.Name = "tabPageMain";
             this.tabPageMain.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMain.Size = new System.Drawing.Size(713, 548);
+            this.tabPageMain.Size = new System.Drawing.Size(713, 567);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "tabPageMain";
             // 
@@ -476,10 +479,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageAppointment.Controls.Add(this.tableLayoutPanel3);
             this.tabPageAppointment.Controls.Add(this.tableLayoutPanel1);
             this.tabPageAppointment.Controls.Add(this.panel1);
-            this.tabPageAppointment.Location = new System.Drawing.Point(4, 24);
+            this.tabPageAppointment.Location = new System.Drawing.Point(4, 5);
             this.tabPageAppointment.Name = "tabPageAppointment";
             this.tabPageAppointment.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAppointment.Size = new System.Drawing.Size(713, 548);
+            this.tabPageAppointment.Size = new System.Drawing.Size(713, 567);
             this.tabPageAppointment.TabIndex = 1;
             this.tabPageAppointment.Text = "tabPageAppointment";
             this.tabPageAppointment.UseVisualStyleBackColor = true;
@@ -679,7 +682,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDui.Location = new System.Drawing.Point(238, 4);
             this.txtDui.Name = "txtDui";
-            this.txtDui.PlaceholderText = "Numero de DUI";
+            this.txtDui.PlaceholderText = "Numero de DUI (10 caracteres)";
             this.txtDui.Size = new System.Drawing.Size(263, 29);
             this.txtDui.TabIndex = 0;
             // 
@@ -765,7 +768,7 @@ namespace ProyectoFinalPOOBD.Views
             this.txtPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(238, 151);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PlaceholderText = "Numero de telefono (8 digitos)";
+            this.txtPhoneNumber.PlaceholderText = "Numero de 8 digitos con guion";
             this.txtPhoneNumber.Size = new System.Drawing.Size(263, 29);
             this.txtPhoneNumber.TabIndex = 11;
             // 
@@ -783,10 +786,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageTracking.Controls.Add(this.tableLayoutPanel7);
             this.tabPageTracking.Controls.Add(this.tableLayoutPanel6);
             this.tabPageTracking.Controls.Add(this.panel3);
-            this.tabPageTracking.Location = new System.Drawing.Point(4, 24);
+            this.tabPageTracking.Location = new System.Drawing.Point(4, 14);
             this.tabPageTracking.Name = "tabPageTracking";
             this.tabPageTracking.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTracking.Size = new System.Drawing.Size(713, 548);
+            this.tabPageTracking.Size = new System.Drawing.Size(713, 558);
             this.tabPageTracking.TabIndex = 2;
             this.tabPageTracking.Text = "tabPageTracking";
             this.tabPageTracking.UseVisualStyleBackColor = true;
@@ -795,37 +798,25 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.listBox1, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.lstMain, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 173);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 149);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(707, 372);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(707, 406);
             this.tableLayoutPanel8.TabIndex = 3;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(701, 319);
-            this.listBox1.TabIndex = 0;
             // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.60204F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.39796F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 309F));
             this.tableLayoutPanel9.Controls.Add(this.btnWaiting, 1, 0);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 334);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 364);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -838,28 +829,40 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnWaiting.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnWaiting.Location = new System.Drawing.Point(274, 3);
+            this.btnWaiting.Enabled = false;
+            this.btnWaiting.Location = new System.Drawing.Point(268, 3);
             this.btnWaiting.Name = "btnWaiting";
-            this.btnWaiting.Size = new System.Drawing.Size(124, 29);
+            this.btnWaiting.Size = new System.Drawing.Size(121, 29);
             this.btnWaiting.TabIndex = 0;
             this.btnWaiting.Text = "Proceder a espera";
             this.btnWaiting.UseVisualStyleBackColor = false;
             this.btnWaiting.Click += new System.EventHandler(this.btnWaiting_Click);
+            // 
+            // lstMain
+            // 
+            this.lstMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lstMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lstMain.FormattingEnabled = true;
+            this.lstMain.ItemHeight = 21;
+            this.lstMain.Location = new System.Drawing.Point(84, 3);
+            this.lstMain.Name = "lstMain";
+            this.lstMain.Size = new System.Drawing.Size(538, 340);
+            this.lstMain.TabIndex = 0;
             // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 5;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.94681F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.05319F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel7.Controls.Add(this.btnSearch, 2, 1);
             this.tableLayoutPanel7.Controls.Add(this.btnClear, 3, 1);
             this.tableLayoutPanel7.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.txtDuiData, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 109);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 85);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.31507F));
@@ -873,9 +876,9 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSearch.Location = new System.Drawing.Point(393, 34);
+            this.btnSearch.Location = new System.Drawing.Point(423, 34);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 27);
+            this.btnSearch.Size = new System.Drawing.Size(83, 27);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -887,9 +890,9 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClear.Location = new System.Drawing.Point(474, 34);
+            this.btnClear.Location = new System.Drawing.Point(512, 34);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(76, 27);
+            this.btnClear.Size = new System.Drawing.Size(103, 27);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Limpiar";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -902,9 +905,9 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(80, 0);
+            this.label1.Location = new System.Drawing.Point(86, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 31);
+            this.label1.Size = new System.Drawing.Size(331, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "DUI:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -914,10 +917,10 @@ namespace ProyectoFinalPOOBD.Views
             this.txtDuiData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDuiData.Location = new System.Drawing.Point(80, 34);
+            this.txtDuiData.Location = new System.Drawing.Point(86, 34);
             this.txtDuiData.Name = "txtDuiData";
             this.txtDuiData.PlaceholderText = "Ingrese el numero de DUI de un ciudadano";
-            this.txtDuiData.Size = new System.Drawing.Size(307, 23);
+            this.txtDuiData.Size = new System.Drawing.Size(331, 23);
             this.txtDuiData.TabIndex = 3;
             // 
             // tableLayoutPanel6
@@ -926,11 +929,11 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.lblDuiSearch, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 29);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(707, 80);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(707, 62);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // lblDuiSearch
@@ -951,9 +954,8 @@ namespace ProyectoFinalPOOBD.Views
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(707, 26);
+            this.panel3.Size = new System.Drawing.Size(707, 20);
             this.panel3.TabIndex = 0;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // tabPageVaccination
             // 
@@ -961,10 +963,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageVaccination.Controls.Add(this.tableLayoutPanel12);
             this.tabPageVaccination.Controls.Add(this.panel5);
             this.tabPageVaccination.Controls.Add(this.panel4);
-            this.tabPageVaccination.Location = new System.Drawing.Point(4, 24);
+            this.tabPageVaccination.Location = new System.Drawing.Point(4, 5);
             this.tabPageVaccination.Name = "tabPageVaccination";
             this.tabPageVaccination.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageVaccination.Size = new System.Drawing.Size(713, 548);
+            this.tabPageVaccination.Size = new System.Drawing.Size(713, 567);
             this.tabPageVaccination.TabIndex = 3;
             this.tabPageVaccination.Text = "tabPageVaccination";
             this.tabPageVaccination.UseVisualStyleBackColor = true;
@@ -1005,7 +1007,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5102F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.4898F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
             this.tableLayoutPanel12.Controls.Add(this.dtpHours, 2, 1);
             this.tableLayoutPanel12.Controls.Add(this.label3, 1, 1);
             this.tableLayoutPanel12.Controls.Add(this.dtpVaccinationDate, 2, 0);
@@ -1025,7 +1027,7 @@ namespace ProyectoFinalPOOBD.Views
             this.dtpHours.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtpHours.CustomFormat = "hh:mm tt";
             this.dtpHours.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHours.Location = new System.Drawing.Point(390, 74);
+            this.dtpHours.Location = new System.Drawing.Point(380, 74);
             this.dtpHours.Name = "dtpHours";
             this.dtpHours.Size = new System.Drawing.Size(79, 23);
             this.dtpHours.TabIndex = 3;
@@ -1035,9 +1037,9 @@ namespace ProyectoFinalPOOBD.Views
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(190, 57);
+            this.label3.Location = new System.Drawing.Point(185, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 57);
+            this.label3.Size = new System.Drawing.Size(173, 57);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hora de vacunacion:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1047,7 +1049,7 @@ namespace ProyectoFinalPOOBD.Views
             this.dtpVaccinationDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpVaccinationDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtpVaccinationDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVaccinationDate.Location = new System.Drawing.Point(381, 17);
+            this.dtpVaccinationDate.Location = new System.Drawing.Point(371, 17);
             this.dtpVaccinationDate.Name = "dtpVaccinationDate";
             this.dtpVaccinationDate.Size = new System.Drawing.Size(98, 23);
             this.dtpVaccinationDate.TabIndex = 1;
@@ -1057,9 +1059,9 @@ namespace ProyectoFinalPOOBD.Views
             this.lblVaccineDate.AutoSize = true;
             this.lblVaccineDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVaccineDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVaccineDate.Location = new System.Drawing.Point(190, 0);
+            this.lblVaccineDate.Location = new System.Drawing.Point(185, 0);
             this.lblVaccineDate.Name = "lblVaccineDate";
-            this.lblVaccineDate.Size = new System.Drawing.Size(178, 57);
+            this.lblVaccineDate.Size = new System.Drawing.Size(173, 57);
             this.lblVaccineDate.TabIndex = 2;
             this.lblVaccineDate.Text = "Fecha de vacunacion:";
             this.lblVaccineDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1083,7 +1085,6 @@ namespace ProyectoFinalPOOBD.Views
             this.lblVaccine.TabIndex = 0;
             this.lblVaccine.Text = "Ingrese datos de vacunacion";
             this.lblVaccine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblVaccine.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel4
             // 
@@ -1101,144 +1102,13 @@ namespace ProyectoFinalPOOBD.Views
             this.tabPageStats.Controls.Add(this.tableLayoutPanel15);
             this.tabPageStats.Controls.Add(this.tableLayoutPanel14);
             this.tabPageStats.Controls.Add(this.panel7);
-            this.tabPageStats.Location = new System.Drawing.Point(4, 24);
+            this.tabPageStats.Location = new System.Drawing.Point(4, 5);
             this.tabPageStats.Name = "tabPageStats";
             this.tabPageStats.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStats.Size = new System.Drawing.Size(713, 548);
+            this.tabPageStats.Size = new System.Drawing.Size(713, 567);
             this.tabPageStats.TabIndex = 4;
             this.tabPageStats.Text = "tabPageStats";
             this.tabPageStats.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(707, 59);
-            this.panel7.TabIndex = 0;
-            // 
-            // tableLayoutPanel14
-            // 
-            this.tableLayoutPanel14.ColumnCount = 1;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 62);
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 1;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(707, 47);
-            this.tableLayoutPanel14.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(701, 47);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Personas vacunadas";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel15
-            // 
-            this.tableLayoutPanel15.ColumnCount = 4;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.46252F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.46676F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.09477F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.69307F));
-            this.tableLayoutPanel15.Controls.Add(this.lblDose2, 3, 0);
-            this.tableLayoutPanel15.Controls.Add(this.label7, 2, 0);
-            this.tableLayoutPanel15.Controls.Add(this.lblDose1, 1, 0);
-            this.tableLayoutPanel15.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 109);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 1;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(707, 38);
-            this.tableLayoutPanel15.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(273, 38);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Primera dosis:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblDose1
-            // 
-            this.lblDose1.AutoSize = true;
-            this.lblDose1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDose1.Location = new System.Drawing.Point(282, 0);
-            this.lblDose1.Name = "lblDose1";
-            this.lblDose1.Size = new System.Drawing.Size(68, 38);
-            this.lblDose1.TabIndex = 1;
-            this.lblDose1.Text = "Dato";
-            this.lblDose1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(356, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 38);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Segunda dosis:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblDose2
-            // 
-            this.lblDose2.AutoSize = true;
-            this.lblDose2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDose2.Location = new System.Drawing.Point(491, 0);
-            this.lblDose2.Name = "lblDose2";
-            this.lblDose2.Size = new System.Drawing.Size(213, 38);
-            this.lblDose2.TabIndex = 3;
-            this.lblDose2.Text = "Dato";
-            this.lblDose2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 147);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(707, 43);
-            this.panel8.TabIndex = 3;
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 1;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 190);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 1;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(707, 47);
-            this.tableLayoutPanel16.TabIndex = 4;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(701, 47);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Eficiencia en tiempos de vacunacion";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel17
             // 
@@ -1248,10 +1118,10 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel17.Controls.Add(this.lbl1HourPlus, 1, 3);
             this.tableLayoutPanel17.Controls.Add(this.lbl1Hour, 1, 2);
             this.tableLayoutPanel17.Controls.Add(this.lbl30Min, 1, 1);
-            this.tableLayoutPanel17.Controls.Add(this.label13, 0, 3);
-            this.tableLayoutPanel17.Controls.Add(this.label12, 0, 2);
-            this.tableLayoutPanel17.Controls.Add(this.label11, 0, 1);
-            this.tableLayoutPanel17.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.lbl1h, 0, 3);
+            this.tableLayoutPanel17.Controls.Add(this.lbl30_1h, 0, 2);
+            this.tableLayoutPanel17.Controls.Add(this.lbl15_30m, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.lbl15mins, 0, 0);
             this.tableLayoutPanel17.Controls.Add(this.lbl15Min, 1, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 237);
@@ -1264,75 +1134,16 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel17.Size = new System.Drawing.Size(707, 155);
             this.tableLayoutPanel17.TabIndex = 5;
             // 
-            // label10
+            // lbl1HourPlus
             // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(347, 38);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "> 15 mins:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(3, 38);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(347, 38);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "15 - 30 mins:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(3, 76);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(347, 38);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "30 mins - 1h:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(3, 114);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(347, 41);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "< 1 h:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl15Min
-            // 
-            this.lbl15Min.AutoSize = true;
-            this.lbl15Min.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl15Min.Location = new System.Drawing.Point(356, 0);
-            this.lbl15Min.Name = "lbl15Min";
-            this.lbl15Min.Size = new System.Drawing.Size(348, 38);
-            this.lbl15Min.TabIndex = 4;
-            this.lbl15Min.Text = "Dato";
-            this.lbl15Min.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl30Min
-            // 
-            this.lbl30Min.AutoSize = true;
-            this.lbl30Min.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl30Min.Location = new System.Drawing.Point(356, 38);
-            this.lbl30Min.Name = "lbl30Min";
-            this.lbl30Min.Size = new System.Drawing.Size(348, 38);
-            this.lbl30Min.TabIndex = 5;
-            this.lbl30Min.Text = "Dato";
-            this.lbl30Min.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl1HourPlus.AutoSize = true;
+            this.lbl1HourPlus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1HourPlus.Location = new System.Drawing.Point(356, 114);
+            this.lbl1HourPlus.Name = "lbl1HourPlus";
+            this.lbl1HourPlus.Size = new System.Drawing.Size(348, 41);
+            this.lbl1HourPlus.TabIndex = 7;
+            this.lbl1HourPlus.Text = "Dato";
+            this.lbl1HourPlus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl1Hour
             // 
@@ -1345,16 +1156,206 @@ namespace ProyectoFinalPOOBD.Views
             this.lbl1Hour.Text = "Dato";
             this.lbl1Hour.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbl1HourPlus
+            // lbl30Min
             // 
-            this.lbl1HourPlus.AutoSize = true;
-            this.lbl1HourPlus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1HourPlus.Location = new System.Drawing.Point(356, 114);
-            this.lbl1HourPlus.Name = "lbl1HourPlus";
-            this.lbl1HourPlus.Size = new System.Drawing.Size(348, 41);
-            this.lbl1HourPlus.TabIndex = 7;
-            this.lbl1HourPlus.Text = "Dato";
-            this.lbl1HourPlus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl30Min.AutoSize = true;
+            this.lbl30Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl30Min.Location = new System.Drawing.Point(356, 38);
+            this.lbl30Min.Name = "lbl30Min";
+            this.lbl30Min.Size = new System.Drawing.Size(348, 38);
+            this.lbl30Min.TabIndex = 5;
+            this.lbl30Min.Text = "Dato";
+            this.lbl30Min.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl1h
+            // 
+            this.lbl1h.AutoSize = true;
+            this.lbl1h.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1h.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl1h.Location = new System.Drawing.Point(3, 114);
+            this.lbl1h.Name = "lbl1h";
+            this.lbl1h.Size = new System.Drawing.Size(347, 41);
+            this.lbl1h.TabIndex = 3;
+            this.lbl1h.Text = "< 1 h:";
+            this.lbl1h.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl30_1h
+            // 
+            this.lbl30_1h.AutoSize = true;
+            this.lbl30_1h.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl30_1h.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl30_1h.Location = new System.Drawing.Point(3, 76);
+            this.lbl30_1h.Name = "lbl30_1h";
+            this.lbl30_1h.Size = new System.Drawing.Size(347, 38);
+            this.lbl30_1h.TabIndex = 2;
+            this.lbl30_1h.Text = "30 mins - 1h:";
+            this.lbl30_1h.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl15_30m
+            // 
+            this.lbl15_30m.AutoSize = true;
+            this.lbl15_30m.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl15_30m.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl15_30m.Location = new System.Drawing.Point(3, 38);
+            this.lbl15_30m.Name = "lbl15_30m";
+            this.lbl15_30m.Size = new System.Drawing.Size(347, 38);
+            this.lbl15_30m.TabIndex = 1;
+            this.lbl15_30m.Text = "15 - 30 mins:";
+            this.lbl15_30m.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl15mins
+            // 
+            this.lbl15mins.AutoSize = true;
+            this.lbl15mins.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl15mins.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl15mins.Location = new System.Drawing.Point(3, 0);
+            this.lbl15mins.Name = "lbl15mins";
+            this.lbl15mins.Size = new System.Drawing.Size(347, 38);
+            this.lbl15mins.TabIndex = 0;
+            this.lbl15mins.Text = "< 15 mins:";
+            this.lbl15mins.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl15Min
+            // 
+            this.lbl15Min.AutoSize = true;
+            this.lbl15Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl15Min.Location = new System.Drawing.Point(356, 0);
+            this.lbl15Min.Name = "lbl15Min";
+            this.lbl15Min.Size = new System.Drawing.Size(348, 38);
+            this.lbl15Min.TabIndex = 4;
+            this.lbl15Min.Text = "Dato";
+            this.lbl15Min.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.lblEficiency, 0, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 190);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(707, 47);
+            this.tableLayoutPanel16.TabIndex = 4;
+            // 
+            // lblEficiency
+            // 
+            this.lblEficiency.AutoSize = true;
+            this.lblEficiency.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEficiency.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEficiency.Location = new System.Drawing.Point(3, 0);
+            this.lblEficiency.Name = "lblEficiency";
+            this.lblEficiency.Size = new System.Drawing.Size(701, 47);
+            this.lblEficiency.TabIndex = 0;
+            this.lblEficiency.Text = "Eficiencia en tiempos de vacunacion";
+            this.lblEficiency.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(3, 147);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(707, 43);
+            this.panel8.TabIndex = 3;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 4;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.46252F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.46676F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.09477F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.69307F));
+            this.tableLayoutPanel15.Controls.Add(this.lblDose2, 3, 0);
+            this.tableLayoutPanel15.Controls.Add(this.lblSecondVaccine, 2, 0);
+            this.tableLayoutPanel15.Controls.Add(this.lblDose1, 1, 0);
+            this.tableLayoutPanel15.Controls.Add(this.lblFirstVaccine, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 109);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(707, 38);
+            this.tableLayoutPanel15.TabIndex = 2;
+            // 
+            // lblDose2
+            // 
+            this.lblDose2.AutoSize = true;
+            this.lblDose2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDose2.Location = new System.Drawing.Point(491, 0);
+            this.lblDose2.Name = "lblDose2";
+            this.lblDose2.Size = new System.Drawing.Size(213, 38);
+            this.lblDose2.TabIndex = 3;
+            this.lblDose2.Text = "Dato";
+            this.lblDose2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSecondVaccine
+            // 
+            this.lblSecondVaccine.AutoSize = true;
+            this.lblSecondVaccine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSecondVaccine.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSecondVaccine.Location = new System.Drawing.Point(356, 0);
+            this.lblSecondVaccine.Name = "lblSecondVaccine";
+            this.lblSecondVaccine.Size = new System.Drawing.Size(129, 38);
+            this.lblSecondVaccine.TabIndex = 2;
+            this.lblSecondVaccine.Text = "Segunda dosis:";
+            this.lblSecondVaccine.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDose1
+            // 
+            this.lblDose1.AutoSize = true;
+            this.lblDose1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDose1.Location = new System.Drawing.Point(282, 0);
+            this.lblDose1.Name = "lblDose1";
+            this.lblDose1.Size = new System.Drawing.Size(68, 38);
+            this.lblDose1.TabIndex = 1;
+            this.lblDose1.Text = "Dato";
+            this.lblDose1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblFirstVaccine
+            // 
+            this.lblFirstVaccine.AutoSize = true;
+            this.lblFirstVaccine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFirstVaccine.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFirstVaccine.Location = new System.Drawing.Point(3, 0);
+            this.lblFirstVaccine.Name = "lblFirstVaccine";
+            this.lblFirstVaccine.Size = new System.Drawing.Size(273, 38);
+            this.lblFirstVaccine.TabIndex = 0;
+            this.lblFirstVaccine.Text = "Primera dosis:";
+            this.lblFirstVaccine.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 1;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.Controls.Add(this.lblCitizensVaccines, 0, 0);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 62);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 1;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(707, 47);
+            this.tableLayoutPanel14.TabIndex = 1;
+            // 
+            // lblCitizensVaccines
+            // 
+            this.lblCitizensVaccines.AutoSize = true;
+            this.lblCitizensVaccines.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCitizensVaccines.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCitizensVaccines.Location = new System.Drawing.Point(3, 0);
+            this.lblCitizensVaccines.Name = "lblCitizensVaccines";
+            this.lblCitizensVaccines.Size = new System.Drawing.Size(701, 47);
+            this.lblCitizensVaccines.TabIndex = 0;
+            this.lblCitizensVaccines.Text = "Personas vacunadas";
+            this.lblCitizensVaccines.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(707, 59);
+            this.panel7.TabIndex = 0;
             // 
             // frmMainForm
             // 
@@ -1365,9 +1366,10 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMainForm";
+            this.Text = "Vacunacion COVID-19";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainForm_FormClosing);
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1407,14 +1409,14 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel12.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.tabPageStats.ResumeLayout(false);
-            this.tableLayoutPanel14.ResumeLayout(false);
-            this.tableLayoutPanel14.PerformLayout();
-            this.tableLayoutPanel15.ResumeLayout(false);
-            this.tableLayoutPanel15.PerformLayout();
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1489,28 +1491,28 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDuiData;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstMain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button btnWaiting;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.Label lbl1HourPlus;
         private System.Windows.Forms.Label lbl1Hour;
         private System.Windows.Forms.Label lbl30Min;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl1h;
+        private System.Windows.Forms.Label lbl30_1h;
+        private System.Windows.Forms.Label lbl15_30m;
+        private System.Windows.Forms.Label lbl15mins;
         private System.Windows.Forms.Label lbl15Min;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblEficiency;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Label lblDose2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblSecondVaccine;
         private System.Windows.Forms.Label lblDose1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblFirstVaccine;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCitizensVaccines;
         private System.Windows.Forms.Panel panel7;
     }
 }

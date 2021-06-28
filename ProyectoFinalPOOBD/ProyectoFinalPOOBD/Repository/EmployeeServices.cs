@@ -6,6 +6,7 @@ using ProyectoFinalPOOBD.VaccineContext;
 
 namespace ProyectoFinalPOOBD.Repository
 {
+    // CRUD de la clase Employee mas operaciones extras
     class EmployeeServices : IRepository<Employee>
     {
         private VaccinationContext _context = new VaccinationContext();
@@ -48,6 +49,7 @@ namespace ProyectoFinalPOOBD.Repository
             return employee;
         }
 
+        // Funcion para encontrar el gestor
         public Employee FindGestor(string username, string password)
         {
             var employee = _context.Employees.Include(e => e.IdUserNavigation).SingleOrDefault(e =>

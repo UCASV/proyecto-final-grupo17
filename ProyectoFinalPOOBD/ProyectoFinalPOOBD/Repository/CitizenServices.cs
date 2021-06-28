@@ -9,9 +9,11 @@ using ProyectoFinalPOOBD.VaccineContext;
 
 namespace ProyectoFinalPOOBD.Repository
 {
+
+    // CRUD de la clase ciudadano
     class CitizenServices : IRepository<Citizen>
     {
-
+        // Instanciacion del context
         private VaccinationContext _context = new VaccinationContext();
 
         public List<Citizen> GetAll()
@@ -42,11 +44,13 @@ namespace ProyectoFinalPOOBD.Repository
             return _context.Citizens.FirstOrDefault(citizen => citizen.Id.Equals(pk));
         }
 
+        // Obtener el ultimo ciudadano
         public Citizen GetLastCitizen()
         {
             return _context.Citizens.OrderBy(c => c.Id).LastOrDefault();
         }
 
+        // Obtener el ciudadano por el DUI
         public Citizen GetCitizenByDui(string dui)
         {
             return _context.Citizens.FirstOrDefault(citizen => citizen.Dui == dui);

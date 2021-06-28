@@ -7,6 +7,7 @@ using ProyectoFinalPOOBD.VaccineContext;
 
 namespace ProyectoFinalPOOBD.Repository
 {
+    // CRUD de servicios de Usuario o Gestor
     class UserServices: IRepository<Models.User>
     {
         private VaccinationContext _context = new VaccinationContext();
@@ -39,6 +40,7 @@ namespace ProyectoFinalPOOBD.Repository
             return _context.Users.FirstOrDefault(u => u.Id == pk);
         }
 
+        // Encontrar el usuario por username y contraseña
         public User FindByUsernameAndPassword(string username, string password)
         {
             return _context.Users.Include(user => user.Employee).FirstOrDefault(user => user.Username == username && user.Password == password);

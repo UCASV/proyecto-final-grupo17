@@ -29,6 +29,7 @@ namespace ProyectoFinalPOOBD.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddNewDisease));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDui = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.84615F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 403F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDui, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.label7, 2, 3);
@@ -85,7 +86,7 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDui.AutoSize = true;
             this.lblDui.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDui.Location = new System.Drawing.Point(108, 97);
+            this.lblDui.Location = new System.Drawing.Point(107, 97);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(397, 53);
             this.lblDui.TabIndex = 8;
@@ -97,7 +98,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(108, 170);
+            this.label7.Location = new System.Drawing.Point(107, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(347, 21);
             this.label7.TabIndex = 22;
@@ -105,7 +106,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             // txtNewDisease
             // 
-            this.txtNewDisease.Location = new System.Drawing.Point(108, 206);
+            this.txtNewDisease.Location = new System.Drawing.Point(107, 206);
             this.txtNewDisease.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewDisease.Name = "txtNewDisease";
             this.txtNewDisease.Size = new System.Drawing.Size(210, 23);
@@ -118,7 +119,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAcept.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnAcept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcept.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAcept.Location = new System.Drawing.Point(108, 242);
+            this.btnAcept.Location = new System.Drawing.Point(107, 242);
             this.btnAcept.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAcept.Name = "btnAcept";
             this.btnAcept.Size = new System.Drawing.Size(131, 31);
@@ -155,11 +156,12 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddNewDisease";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAddNewDisease";
+            this.Text = "Vacunacion COVID-19: Añadir nueva enfermedad";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
