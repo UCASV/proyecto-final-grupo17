@@ -43,7 +43,7 @@ namespace ProyectoFinalPOOBD.Views
             this.pbar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.pbar.AnimationSpeed = 500;
             this.pbar.BackColor = System.Drawing.Color.Transparent;
-            this.pbar.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pbar.Font = new System.Drawing.Font("Segoe UI", 65.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pbar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(124)))), ((int)(((byte)(177)))));
             this.pbar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(51)))), ((int)(((byte)(98)))));
             this.pbar.InnerMargin = 2;
@@ -117,6 +117,7 @@ namespace ProyectoFinalPOOBD.Views
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLoadingView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoadingView";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

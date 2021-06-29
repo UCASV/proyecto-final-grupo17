@@ -404,19 +404,25 @@ namespace ProyectoFinalPOOBD.Views
 
                         // Llenamos el listbox
                         FillList(_currentVaccination, _currenCitizen);
+
+                        MessageBox.Show("Mostrando cita actual para el ciudadano", "Seguimiento de citas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         // Habilitamos la espera
                         btnWaiting.Enabled = true;
+                        btnGeneratePDF.Enabled = true;
                     }
                     else
                     {
                         // El ciudadano existe pero ya recibio sus vacunas
-                        MessageBox.Show("El ciudadano ingresado no posee citas pendientes.");
+                        MessageBox.Show("El ciudadano ingresado ya posee ambas dosis de la vacunacion");
                         // Se limpia el listbox
                         lstMain.Items.Clear();
                         // Se añade al listbox
                         lstMain.Items.Add("Sin resultados de citas del ciudadano");
                         
                         btnWaiting.Enabled = false;
+                        btnGeneratePDF.Enabled = false;
                     }
                 }
                 else
@@ -430,13 +436,16 @@ namespace ProyectoFinalPOOBD.Views
                     // Y ponemos el texto en el listbox
                     lstMain.Items.Add("Sin resultados");
                     btnWaiting.Enabled = false;
+                    btnGeneratePDF.Enabled = false;
                 }
             }
             else
             {
                 // Si no se ha llenado el textbox se muestra lo siguiente:
                 MessageBox.Show("El campo de DUI esta vacio, por favor ingrese uno para comenzar la busqueda");
+                lstMain.Items.Clear();
                 btnWaiting.Enabled = false;
+                btnGeneratePDF.Enabled = false;
             }
         }
 
@@ -445,6 +454,9 @@ namespace ProyectoFinalPOOBD.Views
         {
             txtDuiData.Text = String.Empty;
             txtDuiData.PlaceholderText = "Ingrese el numero de DUI de un ciudadano";
+            lstMain.Items.Clear();
+            btnWaiting.Enabled = false;
+            btnGeneratePDF.Enabled = false;
         }
 
         // Esta funcion llena el listbox cuando hay una cita y ciudadano encontrados:
@@ -534,6 +546,8 @@ namespace ProyectoFinalPOOBD.Views
             MessageBox.Show("Vacunando al ciudadano...");
             MessageBox.Show("Ciudadano vacunado exitosamente!");
 
+            var loadingScreen = new frmLoadingView().ShowDialog();
+
             // Abrimos el formulario de efectos secundarios
             using (var secondaryEffects = new frmSideEffects())
             {
@@ -592,6 +606,7 @@ namespace ProyectoFinalPOOBD.Views
             _currenCitizen = null;
             _currentVaccination = null;
             btnWaiting.Enabled = false;
+            btnGeneratePDF.Enabled = false;
         }
 
         
@@ -615,6 +630,12 @@ namespace ProyectoFinalPOOBD.Views
             lbl30Min.Text = efficiencyStats[1].ToString();
             lbl1Hour.Text = efficiencyStats[2].ToString();
             lbl1HourPlus.Text = efficiencyStats[3].ToString();
+        }
+
+        private void GeneratePDF_Click(object sender, EventArgs e)
+        {
+            var place = new PlaceServices().GetById(_currentVaccination.IdPlace);
+            Utilities.CreatePdf(place.PlaceName, _currenCitizen, _currentVaccination);
         }
     }
 }

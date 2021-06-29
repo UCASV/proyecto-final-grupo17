@@ -178,6 +178,9 @@ namespace ProyectoFinalPOOBD.Backend
                 // Añadimos todo al documento y lo guardara donde decidimos guardarlo
                 document.Add(pdfText);
                 document.Close();
+
+                MessageBox.Show("El PDF ha sido guardado exitosamente!", "PDF Generado con exito", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
             else
             {

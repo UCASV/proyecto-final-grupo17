@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samuel\\Documents\\GitHub\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {}
+    "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samuel\\Documents\\GitHub\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {
+    "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samuel\\Documents\\GitHub\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+        "projectUniqueName": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
         "projectName": "ProyectoFinalPOOBD",
-        "projectPath": "C:\\Users\\Samuel\\Documents\\GitHub\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
-        "packagesPath": "C:\\Users\\Samuel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samuel\\Documents\\GitHub\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+        "projectPath": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+        "packagesPath": "C:\\Users\\Fernando\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Samuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

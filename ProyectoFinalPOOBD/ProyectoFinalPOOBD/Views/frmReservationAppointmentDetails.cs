@@ -44,8 +44,6 @@ namespace ProyectoFinalPOOBD.Views
         private void btnGereratePdf_Click(object sender, EventArgs e)
         {
             Utilities.CreatePdf(lblPlaceData.Text, _citizen, _appointmentDetails);
-            MessageBox.Show("El pdf con los datos de vacunacion ha sido generado exitosamente",
-                "Asignacion de vacunacion: Reporte PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }
