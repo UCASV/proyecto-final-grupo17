@@ -616,7 +616,6 @@ namespace ProyectoFinalPOOBD.Views
             lbl1Hour.Text = efficiencyStats[2].ToString();
             lbl1HourPlus.Text = efficiencyStats[3].ToString();
         }
-
     }
 }
  
