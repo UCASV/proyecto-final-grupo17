@@ -45,16 +45,19 @@ namespace ProyectoFinalPOOBD.Views
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtMins = new System.Windows.Forms.TextBox();
             this.cmbEffects = new System.Windows.Forms.ComboBox();
-            this.lblLink = new System.Windows.Forms.Label();
-            this.btnAddEffect = new System.Windows.Forms.Button();
             this.dgvEffects = new System.Windows.Forms.DataGridView();
             this.Effect = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAceppt = new System.Windows.Forms.Button();
+            this.btnAddEffect = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblLink = new System.Windows.Forms.Label();
+            this.btnNewEffect = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEffects)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,21 +86,21 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.84615F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 426F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDui, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.label7, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 2, 3);
             this.tableLayoutPanel2.Controls.Add(this.panel4, 2, 5);
             this.tableLayoutPanel2.Controls.Add(this.panel5, 2, 6);
-            this.tableLayoutPanel2.Controls.Add(this.lblLink, 2, 8);
-            this.tableLayoutPanel2.Controls.Add(this.btnAddEffect, 2, 10);
             this.tableLayoutPanel2.Controls.Add(this.dgvEffects, 2, 11);
             this.tableLayoutPanel2.Controls.Add(this.btnAceppt, 2, 12);
+            this.tableLayoutPanel2.Controls.Add(this.btnAddEffect, 2, 10);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 2, 8);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(91, 59);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 14;
+            this.tableLayoutPanel2.RowCount = 13;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.65041F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.34959F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
@@ -105,14 +108,13 @@ namespace ProyectoFinalPOOBD.Views
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(561, 434);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(561, 444);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // label2
@@ -121,7 +123,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 19);
+            this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 10;
             // 
             // lblDui
@@ -131,9 +133,9 @@ namespace ProyectoFinalPOOBD.Views
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDui.AutoSize = true;
             this.lblDui.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDui.Location = new System.Drawing.Point(80, 19);
+            this.lblDui.Location = new System.Drawing.Point(76, 26);
             this.lblDui.Name = "lblDui";
-            this.lblDui.Size = new System.Drawing.Size(420, 28);
+            this.lblDui.Size = new System.Drawing.Size(420, 38);
             this.lblDui.TabIndex = 8;
             this.lblDui.Text = "Efectos Secundarios";
             this.lblDui.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,7 +145,7 @@ namespace ProyectoFinalPOOBD.Views
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(80, 47);
+            this.label7.Location = new System.Drawing.Point(76, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(361, 19);
             this.label7.TabIndex = 22;
@@ -153,7 +155,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.panel3.Controls.Add(this.rdoNo);
             this.panel3.Controls.Add(this.rdoYes);
-            this.panel3.Location = new System.Drawing.Point(80, 73);
+            this.panel3.Location = new System.Drawing.Point(76, 90);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 25);
@@ -193,7 +195,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(80, 116);
+            this.panel4.Location = new System.Drawing.Point(76, 133);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(420, 23);
@@ -225,7 +227,7 @@ namespace ProyectoFinalPOOBD.Views
             // 
             this.panel5.Controls.Add(this.txtMins);
             this.panel5.Controls.Add(this.cmbEffects);
-            this.panel5.Location = new System.Drawing.Point(80, 145);
+            this.panel5.Location = new System.Drawing.Point(76, 162);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(420, 28);
@@ -254,49 +256,19 @@ namespace ProyectoFinalPOOBD.Views
             this.cmbEffects.Size = new System.Drawing.Size(166, 23);
             this.cmbEffects.TabIndex = 0;
             // 
-            // lblLink
-            // 
-            this.lblLink.AutoSize = true;
-            this.lblLink.Enabled = false;
-            this.lblLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLink.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLink.Location = new System.Drawing.Point(80, 188);
-            this.lblLink.Name = "lblLink";
-            this.lblLink.Size = new System.Drawing.Size(384, 20);
-            this.lblLink.TabIndex = 21;
-            this.lblLink.Text = "Si el efecto no se encuentra ingreselo dando click aqui\r\n";
-            this.lblLink.Click += new System.EventHandler(this.AddNewSideEffect_Click);
-            // 
-            // btnAddEffect
-            // 
-            this.btnAddEffect.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddEffect.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddEffect.Enabled = false;
-            this.btnAddEffect.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.btnAddEffect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEffect.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddEffect.Location = new System.Drawing.Point(224, 222);
-            this.btnAddEffect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddEffect.Name = "btnAddEffect";
-            this.btnAddEffect.Size = new System.Drawing.Size(131, 31);
-            this.btnAddEffect.TabIndex = 28;
-            this.btnAddEffect.Text = "Agregar efecto";
-            this.btnAddEffect.UseVisualStyleBackColor = false;
-            this.btnAddEffect.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dgvEffects
             // 
             this.dgvEffects.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEffects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEffects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Effect});
-            this.dgvEffects.Location = new System.Drawing.Point(80, 258);
+            this.dgvEffects.Location = new System.Drawing.Point(76, 290);
             this.dgvEffects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEffects.Name = "dgvEffects";
             this.dgvEffects.RowHeadersWidth = 51;
             this.dgvEffects.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEffects.RowTemplate.Height = 29;
-            this.dgvEffects.Size = new System.Drawing.Size(420, 120);
+            this.dgvEffects.Size = new System.Drawing.Size(420, 116);
             this.dgvEffects.TabIndex = 29;
             // 
             // Effect
@@ -312,7 +284,7 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAceppt.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnAceppt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceppt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAceppt.Location = new System.Drawing.Point(224, 387);
+            this.btnAceppt.Location = new System.Drawing.Point(220, 410);
             this.btnAceppt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceppt.Name = "btnAceppt";
             this.btnAceppt.Size = new System.Drawing.Size(131, 31);
@@ -320,6 +292,68 @@ namespace ProyectoFinalPOOBD.Views
             this.btnAceppt.Text = "Aceptar";
             this.btnAceppt.UseVisualStyleBackColor = false;
             this.btnAceppt.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnAddEffect
+            // 
+            this.btnAddEffect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddEffect.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddEffect.Enabled = false;
+            this.btnAddEffect.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnAddEffect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEffect.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddEffect.Location = new System.Drawing.Point(220, 256);
+            this.btnAddEffect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddEffect.Name = "btnAddEffect";
+            this.btnAddEffect.Size = new System.Drawing.Size(131, 30);
+            this.btnAddEffect.TabIndex = 31;
+            this.btnAddEffect.Text = "Agregar efecto";
+            this.btnAddEffect.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel1.Controls.Add(this.lblLink, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnNewEffect, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(76, 209);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(420, 34);
+            this.tableLayoutPanel1.TabIndex = 32;
+            // 
+            // lblLink
+            // 
+            this.lblLink.AutoSize = true;
+            this.lblLink.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLink.Enabled = false;
+            this.lblLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLink.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLink.Location = new System.Drawing.Point(3, 0);
+            this.lblLink.Name = "lblLink";
+            this.lblLink.Size = new System.Drawing.Size(353, 34);
+            this.lblLink.TabIndex = 21;
+            this.lblLink.Text = "Si el efecto no se encuentra ingreselo dando click";
+            this.lblLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLink.Click += new System.EventHandler(this.AddNewSideEffect_Click);
+            // 
+            // btnNewEffect
+            // 
+            this.btnNewEffect.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNewEffect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewEffect.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnNewEffect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewEffect.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNewEffect.Location = new System.Drawing.Point(362, 3);
+            this.btnNewEffect.Name = "btnNewEffect";
+            this.btnNewEffect.Size = new System.Drawing.Size(55, 28);
+            this.btnNewEffect.TabIndex = 22;
+            this.btnNewEffect.Text = "aqui";
+            this.btnNewEffect.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNewEffect.UseVisualStyleBackColor = false;
+            this.btnNewEffect.Click += new System.EventHandler(this.btnNewEffect_Click);
             // 
             // frmSideEffects
             // 
@@ -346,6 +380,8 @@ namespace ProyectoFinalPOOBD.Views
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEffects)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -367,10 +403,12 @@ namespace ProyectoFinalPOOBD.Views
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtMins;
         private System.Windows.Forms.ComboBox cmbEffects;
-        private System.Windows.Forms.Button btnAddEffect;
         private System.Windows.Forms.DataGridView dgvEffects;
         private System.Windows.Forms.Button btnAceppt;
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Effect;
+        private System.Windows.Forms.Button btnAddEffect;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnNewEffect;
     }
 }

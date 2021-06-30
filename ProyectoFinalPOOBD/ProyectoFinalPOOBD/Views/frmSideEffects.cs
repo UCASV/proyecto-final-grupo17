@@ -95,9 +95,7 @@ namespace ProyectoFinalPOOBD.Views
         // Si se da click en el label se crea un nuevo efecto secundario y llenamos nuevamente el comboBox
         private void AddNewSideEffect_Click(object sender, EventArgs e)
         {
-            var newSideEffect = new frmNewSideEffect();
-            newSideEffect.ShowDialog();
-            InitializeCmbBox();
+            //Disabled label working as a button
         }
 
         // Al clickear en aceptar se cierra el form
@@ -130,6 +128,13 @@ namespace ProyectoFinalPOOBD.Views
                 lblLink.Enabled = true;
                 btnAddEffect.Enabled = true;
             }
+        }
+
+        private void btnNewEffect_Click(object sender, EventArgs e)
+        {
+            var newSideEffect = new frmNewSideEffect();
+            newSideEffect.ShowDialog();
+            InitializeCmbBox();
         }
     }
 }
