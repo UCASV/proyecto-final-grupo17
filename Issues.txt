@@ -1,0 +1,8 @@
+Los issues que surgieron en el desarrollo fue la codificacion del area de estadisticas,
+debido a que se utilizo .Net Core Winforms App, Live Charts y otro tipo de Nuget para
+graficos mostraban incompatibilidad con .NET Core, por tanto la seccion de estadisticas
+Solo se muestran los datos solicitados pero sin el uso de graficos, y al respecto con
+las estadisticas de efectos secundarios no fueron añadidas, ya que los efectos pueden
+ser mas cada vez si se agrega uno nuevo, los label se tendrian que agrandar, y por tanto
+se tendria una mala visualizacion de los datos, por lo que solo se dejo el codigo de ese query
+dentro de la solucion dentro de la carpeta Backend en el archivo Queries.
