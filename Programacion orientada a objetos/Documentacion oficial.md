@@ -45,7 +45,7 @@ visibilidad del codigo, por ese motivo se escogio el patron de diseño de reposi
 3. Una vez nos cerciorarnos de tener el SMSS y SQL Server developer instalado y estando en la raiz del repositorio, navegaremos dentro de la carpeta **Bases de datos** y abriremos el archivo nombrado **Banco de datos.sql** : 
 (Raiz de carpetas o repositorio) -> Bases de datos -> Banco de datos.sql
 
-4. Abrimos el script o Banco de datos, y solamente ejecutamos el codigo, automaticamente el gestor creara la BD y poblara la base de datos.
+4. Abrimos el script o Banco de datos en Sql Server, y solamente ejecutamos el codigo, automaticamente el gestor creara la BD y poblara la base de datos.
 
 5. Una vez ejecutado el script y teniendo la base de datos creada, volvemos a dirigirnos a la raiz de nuestro repositorio nuevamente y procedemos a ejecutar el instalador, nos dirigimos a la carpeta **Programacion orientada a objetos**, luego dentro de ella hay una carpeta nombrada **ProyectoFinalPOOBD** , abrimos la carpeta, y dentro de ella habra una carpeta llamada Instalador, abrimos la carpeta **Instalador** y dentro de esta carpeta habra una carpeta llamada **Debug**, abrimos esta carpeta donde se encuentra el instalador nombrado como **setup.exe** <br>
 (Raiz del directorio o repo) -> Programacion orientada a objetos -> ProyectoFinalPOOBD -> Instalador -> Debug -> setup.exe
