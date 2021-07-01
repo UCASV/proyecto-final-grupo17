@@ -7043,11 +7043,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\POO\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+      "projectUniqueName": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\Programacion orientada a objetos\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
       "projectName": "ProyectoFinalPOOBD",
-      "projectPath": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\POO\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
+      "projectPath": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\Programacion orientada a objetos\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD.csproj",
       "packagesPath": "C:\\Users\\Fernando\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\POO\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
+      "outputPath": "C:\\Users\\Fernando\\Desktop\\final\\proyecto-final-grupo17\\Programacion orientada a objetos\\ProyectoFinalPOOBD\\ProyectoFinalPOOBD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
